@@ -1,23 +1,23 @@
 /* Fonts */
 :root {
-  --default-font:  "Helvetica Neue", sans-serif;
-  --heading-font:  "Helvetica Neue", sans-serif;
-  --nav-font:  "Helvetica Neue", sans-serif;
+  --default-font: "Helvetica Neue", sans-serif;
+  --heading-font: "Helvetica Neue", sans-serif;
+  --nav-font: "Helvetica Neue", sans-serif;
 }
 
 :root {
-  --background-color: #b52f36;        /* Negro carbón profundo */
-  --default-color: #e0e0e0;           /* Gris claro para texto general */
-  --heading-color: #ffffff;           /* Títulos bien contrastados */
-  --accent-color: #b52f36;            /* Rojo Ibarra como punto de tensión visual */
-  --surface-color: #1e1e1e;           /* Cajas internas con gris oscuro */
+  --background-color: #b52f36; /* Negro carbón profundo */
+  --default-color: #e0e0e0; /* Gris claro para texto general */
+  --heading-color: #ffffff; /* Títulos bien contrastados */
+  --accent-color: #b52f36; /* Rojo Ibarra como punto de tensión visual */
+  --surface-color: #1e1e1e; /* Cajas internas con gris oscuro */
   --contrast-color: #ffffff;
 
   --nav-color: #e0e0e0;
-  --nav-hover-color: #b52f36;
+  --nav-hover-color: #1e1e1e;
   --nav-dropdown-background-color: #1e1e1e;
   --nav-dropdown-color: #e0e0e0;
-  --nav-dropdown-hover-color: #b52f36;
+  --nav-dropdown-hover-color: #1e1e1e;
 }
 
 /* Smooth scroll */
@@ -41,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--surface-color), transparent 25%);
   text-decoration: none;
 }
 
@@ -147,7 +147,7 @@ h6 {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: var(--heading-color);
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
