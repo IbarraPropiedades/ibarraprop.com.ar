@@ -6,7 +6,7 @@
 }
 
 :root {
-  --background-color: rgba(23,23,23);        /* Negro carbón profundo */
+  --background-color: #b52f36;        /* Negro carbón profundo */
   --default-color: #e0e0e0;           /* Gris claro para texto general */
   --heading-color: #ffffff;           /* Títulos bien contrastados */
   --accent-color: #b52f36;            /* Rojo Ibarra como punto de tensión visual */
