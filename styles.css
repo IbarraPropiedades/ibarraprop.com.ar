@@ -62,3 +62,12 @@ body {
   font-size: 0.95rem;
   letter-spacing: 0.45em;
 }
+
+.mensaje-obras {
+  text-align: center;
+   font-size: 0.95rem;
+   letter-spacing: 0.2em;
+  margin: 30px auto;
+  color: white;
+  max-width: 600px;
+}
