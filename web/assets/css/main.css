@@ -631,13 +631,28 @@ section,
 .custom-select {
   appearance: none;
   background: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   padding: 12px 40px 12px 16px;
   border-radius: 25px;
   font-size: 1rem;
   cursor: pointer;
   min-width: 180px;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #b52f36; /* rojo de marca */
+  box-shadow: 0 0 0 3px rgba(181, 47, 54, 0.3);
+}
+
+.custom-select:hover {
+  border-color: #b52f36;
+}
+
+.custom-select option {
+  color: #000000; /* negro */
+  background-color: #ffffff; /* blanco */
 }
 
 .select-icon {
@@ -653,7 +668,7 @@ section,
   padding: 12px 24px;
   background: transparent;
   color: var(--contrast-color);
-  border: 1px solid var(--background-color);
+  border: 2px solid var(--background-color);
   font-weight: bold;
   border-radius: 25px;
   cursor: pointer;
@@ -661,7 +676,7 @@ section,
 }
 .search-button:hover {
   background: var(--background-color);
-  border: 1px solid var(--background-color);
+  border: 2px solid var(--background-color);
   color: var(--contrast-color);
 }
 /*--------------------------------------------------------------
