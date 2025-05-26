@@ -9,7 +9,7 @@
   --background-color: #b52f36; /* Negro carbón profundo */
   --default-color: #e0e0e0; /* Gris claro para texto general */
   --heading-color: #ffffff; /* Títulos bien contrastados */
-  --accent-color: #b52f36; /* Rojo Ibarra como punto de tensión visual */
+  --accent-color: #1e1e1e; /* Rojo Ibarra como punto de tensión visual */
   --surface-color: #1e1e1e; /* Cajas internas con gris oscuro */
   --contrast-color: #ffffff;
 
@@ -1360,6 +1360,14 @@ section,
   margin-bottom: -30px;
   visibility: visible;
   opacity: 1;
+}
+
+.real-estate-2 .card:hover {
+  background-color: #000 !important; /* fuerza fondo negro */
+  color: #fff;
+}
+.real-estate-2 .card::before {
+  background-color: #000 !important;
 }
 
 /*--------------------------------------------------------------
