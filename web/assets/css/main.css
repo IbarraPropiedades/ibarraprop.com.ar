@@ -673,8 +673,8 @@ section,
 }
 
 .services .service-item .icon {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--background-color);
+  background: var(--contrast-color);
   margin: 0;
   width: 64px;
   height: 64px;
@@ -1015,7 +1015,7 @@ section,
 }
 
 .features .icon-box i {
-  color: var(--accent-color);
+  color: var(--heading-color);
   background-color: var(--surface-color);
   display: flex;
   align-items: center;
