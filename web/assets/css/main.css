@@ -30,7 +30,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--contrast-color-color);
   font-family: var(--default-font);
 }
 
@@ -87,6 +87,27 @@ h6 {
   color: var(--accent-color);
 }
 
+.tasar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #000;
+  padding: 10px 24px 10px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1.2; /* Asegura altura de línea razonable */
+  text-align: center;
+  vertical-align: middle;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgb(0, 0, 0);
+}
+
+.tasar:hover {
+  background-color: #91252a; /* Más oscuro en hover */
+  transform: translateY(-1px);
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
