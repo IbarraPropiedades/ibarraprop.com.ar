@@ -105,8 +105,12 @@ h6 {
 }
 
 .tasar:hover {
-  background-color: #91252a; /* Más oscuro en hover */
+  background-color: var(--accent-color); /* Más oscuro en hover */
   transform: translateY(-1px);
+}
+
+.tasar:hover a {
+  color: white !important;
 }
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -184,8 +188,11 @@ h6 {
   .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--contrast-color);
   }
+  /* #navmenu > ul > li.tasar > a:hover {
+    color: white !important;
+  } */
 
   .navmenu .dropdown ul {
     margin: 0;
@@ -560,7 +567,7 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #892025;
   padding: 60px 0;
   scroll-margin-top: 90px;
   overflow: clip;
