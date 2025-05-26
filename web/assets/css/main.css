@@ -24,7 +24,48 @@
 :root {
   scroll-behavior: smooth;
 }
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 
+  10%,
+  20% {
+    -webkit-transform: scale3d(0.95, 0.95, 0.95) rotate3d(0, 0, 1, -10deg);
+    transform: scale3d(0.95, 0.95, 0.95) rotate3d(0, 0, 1, -10deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+    transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -111,6 +152,19 @@ h6 {
 
 .tasar:hover a {
   color: white !important;
+}
+
+.wasap {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 60px;
+  width: 60px;
+  z-index: 10000;
+  visibility: visible;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: 100;
 }
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -481,7 +535,7 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  left: 15px;
   bottom: 15px;
   z-index: 99999;
   background-color: var(--accent-color);
