@@ -1409,9 +1409,6 @@ section,
   background-position: right 1rem center;
   background-size: 0.65rem;
 }
-.mr-2{
-  padding-right: 10px !important;
-}
 
 .filtro-select option {
   color: #000;
@@ -1439,6 +1436,22 @@ section,
 select option:disabled {
   background-color: #eeeeee;
   color: #666666;
+}
+
+.limpiar-filtros {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.limpiar-filtros:hover {
+   border-color: #00000089;
 }
 
 .dropdown-count {

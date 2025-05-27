@@ -50,4 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Inicializar todo
   initCustomMultiselects();
+
+  window.resetFiltros = function () {
+    // Deselecciona todos los checkboxes de los dropdowns personalizados
+    document
+      .querySelectorAll('.dropdown-options input[type="checkbox"]')
+      .forEach((cb) => {
+        cb.checked = false;
+      });
+
+    // Reinicia los contadores de los botones
+    document.querySelectorAll(".custom-multiselect").forEach((wrapper) => {
+      const id = wrapper.dataset.id;
+      const countSpan = document.getElementById(`${id}-count`);
+      if (countSpan) {
+        countSpan.textContent = "▼";
+      }
+    });
+
+    // También resetea selects normales si tenés
+    document.querySelectorAll(".filtro-select").forEach((select) => {
+      select.selectedIndex = 0;
+    });
+
+    // TODO opcional: volver a mostrar todas las propiedades
+    // filtrarPropiedades(); // si usás JS para eso
+  };
 });

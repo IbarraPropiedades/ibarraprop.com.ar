@@ -345,7 +345,6 @@
                     ><input type="checkbox" value="terreno" /> Terreno</label
                   >
                 </div>
-                
               </div>
 
               <select class="filtro-select" id="filtro-orden">
@@ -357,6 +356,14 @@
                 <option value="fecha-asc">Fecha ↑</option>
                 <option value="fecha-desc">Fecha ↓</option>
               </select>
+
+              <button
+                type="button"
+                class="limpiar-filtros"
+                onclick="resetFiltros()"
+              >
+                Limpiar filtros
+              </button>
             </div>
           </div>
         </nav>
@@ -697,7 +704,7 @@
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
     <!-- Main JS File -->
-    <script src="assets/js/dropdowns.js"></script>
+    <script defer src="assets/js/dropdowns.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
