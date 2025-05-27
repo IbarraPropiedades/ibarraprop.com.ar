@@ -1436,6 +1436,11 @@ section,
   margin: 0.5rem;
 }
 
+select option:disabled {
+  background-color: #eeeeee;
+  color: #666666;
+}
+
 .dropdown-count {
   margin-left: 0.1rem;
   font-size: 0.9rem;
