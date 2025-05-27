@@ -110,23 +110,79 @@
           <div class="container">
             <div class="row d-flex justify-content-center text-center">
               <div class="col-lg-8">
-                <h1>Properties</h1>
+                <h1>Encontrá tu lugar ideal</h1>
                 <p class="mb-0">
-                  Odio et unde deleniti. Deserunt numquam exercitationem.
-                  Officiis quo odio sint voluptas consequatur ut a odio
-                  voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi
-                  ratione sint. Sit quaerat ipsum dolorem.
+                  Casas, departamentos y espacios únicos en Zona Norte. Buscá,
+                  compará y encontrá tu nuevo hogar con nosotros.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <nav class="breadcrumbs">
+        <nav class="breadcrumbs with-filters">
           <div class="container">
-            <ol>
-              <li><a href="index.html">Home</a></li>
-              <li class="current">Properties</li>
-            </ol>
+            <div class="filtro-wrapper">
+              <select class="filtro-select" id="filtro-operacion">
+                <option value="">Operación</option>
+                <option value="venta">Venta</option>
+                <option value="alquiler">Alquiler</option>
+              </select>
+
+              <div class="custom-multiselect" data-id="zona">
+                <button
+                  type="button"
+                  class="dropdown-button"
+                  onclick="toggleDropdown('zona')"
+                >
+                  Zona
+                </button>
+                <div class="dropdown-options" id="dropdown-zona">
+                  <label
+                    ><input type="checkbox" value="san-isidro" /> San
+                    Isidro</label
+                  >
+                  <label
+                    ><input type="checkbox" value="vicente-lopez" /> Vicente
+                    López</label
+                  >
+                  <label><input type="checkbox" value="tigre" /> Tigre</label>
+                  <label
+                    ><input type="checkbox" value="nordelta" /> Nordelta</label
+                  >
+                </div>
+              </div>
+
+              <div class="custom-multiselect" data-id="tipo">
+                <button
+                  type="button"
+                  class="dropdown-button mr-2"
+                  onclick="toggleDropdown('tipo')"
+                >
+                  Tipo
+                </button>
+                <div class="dropdown-options" id="dropdown-tipo">
+                  <label><input type="checkbox" value="casa" /> Casa</label>
+                  <label
+                    ><input type="checkbox" value="departamento" />
+                    Departamento</label
+                  >
+                  <label><input type="checkbox" value="ph" /> PH</label>
+                  <label
+                    ><input type="checkbox" value="terreno" /> Terreno</label
+                  >
+                </div>
+              </div>
+
+              <select class="filtro-select" id="filtro-orden">
+                <option value="">Ordenar por</option>
+                <option value="precio-asc">Precio ↑</option>
+                <option value="precio-desc">Precio ↓</option>
+                <option value="titulo-asc">Título A-Z</option>
+                <option value="titulo-desc">Título Z-A</option>
+                <option value="fecha-asc">Fecha ↑</option>
+                <option value="fecha-desc">Fecha ↓</option>
+              </select>
+            </div>
           </div>
         </nav>
       </div>
@@ -143,28 +199,40 @@
             >
               <div class="card">
                 <img
-                  src="assets/img/properties/property-1.jpg"
+                  src="assets/img/propiedades/CasabarriopuertosARAUCARIAS/WhatsApp Image 2025-05-15 at 14.44.18 (2).jpeg"
                   alt=""
                   class="img-fluid"
                 />
                 <div class="card-body">
-                  <span class="sale-rent">Rent | $1200</span>
+                  <span class="sale-rent">Venta | $1200</span>
                   <h3>
-                    <a href="property-single.html" class="stretched-link"
-                      >204 Mount Olive Road Two</a
-                    >
+                    <a href="property-single.html" class="stretched-link">
+                      Casa Barrio Puerto Araucarias
+                    </a>
                   </h3>
                   <div
-                    class="card-content d-flex flex-column justify-content-center text-center"
+                    class="card-content d-flex flex-column justify-content-center text-center mt-3"
                   >
-                    <div class="row propery-info">
-                      <div class="col">Area</div>
-                      <div class="col">Beds</div>
-                      <div class="col">Baths</div>
-                      <div class="col">Garages</div>
+                    <div class="row propery-info text-muted">
+                      <div class="col">
+                        <i class="fas fa-vector-square"></i><br />
+                        <small>Area</small>
+                      </div>
+                      <div class="col">
+                        <i class="fas fa-bed"></i><br />
+                        <small>Beds</small>
+                      </div>
+                      <div class="col">
+                        <i class="fas fa-bath"></i><br />
+                        <small>Baths</small>
+                      </div>
+                      <div class="col">
+                        <i class="fas fa-car"></i><br />
+                        <small>Garage</small>
+                      </div>
                     </div>
-                    <div class="row">
-                      <div class="col">340m2</div>
+                    <div class="row mt-2 fw-bold">
+                      <div class="col">340m²</div>
                       <div class="col">5</div>
                       <div class="col">2</div>
                       <div class="col">1</div>
@@ -182,15 +250,15 @@
             >
               <div class="card">
                 <img
-                  src="assets/img/properties/property-2.jpg"
+                  src="assets/img/propiedades/2/WhatsApp Image 2025-05-15 at 14.36.06 (6).jpeg"
                   alt=""
                   class="img-fluid"
                 />
                 <div class="card-body">
-                  <span class="sale-rent">Sale | $350.000</span>
+                  <span class="sale-rent">Venta | $350.000</span>
                   <h3>
                     <a href="property-single.html" class="stretched-link"
-                      >647 Molie Road</a
+                      >Local Lomas San Isidro</a
                     >
                   </h3>
                   <div
@@ -446,6 +514,7 @@
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
+
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -453,6 +522,7 @@
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
     <!-- Main JS File -->
+    <script src="assets/js/dropdowns.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

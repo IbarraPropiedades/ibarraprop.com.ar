@@ -6,7 +6,8 @@
 }
 
 :root {
-  --background-color: #b52f36; /* Negro carbón profundo */
+  --background-color: #b52f36;
+  --background-color-oscuro: #892025;
   --default-color: #e0e0e0; /* Gris claro para texto general */
   --heading-color: #ffffff; /* Títulos bien contrastados */
   --accent-color: #1e1e1e; /* Rojo Ibarra como punto de tensión visual */
@@ -575,7 +576,7 @@ h6 {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #1e1e1eee;
   position: relative;
 }
 
@@ -591,8 +592,7 @@ h6 {
 }
 
 .page-title nav {
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
-  padding: 20px 0;
+  background-color: var(--background-color-oscuro);
 }
 
 .page-title nav ol {
@@ -1374,14 +1374,107 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Real Estate Section
+# Real Estate Section FILTROS
+--------------------------------------------------------------*/
+.filtro-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background: transparent;
+  align-items: center;
+}
+
+.filtro-select,
+.dropdown-button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: white;
+  cursor: pointer;
+  min-width: 180px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px; /* fuerza altura visual igual */
+  box-sizing: border-box;
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 320 512'%3E%3Cpath d='M31 192h258c17.7 0 26.7 21.5 14.1 34L174.1 355c-7.8 7.8-20.5 7.8-28.3 0L16.9 226C4.3 213.5 13.3 192 31 192z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.65rem;
+}
+.mr-2{
+  padding-right: 10px !important;
+}
+
+.filtro-select option {
+  color: #000;
+}
+
+.filtro-select:focus,
+.dropdown-button:focus {
+  outline: none;
+  border-color: #00000089;
+  box-shadow: 0 0 0 2px rgba(137, 32, 37, 0.4);
+}
+
+.filtro-select:hover,
+.dropdown-button:hover {
+  border-color: #00000089;
+}
+
+/* Multiselect personalizado */
+.custom-multiselect {
+  position: relative;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.dropdown-count {
+  margin-left: 0.1rem;
+  font-size: 0.9rem;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: #333;
+  min-width: 220px;
+  border-radius: 10px;
+  padding: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  top: 110%;
+  left: 0;
+}
+
+.dropdown-options label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dropdown-options input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/*--------------------------------------------------------------
+# Real Estate Section CARDS
 --------------------------------------------------------------*/
 .real-estate .card {
   background-color: var(--background-color);
   color: var(--default-color);
   border: none;
   position: relative;
-  border-radius: 0px;
+  border-radius: 0;
   overflow: hidden;
   min-height: 500px;
 }
@@ -1401,7 +1494,6 @@ section,
 .real-estate .card img {
   position: absolute;
   inset: 0;
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1415,47 +1507,49 @@ section,
   right: 0;
   z-index: 3;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
-.real-estate .card .card-body .sale-rent {
+.real-estate .card .sale-rent {
   display: inline-block;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--contrast-color);
-  padding: 4px 20px;
+  padding: 4px 16px;
   border: 2px solid var(--accent-color);
-  border-radius: 50px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.3);
   margin-bottom: 10px;
 }
 
 .real-estate .card .card-body h3 {
   font-weight: 700;
   font-size: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
   padding-left: 10px;
   border-left: 3px solid var(--accent-color);
 }
 
 .real-estate .card .card-body h3 a {
   color: var(--contrast-color);
+  text-decoration: none;
 }
 
 .real-estate .card .card-body .card-content {
   background-color: var(--accent-color);
   color: var(--contrast-color);
-  height: 80px;
+  height: 100px;
   visibility: hidden;
   opacity: 0;
-  margin-top: 10px;
-  margin-bottom: -80px;
+  margin-top: 12px;
+  margin-bottom: -100px;
   margin-left: -30px;
   margin-right: -30px;
-  transition: 0.3s;
-  padding: 0 10px;
-}
-
-.real-estate .card .card-body .card-content .propery-info {
-  font-weight: 500;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .real-estate .card:hover .card-content {
@@ -1464,8 +1558,33 @@ section,
   opacity: 1;
 }
 
+/* Íconos con texto */
+.real-estate .card .card-content .propery-info {
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.real-estate .card .card-content .propery-info .col {
+  padding: 4px;
+  line-height: 1.2;
+}
+
+.real-estate .card .card-content i {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.real-estate .card .card-content small {
+  font-size: 0.7rem;
+  color: #f2dbe1;
+}
+
+/* Hover style opcional para versión dark */
 .real-estate-2 .card:hover {
-  background-color: #000 !important; /* fuerza fondo negro */
+  background-color: #000 !important;
   color: #fff;
 }
 .real-estate-2 .card::before {

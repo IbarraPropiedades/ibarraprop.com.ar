@@ -154,4 +154,6 @@
   document.getElementById("copyright").innerHTML =
     currentYear +
     " © Copyright <strong><span>IBARRA Propiedades</span></strong>. Todos los derechos reservados. Argentina, Buenos Aires.";
+
+    
 })();
