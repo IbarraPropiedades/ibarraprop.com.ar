@@ -123,7 +123,8 @@
           <div class="container">
             <div class="filtro-wrapper">
               <select class="filtro-select" id="filtro-operacion">
-                <option value="">Operación</option>
+                <option value="operacion" disabled>Operación</option>
+                <option value="compra">Compra</option>
                 <option value="venta">Venta</option>
                 <option value="alquiler">Alquiler</option>
               </select>
@@ -137,18 +138,175 @@
                   Zona
                 </button>
                 <div class="dropdown-options" id="dropdown-zona">
+                  <!-- Vicente López -->
+                  <label><input type="checkbox" value="olivos" /> Olivos</label>
                   <label
-                    ><input type="checkbox" value="san-isidro" /> San
-                    Isidro</label
+                    ><input type="checkbox" value="la-lucila" /> La
+                    Lucila</label
                   >
                   <label
-                    ><input type="checkbox" value="vicente-lopez" /> Vicente
-                    López</label
+                    ><input type="checkbox" value="florida" /> Florida</label
                   >
-                  <label><input type="checkbox" value="tigre" /> Tigre</label>
+                  <label><input type="checkbox" value="munro" /> Munro</label>
+                  <label
+                    ><input type="checkbox" value="villa-martelli" /> Villa
+                    Martelli</label
+                  >
+
+                  <!-- San Isidro -->
+                  <label
+                    ><input type="checkbox" value="martinez" /> Martínez</label
+                  >
+                  <label
+                    ><input type="checkbox" value="acassuso" /> Acassuso</label
+                  >
+                  <label><input type="checkbox" value="beccar" /> Béccar</label>
+                  <label
+                    ><input type="checkbox" value="villa-adelina" /> Villa
+                    Adelina</label
+                  >
+                  <label
+                    ><input type="checkbox" value="san-isidro-centro" /> San
+                    Isidro Centro</label
+                  >
+
+                  <!-- San Fernando -->
+                  <label
+                    ><input type="checkbox" value="victoria" /> Victoria</label
+                  >
+                  <label
+                    ><input type="checkbox" value="virreyes" /> Virreyes</label
+                  >
+                  <label
+                    ><input type="checkbox" value="san-fernando-centro" /> San
+                    Fernando Centro</label
+                  >
+
+                  <!-- Tigre -->
+                  <label
+                    ><input type="checkbox" value="tigre-centro" /> Tigre
+                    Centro</label
+                  >
+                  <label
+                    ><input type="checkbox" value="general-pacheco" /> General
+                    Pacheco</label
+                  >
                   <label
                     ><input type="checkbox" value="nordelta" /> Nordelta</label
                   >
+                  <label
+                    ><input type="checkbox" value="don-torcuato" /> Don
+                    Torcuato</label
+                  >
+                  <label
+                    ><input type="checkbox" value="rincon-de-milberg" /> Rincón
+                    de Milberg</label
+                  >
+                  <label
+                    ><input type="checkbox" value="el-talar" /> El Talar</label
+                  >
+                  <label
+                    ><input type="checkbox" value="troncos-del-talar" /> Troncos
+                    del Talar</label
+                  >
+
+                  <!-- Pilar -->
+                  <label
+                    ><input type="checkbox" value="pilar-centro" /> Pilar
+                    Centro</label
+                  >
+                  <label
+                    ><input type="checkbox" value="del-viso" /> Del Viso</label
+                  >
+                  <label
+                    ><input type="checkbox" value="villa-rosa" /> Villa
+                    Rosa</label
+                  >
+                  <label
+                    ><input type="checkbox" value="manuel-alberti" /> Manuel
+                    Alberti</label
+                  >
+                  <label
+                    ><input type="checkbox" value="champagnat" />
+                    Champagnat</label
+                  >
+                  <label
+                    ><input type="checkbox" value="pilar-del-este" /> Pilar del
+                    Este</label
+                  >
+
+                  <!-- Escobar -->
+                  <label
+                    ><input type="checkbox" value="ingeniero-maschwitz" />
+                    Ingeniero Maschwitz</label
+                  >
+                  <label
+                    ><input type="checkbox" value="belen-de-escobar" /> Belén de
+                    Escobar</label
+                  >
+                  <label
+                    ><input type="checkbox" value="loma-verde" /> Loma
+                    Verde</label
+                  >
+                  <label><input type="checkbox" value="garin" /> Garín</label>
+                  <label><input type="checkbox" value="matheu" /> Matheu</label>
+
+                  <!-- Malvinas Argentinas -->
+                  <label
+                    ><input type="checkbox" value="los-polvorines" /> Los
+                    Polvorines</label
+                  >
+                  <label
+                    ><input type="checkbox" value="tortuguitas" />
+                    Tortuguitas</label
+                  >
+                  <label
+                    ><input type="checkbox" value="grand-bourg" /> Grand
+                    Bourg</label
+                  >
+
+                  <!-- San Miguel -->
+                  <label
+                    ><input type="checkbox" value="san-miguel-centro" /> San
+                    Miguel Centro</label
+                  >
+                  <label
+                    ><input type="checkbox" value="bella-vista" /> Bella
+                    Vista</label
+                  >
+                  <label><input type="checkbox" value="muniz" /> Muñiz</label>
+
+                  <!-- José C. Paz -->
+                  <label
+                    ><input type="checkbox" value="jose-c-paz-centro" /> José C.
+                    Paz Centro</label
+                  >
+                  <label
+                    ><input type="checkbox" value="barrio-frino" /> Barrio
+                    Frino</label
+                  >
+
+                  <!-- San Martín -->
+                  <label
+                    ><input type="checkbox" value="san-martin-centro" /> San
+                    Martín Centro</label
+                  >
+                  <label
+                    ><input type="checkbox" value="villa-ballester" /> Villa
+                    Ballester</label
+                  >
+                  <label
+                    ><input type="checkbox" value="san-andres" /> San
+                    Andrés</label
+                  >
+
+                  <!-- Campana -->
+                  <label
+                    ><input type="checkbox" value="campana" /> Campana</label
+                  >
+
+                  <!-- Zárate -->
+                  <label><input type="checkbox" value="zarate" /> Zárate</label>
                 </div>
               </div>
 
@@ -161,16 +319,33 @@
                   Tipo
                 </button>
                 <div class="dropdown-options" id="dropdown-tipo">
+                  <label><input type="checkbox" value="campo" /> Campo</label>
                   <label><input type="checkbox" value="casa" /> Casa</label>
+                  <label
+                    ><input type="checkbox" value="cochera" /> Cochera</label
+                  >
                   <label
                     ><input type="checkbox" value="departamento" />
                     Departamento</label
+                  >
+                  <label
+                    ><input type="checkbox" value="deposito" /> Depósito</label
+                  >
+                  <label
+                    ><input type="checkbox" value="edificio-comercial" />
+                    Edificio Comercial</label
+                  >
+                  <label><input type="checkbox" value="galpon" /> Galpón</label>
+                  <label><input type="checkbox" value="local" /> Local</label>
+                  <label
+                    ><input type="checkbox" value="oficina" /> Oficina</label
                   >
                   <label><input type="checkbox" value="ph" /> PH</label>
                   <label
                     ><input type="checkbox" value="terreno" /> Terreno</label
                   >
                 </div>
+                
               </div>
 
               <select class="filtro-select" id="filtro-orden">
