@@ -71,7 +71,7 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
+  color: var(--contrast-color);
   background-color: var(--contrast-color-color);
   font-family: var(--default-font);
 }
@@ -199,7 +199,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--contrast-color);
     font-size: 16px;
     padding: 0 2px;
     font-family: var(--nav-font);
@@ -436,7 +436,7 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
+  color: var(--contrast-color);
   background-color: #892025;
   font-size: 14px;
   padding: 40px 0 0 0;
@@ -444,7 +444,7 @@ h6 {
 }
 
 .footer .icon {
-  color: var(--accent-color);
+  color: var(--contrast-color);
   margin-right: 15px;
   font-size: 24px;
   line-height: 0;
@@ -467,9 +467,9 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid var(--contrast-color);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: var(--contrast-color);
   margin-right: 10px;
   transition: 0.3s;
 }
