@@ -244,6 +244,7 @@ h6 {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--contrast-color);
+    font-size: 18px;
   }
   /* #navmenu > ul > li.tasar > a:hover {
     color: white !important;
@@ -651,6 +652,8 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  color: var(--accent-color);
+  font-weight: 600;
 }
 
 /*--------------------------------------------------------------
@@ -980,7 +983,7 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.abt{
+.abt {
   background-color: var(--accent-color); /* Gris moderno claro */
   padding: 2rem;
   border-radius: 16px;
