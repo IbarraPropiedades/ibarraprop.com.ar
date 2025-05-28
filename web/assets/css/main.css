@@ -980,10 +980,16 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.abt{
+  background-color: var(--accent-color); /* Gris moderno claro */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
 .about .content .who-we-are {
   text-transform: uppercase;
   margin-bottom: 15px;
-  color: var(--accent-color);
+  color: var(--background-color);
   font-weight: 600;
 }
 
@@ -1004,7 +1010,7 @@ section,
 .about .content ul i {
   font-size: 1.25rem;
   margin-right: 4px;
-  color: var(--accent-color);
+  color: var(--background-color);
 }
 
 .about .content p:last-child {
