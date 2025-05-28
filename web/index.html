@@ -806,122 +806,126 @@
       <!-- Contact Section -->
       <section id="contact" class="contact section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-            <iframe
-              style="border: 0; width: 100%; height: 270px"
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1382.6138924034235!2d-58.54912613968751!3d-34.49201808059839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDI5JzMwLjkiUyA1OMKwMzInNTIuOCJX!5e0!3m2!1ses!2sar!4v1748381194372!5m2!1ses!2sar"
-              frameborder="0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <!-- Encabezado -->
+          <div class="text-center mb-4">
+            <h3>¿Querés vender o alquilar tu propiedad?</h3>
+            <p style="color: black; font-weight: 600">
+              Completá el formulario y coordinamos una tasación sin compromiso.
+            </p>
           </div>
-          <!-- End Google Maps -->
 
+          <!-- Formulario -->
           <div class="row gy-4">
-            <div class="col-lg-4">
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+            <div class="col-lg-12">
+              <form id="contactForm" action="" method="POST" class="tasa-form">
+                <div class="form-row">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Nombre y Apellido"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                  />
                 </div>
-              </div>
-              <!-- End Info Item -->
 
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                <div class="form-row">
+                  <input
+                    type="tel"
+                    name="telefono"
+                    placeholder="Teléfono"
+                    required
+                  />
+                  <select name="localidad" id="localidad" required>
+                    <option value="">Localidad</option>
+                    <option>Acassuso</option>
+                    <option>Beccar</option>
+                    <option>Boulogne</option>
+                    <option>Del Viso</option>
+                    <option>Don Torcuato</option>
+                    <option>Florida</option>
+                    <option>General Pacheco</option>
+                    <option>Ingeniero Maschwitz</option>
+                    <option>La Lucila</option>
+                    <option>Martínez</option>
+                    <option>Nordelta</option>
+                    <option>Olivos</option>
+                    <option>Pilar</option>
+                    <option>San Fernando</option>
+                    <option>San Isidro</option>
+                    <option>Tigre</option>
+                    <option>Tortuguitas</option>
+                    <option>Vicente López</option>
+                    <option>Villa Adelina</option>
+                  </select>
                 </div>
-              </div>
-              <!-- End Info Item -->
 
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                <div class="form-row">
+                  <select name="tipo_operacion" required>
+                    <option value="">Operación</option>
+                    <option>Venta</option>
+                    <option>Alquiler</option>
+                    <option>Alquiler Temporario</option>
+                  </select>
+                  <select name="tipo_inmueble" required>
+                    <option value="">Tipo de Inmueble</option>
+                    <option>Departamento</option>
+                    <option>Casa</option>
+                    <option>PH</option>
+                    <option>Terreno</option>
+                    <option>Local</option>
+                    <option>Oficina</option>
+                    <option>Otro</option>
+                  </select>
                 </div>
-              </div>
-              <!-- End Info Item -->
-            </div>
 
-            <div class="col-lg-8">
-              <form
-                action="forms/contact.php"
-                method="post"
-                class="php-email-form"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div class="row gy-4">
-                  <div class="col-md-6">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Your Name"
-                      required=""
-                    />
-                  </div>
+                <textarea
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Contanos un poco más sobre tu propiedad, ubicación, estado, superficie, etc."
+                ></textarea>
 
-                  <div class="col-md-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      placeholder="Your Email"
-                      required=""
-                    />
-                  </div>
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://ibarraprop.com.ar/gracias.html"
+                />
 
-                  <div class="col-md-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="subject"
-                      placeholder="Subject"
-                      required=""
-                    />
-                  </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  <div class="g-recaptcha" data-sitekey=""></div>
+                </div>
 
-                  <div class="col-md-12">
-                    <textarea
-                      class="form-control"
-                      name="message"
-                      rows="6"
-                      placeholder="Message"
-                      required=""
-                    ></textarea>
-                  </div>
-
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-
-                    <button type="submit">Send Message</button>
-                  </div>
+                <div style="text-align: center">
+                  <button type="submit" class="tasa-btn" id="submit-button">
+                    Enviar solicitud de Tasación
+                  </button>
                 </div>
               </form>
             </div>
-            <!-- End Contact Form -->
+
+            <!-- Mapa -->
+            <!-- <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+              <iframe
+                style="border: 0; width: 100%; height: 270px"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1382.6138924034235!2d-58.54912613968751!3d-34.49201808059839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDI5JzMwLjkiUyA1OMKwMzInNTIuOCJX!5e0!3m2!1ses!2sar!4v1748381194372!5m2!1ses!2sar"
+                frameborder="0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div> -->
           </div>
         </div>
       </section>

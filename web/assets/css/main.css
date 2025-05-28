@@ -1834,3 +1834,85 @@ select option:disabled {
 .starter-section {
   /* Add your styles here */
 }
+.tasa-form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tasa-form input,
+.tasa-form select,
+.tasa-form textarea {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: var(--font-size20);
+  border-radius: 5px;
+  border: 1px solid var(--contrast-color);
+  font-family: var(--font-texto);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s ease;
+  background-color: var(--accent-color);
+  color: white !important;
+}
+
+.tasa-form input:focus,
+.tasa-form select:focus,
+.tasa-form textarea:focus {
+  border-color: var(--contrast-color);
+  outline: none;
+}
+
+.tasa-form input::placeholder,
+.tasa-form textarea::placeholder {
+  color: var(--contrast-color); /* elegí el gris que combine con tu fondo */
+  opacity: 1;     /* asegura visibilidad total en todos los navegadores */
+}
+
+.tasa-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  appearance: none; /* Oculta el diseño nativo */
+  background-color: var(--accent-color);
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="gray" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.25 4.38a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem; /* espacio para la flecha */
+  cursor: pointer;
+  color: white;
+}
+
+.tasa-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.tasa-btn {
+  background-color:var(--contrast-color);
+  color: black;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  border: none;
+  font-weight:600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tasa-btn:hover {
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none !important;
+}
