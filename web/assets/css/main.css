@@ -424,7 +424,7 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: #892025;
     transition: 0.3s;
   }
 
@@ -645,6 +645,12 @@ section,
 }
 
 .section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.section-title h3 {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 15px;
