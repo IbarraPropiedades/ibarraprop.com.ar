@@ -1537,6 +1537,12 @@ select option:disabled {
   font-size: 0.7rem;
   color: white;
 }
+.video-propiedad {
+  width: 100%;
+  height: 300px; /* o el valor que prefieras */
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 /* Hover style opcional para versión dark */
 .real-estate-2 .card:hover {
