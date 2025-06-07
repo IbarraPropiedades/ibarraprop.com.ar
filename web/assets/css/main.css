@@ -476,8 +476,8 @@ h6 {
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color:  black;
+  border-color: black;
 }
 
 .footer .copyright {
