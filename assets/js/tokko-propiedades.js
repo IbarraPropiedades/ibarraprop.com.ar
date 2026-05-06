@@ -13,7 +13,7 @@
     limit: 12,
     shared: true,
     fallbackImage: "assets/img/properties/property-1.jpg",
-    detailPage: "property-single.html",
+    detailPage: "detalle-propiedad.html",
     whatsappPhone: "5491121805630",
   };
 

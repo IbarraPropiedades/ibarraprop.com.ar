@@ -1,36 +1,1134 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-AR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ibarra Propiedades</title>
-      <!-- Favicons -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Ibarra Propiedades | Inmobiliaria en Zona Norte</title>
+    <meta
+      name="description"
+      content="Ibarra Propiedades, inmobiliaria en Zona Norte con más de 20 años de experiencia. Propiedades en venta y alquiler, tasaciones y asesoramiento inmobiliario personalizado."
+    />
+    <meta
+      name="keywords"
+      content="Ibarra Propiedades, inmobiliaria Zona Norte, propiedades en venta, propiedades en alquiler, tasaciones inmobiliarias, casas en venta, departamentos en venta, San Isidro, Vicente López, Tigre"
+    />
+    <meta name="author" content="Ibarra Propiedades" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#892025" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <link rel="canonical" href="https://ibarraprop.com.ar/" />
+
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ibarra Propiedades" />
+    <meta
+      property="og:title"
+      content="Ibarra Propiedades | Inmobiliaria en Zona Norte"
+    />
+    <meta
+      property="og:description"
+      content="Comprá, vendé o alquilá tu propiedad con asesoramiento profesional en Zona Norte. Tasaciones, propiedades destacadas y atención personalizada."
+    />
+    <meta property="og:url" content="https://ibarraprop.com.ar/" />
+    <meta
+      property="og:image"
+      content="https://ibarraprop.com.ar/assets/img/logo.png"
+    />
+    <meta property="og:image:alt" content="Logo de Ibarra Propiedades" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ibarra Propiedades | Inmobiliaria en Zona Norte"
+    />
+    <meta
+      name="twitter:description"
+      content="Propiedades en venta y alquiler, tasaciones y asesoramiento inmobiliario en Zona Norte."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ibarraprop.com.ar/assets/img/logo.png"
+    />
+
+    <!-- Favicons -->
     <link href="assets/img/favicon/favicon.ico" rel="icon" />
     <link
       href="assets/img/favicon/apple-touch-icon.png"
       rel="apple-touch-icon"
     />
 
+    <!-- Performance: external connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+    <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-AvbHedHu8FDxE3ddefa5tQ2Oa4KQbZwkqc7TqvQl4E8c5q1h9fY1xGj9b6X2YvL3B4h7sZ9B4Yq0Qp1x0Q6J7g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "RealEstateAgent",
+            "@id": "https://ibarraprop.com.ar/#realestateagent",
+            "name": "Ibarra Propiedades",
+            "url": "https://ibarraprop.com.ar/",
+            "logo": "https://ibarraprop.com.ar/assets/img/logo.png",
+            "image": "https://ibarraprop.com.ar/assets/img/logo.png",
+            "description": "Inmobiliaria en Zona Norte especializada en propiedades en venta, alquiler y tasaciones inmobiliarias.",
+            "telephone": "+54 9 11 2180 5630",
+            "email": "info@ibarraprop.com.ar",
+            "areaServed": [
+              "Zona Norte",
+              "San Isidro",
+              "Vicente López",
+              "Tigre",
+              "San Fernando",
+              "Pilar",
+              "Escobar"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "AR",
+              "addressRegion": "Buenos Aires"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+54 9 11 2180 5630",
+              "contactType": "customer service",
+              "areaServed": "AR",
+              "availableLanguage": ["es-AR", "es"]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://ibarraprop.com.ar/#website",
+            "url": "https://ibarraprop.com.ar/",
+            "name": "Ibarra Propiedades",
+            "publisher": {
+              "@id": "https://ibarraprop.com.ar/#realestateagent"
+            },
+            "inLanguage": "es-AR",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://ibarraprop.com.ar/propiedades.html?search={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://ibarraprop.com.ar/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://ibarraprop.com.ar/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
-  <body>
-    <div class="logo"><span class="logo-i">I</span>BARRA</div>
-    <div class="subtitulo">30 AÑOS</div>
-    <div class="servicios">
-      <p>TASACIÓN</p>
-      <p>VENTAS</p>
-      <p>ALQUILERES</p>
+
+  <body class="index-page">
+    <a class="visually-hidden-focusable" href="#main"
+      >Saltar al contenido principal</a
+    >
+
+    <!-- WhatsApp flotante -->
+    <div class="wasap" style="animation-name: tada">
+      <a
+        href="https://api.whatsapp.com/send?l=es&text=Hola%20Ibarra%20Propiedades!%20Quiero%20consultarles%20por%20una%20propiedad&phone=+5491121805630"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Consultar por WhatsApp a Ibarra Propiedades"
+      >
+        <img
+          src="assets/img/svg/logo-wapp-01.svg"
+          alt="WhatsApp de Ibarra Propiedades"
+          width="64"
+          height="64"
+          loading="eager"
+          decoding="async"
+        />
+      </a>
     </div>
-    <div class="claim">TU LLAVE AL<br />HOGAR PERFECTO</div>
-    <br />
-    <br />
-    <p class="mensaje-obras">
-      Estamos construyendo una nueva experiencia online.<br />Muy pronto vas a
-      poder recorrer nuestras propiedades desde acá.
-    </p>
+
+    <!-- HEADER -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center"
+          aria-label="Ibarra Propiedades - Inicio"
+        >
+          <img
+            src="assets/img/logo.png"
+            alt="Ibarra Propiedades"
+            width="170"
+            height="80"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </a>
+
+        <nav id="navmenu" class="navmenu" aria-label="Navegación principal">
+          <ul>
+            <li><a href="#hero" class="active">Inicio</a></li>
+            <li><a href="propiedades.html">Propiedades</a></li>
+            <li><a href="#services">Vender</a></li>
+            <li><a href="#about">Quiénes somos</a></li>
+            <li><a href="#zonas">Zonas</a></li>
+            <li class="tasar">
+              <a href="#contact" style="color: black; margin-right: 15px"
+                >Tasá ahora</a
+              >
+            </li>
+          </ul>
+          <i
+            class="mobile-nav-toggle d-xl-none bi bi-list"
+            role="button"
+            tabindex="0"
+            aria-label="Abrir menú de navegación"
+          ></i>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="hero section dark-background"
+        aria-labelledby="hero-title"
+      >
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-video"
+          aria-hidden="true"
+          preload="metadata"
+        >
+          <source src="assets/video/1.mp4" type="video/mp4" />
+          Tu navegador no soporta el video HTML5.
+        </video>
+        <div class="overlay" aria-hidden="true"></div>
+
+        <div class="hero-content" data-aos="fade-up">
+          <p class="hero-kicker">Inmobiliaria en Zona Norte</p>
+          <h1 id="hero-title">
+            Tu próximo hogar empieza con una decisión bien asesorada
+          </h1>
+          <p class="hero-subtitle">
+            Comprá, vendé o alquilá propiedades con el acompañamiento de una
+            inmobiliaria local, cercana y especializada en San Isidro, Vicente
+            López, Tigre y alrededores.
+          </p>
+
+          <form
+            class="search-bar"
+            action="propiedades.html"
+            method="GET"
+            aria-label="Buscador rápido de propiedades"
+          >
+            <div class="custom-select-wrapper">
+              <label class="visually-hidden" for="operacion">Operación</label>
+              <select id="operacion" name="operacion" class="custom-select">
+                <option value="" selected>Operación</option>
+                <option value="venta">Venta</option>
+                <option value="alquiler">Alquiler</option>
+                <option value="alquiler-temporario">Alquiler temporario</option>
+              </select>
+              <i class="fas fa-chevron-down select-icon" aria-hidden="true"></i>
+            </div>
+
+            <div class="custom-select-wrapper">
+              <label class="visually-hidden" for="tipo"
+                >Tipo de propiedad</label
+              >
+              <select id="tipo" name="tipo" class="custom-select">
+                <option value="" selected>Tipo</option>
+                <option value="casa">Casa</option>
+                <option value="campo">Campo</option>
+                <option value="cochera">Cochera</option>
+                <option value="departamento">Departamento</option>
+                <option value="deposito">Depósito</option>
+                <option value="edificio-comercial">Edificio comercial</option>
+                <option value="galpon">Galpón</option>
+                <option value="local">Local</option>
+                <option value="oficina">Oficina</option>
+                <option value="ph">PH</option>
+                <option value="terreno">Terreno</option>
+              </select>
+              <i class="fas fa-chevron-down select-icon" aria-hidden="true"></i>
+            </div>
+
+            <div class="custom-select-wrapper">
+              <label class="visually-hidden" for="zona">Zona</label>
+              <select id="zona" name="zona" class="custom-select">
+                <option value="" selected>Zona</option>
+                <optgroup label="Vicente López">
+                  <option value="olivos">Olivos</option>
+                  <option value="la-lucila">La Lucila</option>
+                  <option value="florida">Florida</option>
+                  <option value="munro">Munro</option>
+                  <option value="villa-martelli">Villa Martelli</option>
+                </optgroup>
+                <optgroup label="San Isidro">
+                  <option value="martinez">Martínez</option>
+                  <option value="acassuso">Acassuso</option>
+                  <option value="beccar">Béccar</option>
+                  <option value="villa-adelina">Villa Adelina</option>
+                  <option value="san-isidro-centro">San Isidro Centro</option>
+                </optgroup>
+                <optgroup label="San Fernando">
+                  <option value="victoria">Victoria</option>
+                  <option value="virreyes">Virreyes</option>
+                  <option value="san-fernando-centro">
+                    San Fernando Centro
+                  </option>
+                </optgroup>
+                <optgroup label="Tigre">
+                  <option value="tigre-centro">Tigre Centro</option>
+                  <option value="general-pacheco">General Pacheco</option>
+                  <option value="nordelta">Nordelta</option>
+                  <option value="don-torcuato">Don Torcuato</option>
+                  <option value="rincon-de-milberg">Rincón de Milberg</option>
+                  <option value="el-talar">El Talar</option>
+                  <option value="troncos-del-talar">Troncos del Talar</option>
+                </optgroup>
+                <optgroup label="Pilar">
+                  <option value="pilar-centro">Pilar Centro</option>
+                  <option value="del-viso">Del Viso</option>
+                  <option value="villa-rosa">Villa Rosa</option>
+                  <option value="manuel-alberti">Manuel Alberti</option>
+                  <option value="champagnat">Champagnat</option>
+                  <option value="pilar-del-este">Pilar del Este</option>
+                </optgroup>
+                <optgroup label="Escobar">
+                  <option value="ingeniero-maschwitz">
+                    Ingeniero Maschwitz
+                  </option>
+                  <option value="belen-de-escobar">Belén de Escobar</option>
+                  <option value="loma-verde">Loma Verde</option>
+                  <option value="garin">Garín</option>
+                  <option value="matheu">Matheu</option>
+                </optgroup>
+                <optgroup label="Otras zonas">
+                  <option value="los-polvorines">Los Polvorines</option>
+                  <option value="tortuguitas">Tortuguitas</option>
+                  <option value="grand-bourg">Grand Bourg</option>
+                  <option value="san-miguel-centro">San Miguel Centro</option>
+                  <option value="bella-vista">Bella Vista</option>
+                  <option value="muniz">Muñiz</option>
+                  <option value="jose-c-paz-centro">José C. Paz Centro</option>
+                  <option value="san-martin-centro">San Martín Centro</option>
+                  <option value="villa-ballester">Villa Ballester</option>
+                  <option value="campana">Campana</option>
+                  <option value="zarate">Zárate</option>
+                </optgroup>
+              </select>
+              <i class="fas fa-chevron-down select-icon" aria-hidden="true"></i>
+            </div>
+
+            <button class="search-button" type="submit">
+              Buscar propiedades
+            </button>
+          </form>
+
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a href="propiedades.html" class="btn btn-primary"
+              >Ver propiedades</a
+            >
+            <a href="#contact" class="btn btn-outline-light"
+              >Tasá tu propiedad</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- Services Section -->
+      <section
+        id="services"
+        class="services section"
+        aria-labelledby="services-title"
+      >
+        <div class="container section-title" data-aos="fade-up">
+          <h2 id="services-title">¿Cómo vendemos tu propiedad?</h2>
+          <p>
+            Un proceso claro, estratégico y acompañado para que vendas o
+            alquiles con seguridad, visibilidad y mejores decisiones
+            comerciales.
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                </div>
+                <h3>Coordinamos una visita profesional</h3>
+                <p>
+                  Relevamos la propiedad, analizamos su estado, ubicación,
+                  diferenciales y potencial dentro del mercado inmobiliario
+                  actual.
+                </p>
+              </article>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+                </div>
+                <h3>Realizamos una tasación estratégica</h3>
+                <p>
+                  Definimos un valor competitivo en base a zona, demanda, estado
+                  del inmueble y referencias reales de propiedades comparables.
+                </p>
+              </article>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-megaphone" aria-hidden="true"></i>
+                </div>
+                <h3>Publicamos con máxima visibilidad</h3>
+                <p>
+                  Preparamos la propiedad para mostrarse mejor y la difundimos
+                  en canales digitales, portales inmobiliarios y redes sociales.
+                </p>
+              </article>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-chat-dots" aria-hidden="true"></i>
+                </div>
+                <h3>Gestionamos consultas y visitas</h3>
+                <p>
+                  Filtramos interesados, coordinamos recorridas y mantenemos una
+                  comunicación clara para que sepas qué está pasando en cada
+                  etapa.
+                </p>
+              </article>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-person-badge" aria-hidden="true"></i>
+                </div>
+                <h3>Negociamos con criterio profesional</h3>
+                <p>
+                  Te asesoramos frente a ofertas, condiciones, documentación y
+                  escenarios de negociación para cuidar tu operación.
+                </p>
+              </article>
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-house-check" aria-hidden="true"></i>
+                </div>
+                <h3>Acompañamos hasta el cierre</h3>
+                <p>
+                  Seguimos la operación hasta la reserva, boleto, firma o
+                  entrega, priorizando seguridad, transparencia y tranquilidad.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section" aria-labelledby="about-title">
+        <div class="container abt">
+          <div class="row gy-4 align-items-center">
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <p class="who-we-are">Quiénes somos</p>
+              <h2 id="about-title">
+                Una inmobiliaria de Zona Norte con mirada cercana y criterio
+                profesional
+              </h2>
+              <p class="fst-italic">
+                En Ibarra Propiedades contamos con más de 20 años de experiencia
+                en el mercado inmobiliario de Zona Norte. Conocemos sus barrios,
+                sus oportunidades y las decisiones que hacen que una operación
+                sea segura, clara y conveniente.
+              </p>
+              <ul>
+                <li>
+                  <i class="bi bi-house-check" aria-hidden="true"></i>
+                  <span
+                    >Especialistas en propiedades de San Isidro, Vicente López,
+                    Tigre y alrededores.</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-person-badge" aria-hidden="true"></i>
+                  <span
+                    >Atención personalizada para propietarios, compradores e
+                    inquilinos.</span
+                  >
+                </li>
+                <li>
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                  <span
+                    >Difusión estratégica en canales digitales para lograr mayor
+                    visibilidad y consultas calificadas.</span
+                  >
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn-primary mt-3"
+                >Solicitar asesoramiento</a
+              >
+            </div>
+
+            <div
+              class="col-lg-6 about-images"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="row gy-4">
+                <div class="col-lg-6">
+                  <img
+                    src="assets/img/about-company-1.jpg"
+                    class="img-fluid"
+                    alt="Asesoramiento inmobiliario personalizado de Ibarra Propiedades"
+                    width="640"
+                    height="760"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <div class="row gy-4">
+                    <div class="col-lg-12">
+                      <img
+                        src="assets/img/about-company-2.jpg"
+                        class="img-fluid"
+                        alt="Propiedades en venta y alquiler en Zona Norte"
+                        width="640"
+                        height="360"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="col-lg-12">
+                      <img
+                        src="assets/img/about-company-3.jpg"
+                        class="img-fluid"
+                        alt="Equipo inmobiliario acompañando una operación segura"
+                        width="640"
+                        height="360"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Stats Section -->
+      <section
+        id="stats"
+        class="stats section"
+        aria-label="Indicadores de confianza de Ibarra Propiedades"
+      >
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i
+                  class="bi bi-emoji-smile color-blue flex-shrink-0"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <span
+                    data-purecounter-start="0"
+                    data-purecounter-end="312"
+                    data-purecounter-duration="1"
+                    class="purecounter"
+                  ></span>
+                  <p>Clientes asesorados</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i
+                  class="bi bi-journal-richtext color-orange flex-shrink-0"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <span
+                    data-purecounter-start="0"
+                    data-purecounter-end="183"
+                    data-purecounter-duration="1"
+                    class="purecounter"
+                  ></span>
+                  <p>Operaciones acompañadas</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i
+                  class="bi bi-headset color-green flex-shrink-0"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <span
+                    data-purecounter-start="0"
+                    data-purecounter-end="2563"
+                    data-purecounter-duration="1"
+                    class="purecounter"
+                  ></span>
+                  <p>Horas de asesoramiento</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i
+                  class="bi bi-people color-pink flex-shrink-0"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <span
+                    data-purecounter-start="0"
+                    data-purecounter-end="20"
+                    data-purecounter-duration="1"
+                    class="purecounter"
+                  ></span>
+                  <p>Barrios de Zona Norte</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Stats Section -->
+
+      <!-- Featured CTA Section -->
+      <section
+        id="propiedades-destacadas"
+        class="section featured-properties"
+        aria-labelledby="featured-title"
+      >
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2 id="featured-title">Propiedades en venta y alquiler</h2>
+            <p>
+              Explorá oportunidades seleccionadas en Zona Norte o consultanos
+              para encontrar una propiedad alineada a tu búsqueda, presupuesto y
+              momento de vida.
+            </p>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-building" aria-hidden="true"></i>
+                </div>
+                <h3>Departamentos</h3>
+                <p>
+                  Opciones en venta y alquiler para vivir, invertir o mudarte
+                  dentro de Zona Norte.
+                </p>
+                <a
+                  href="propiedades.html?tipo=departamento"
+                  class="stretched-link"
+                  aria-label="Ver departamentos en Ibarra Propiedades"
+                ></a>
+              </article>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-house-door" aria-hidden="true"></i>
+                </div>
+                <h3>Casas y PH</h3>
+                <p>
+                  Propiedades familiares, casas con jardín, PH y alternativas
+                  residenciales bien ubicadas.
+                </p>
+                <a
+                  href="propiedades.html?tipo=casa"
+                  class="stretched-link"
+                  aria-label="Ver casas y PH en Ibarra Propiedades"
+                ></a>
+              </article>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <article class="service-item position-relative h-100">
+                <div class="icon">
+                  <i class="bi bi-shop" aria-hidden="true"></i>
+                </div>
+                <h3>Locales, oficinas y terrenos</h3>
+                <p>
+                  Inmuebles comerciales, terrenos y oportunidades para proyectos
+                  o inversión.
+                </p>
+                <a
+                  href="propiedades.html"
+                  class="stretched-link"
+                  aria-label="Ver inmuebles comerciales y terrenos"
+                ></a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Featured CTA Section -->
+
+      <!-- Zones Section -->
+      <section
+        id="zonas"
+        class="section zonas-section"
+        aria-labelledby="zonas-title"
+      >
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2 id="zonas-title">Zonas donde trabajamos</h2>
+            <p>
+              Acompañamos operaciones inmobiliarias en los principales barrios y
+              localidades de Zona Norte, con conocimiento real del mercado
+              local.
+            </p>
+          </div>
+          <div class="row gy-3">
+            <div class="col-md-3 col-6">
+              <a class="zone-link" href="propiedades.html?zona=san-isidro"
+                >San Isidro</a
+              >
+            </div>
+            <div class="col-md-3 col-6">
+              <a class="zone-link" href="propiedades.html?zona=vicente-lopez"
+                >Vicente López</a
+              >
+            </div>
+            <div class="col-md-3 col-6">
+              <a class="zone-link" href="propiedades.html?zona=tigre">Tigre</a>
+            </div>
+            <div class="col-md-3 col-6">
+              <a class="zone-link" href="propiedades.html?zona=san-fernando"
+                >San Fernando</a
+              >
+            </div>
+            <div class="col-md-3 col-6">
+              <a class="zone-link" href="propiedades.html?zona=olivos">Olivos</a>
+            </div>
+            <div class="col-md-3 col-6">
+              <a class="zone-link" href="propiedades.html?zona=martinez"
+                >Martínez</a
+              >
+            </div>
+            <div class="col-md-3 col-6">
+              <a class="zone-link" href="propiedades.html?zona=beccar">Béccar</a>
+            </div>
+            <div class="col-md-3 col-6">
+              <a class="zone-link" href="propiedades.html?zona=nordelta"
+                >Nordelta</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Zones Section -->
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="contact section"
+        aria-labelledby="contact-title"
+      >
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-center mb-4">
+            <h2 id="contact-title">¿Querés vender o alquilar tu propiedad?</h2>
+            <p style="color: black; font-weight: 600">
+              Completá el formulario y coordinamos una tasación sin compromiso.
+            </p>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-12">
+              <!-- TODO: agregar action real del proveedor de formularios si corresponde. -->
+              <form
+                id="contactForm"
+                action=""
+                method="POST"
+                class="tasa-form"
+                aria-label="Formulario para solicitar tasación inmobiliaria"
+              >
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="visually-hidden" for="name"
+                      >Nombre y apellido</label
+                    >
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Nombre y apellido"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label class="visually-hidden" for="email">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="visually-hidden" for="telefono"
+                      >Teléfono</label
+                    >
+                    <input
+                      type="tel"
+                      name="telefono"
+                      id="telefono"
+                      placeholder="Teléfono"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+                  <div class="form-field">
+                    <label class="visually-hidden" for="localidad"
+                      >Localidad</label
+                    >
+                    <select name="localidad" id="localidad" required>
+                      <option value="">Localidad</option>
+                      <option>Acassuso</option>
+                      <option>Béccar</option>
+                      <option>Boulogne</option>
+                      <option>Del Viso</option>
+                      <option>Don Torcuato</option>
+                      <option>Florida</option>
+                      <option>General Pacheco</option>
+                      <option>Ingeniero Maschwitz</option>
+                      <option>La Lucila</option>
+                      <option>Martínez</option>
+                      <option>Nordelta</option>
+                      <option>Olivos</option>
+                      <option>Pilar</option>
+                      <option>San Fernando</option>
+                      <option>San Isidro</option>
+                      <option>Tigre</option>
+                      <option>Tortuguitas</option>
+                      <option>Vicente López</option>
+                      <option>Villa Adelina</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-field">
+                    <label class="visually-hidden" for="tipo_operacion"
+                      >Tipo de operación</label
+                    >
+                    <select name="tipo_operacion" id="tipo_operacion" required>
+                      <option value="">Operación</option>
+                      <option>Venta</option>
+                      <option>Alquiler</option>
+                      <option>Alquiler temporario</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label class="visually-hidden" for="tipo_inmueble"
+                      >Tipo de inmueble</label
+                    >
+                    <select name="tipo_inmueble" id="tipo_inmueble" required>
+                      <option value="">Tipo de inmueble</option>
+                      <option>Departamento</option>
+                      <option>Casa</option>
+                      <option>PH</option>
+                      <option>Terreno</option>
+                      <option>Local</option>
+                      <option>Oficina</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                </div>
+
+                <label class="visually-hidden" for="mensaje">Mensaje</label>
+                <textarea
+                  name="mensaje"
+                  id="mensaje"
+                  rows="4"
+                  placeholder="Contanos un poco más sobre tu propiedad: ubicación, estado, superficie, ambientes y cualquier dato relevante."
+                ></textarea>
+
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://ibarraprop.com.ar/gracias.html"
+                />
+
+                <!-- TODO: agregar sitekey real de reCAPTCHA antes de publicar. -->
+                <div
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  <div class="g-recaptcha" data-sitekey=""></div>
+                </div>
+
+                <div style="text-align: center">
+                  <button type="submit" class="tasa-btn" id="submit-button">
+                    Enviar solicitud de tasación
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-lg-3 col-md-6 d-flex">
+            <div class="address">
+              <img
+                src="assets/img/logo.png"
+                alt="Ibarra Propiedades"
+                style="height: 80px"
+                width="170"
+                height="80"
+                loading="lazy"
+                decoding="async"
+              />
+              <p class="mt-3 mb-0">
+                Inmobiliaria especializada en venta, alquiler y tasación de
+                propiedades en Zona Norte.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex">
+            <i class="bi bi-telephone-fill icon" aria-hidden="true"></i>
+            <div>
+              <h3 class="h4">Contacto</h3>
+              <p>
+                <strong>Teléfono:</strong>
+                <a href="tel:+5491121805630">+54 9 11 2180 5630</a><br />
+                <strong>Email:</strong>
+                <a href="mailto:info@ibarraprop.com.ar"
+                  >info@ibarraprop.com.ar</a
+                ><br />
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex">
+            <i class="bi bi-clock-fill icon" aria-hidden="true"></i>
+            <div>
+              <h3 class="h4">Horarios de atención</h3>
+              <p>
+                <strong>Lunes a viernes:</strong> <span>11:00 - 23:00 hs</span
+                ><br />
+                <strong>Domingo:</strong> <span>Cerrado</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <h3 class="h4">Seguinos en redes</h3>
+            <div class="social-links d-flex">
+              <!-- TODO: reemplazar por la URL real de Facebook. -->
+              <a
+                href="https://www.facebook.com/"
+                class="facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook de Ibarra Propiedades"
+              >
+                <i class="bi bi-facebook" aria-hidden="true"></i>
+              </a>
+              <!-- TODO: reemplazar por la URL real de Instagram. -->
+              <a
+                href="https://www.instagram.com/"
+                class="instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Ibarra Propiedades"
+              >
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+            <nav
+              class="footer-links mt-3"
+              aria-label="Enlaces del pie de página"
+            >
+              <a href="propiedades.html">Propiedades</a><br />
+              <a href="#contact">Tasaciones</a><br />
+              <a href="#about">Quiénes somos</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p id="copyright">
+          © <span id="current-year">2026</span> Ibarra Propiedades. Todos los
+          derechos reservados.
+        </p>
+        <div class="credits">
+          <a
+            href="https://www.raven3.com.ar"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="font-size: 10px; text-decoration: none; color: #892025"
+            >by <strong>Raven3</strong></a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      aria-label="Volver arriba"
+    >
+      <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
+    </a>
+
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true"></div>
+
+    <!-- Vendor JS Files -->
+    <script
+      src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="assets/vendor/php-email-form/validate.js" defer></script>
+    <script src="assets/vendor/aos/aos.js" defer></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+    <script
+      src="assets/vendor/purecounter/purecounter_vanilla.js"
+      defer
+    ></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js" defer></script>
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle, .nav-toggle");
+      const navMenu = document.querySelector(".nav-menu, .header__nav, .nav");
+
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+          document.body.classList.toggle("nav-open");
+          navMenu.classList.toggle("is-open");
+
+          const isOpen = navMenu.classList.contains("is-open");
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+    </script>
   </body>
 </html>
