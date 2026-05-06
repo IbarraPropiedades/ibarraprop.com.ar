@@ -1155,7 +1155,7 @@ section,
 .footer {
   position: relative;
   padding: 62px 0 0;
-  background: #241819;
+    background: rgba(137, 32, 37, 0.92);
   color: var(--contrast-color);
   font-size: 14px;
 }
