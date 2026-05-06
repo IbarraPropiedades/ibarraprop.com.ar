@@ -1,0 +1,588 @@
+/* ==========================================================
+   IBARRA PROPIEDADES — PROPIEDADES.CSS
+   Archivo sugerido: assets/css/propiedades.css
+
+   Usar después de main.css:
+   <link href="assets/css/main.css" rel="stylesheet" />
+   <link href="assets/css/propiedades.css" rel="stylesheet" />
+
+   Alcance: sólo página propiedades.html
+   ========================================================== */
+
+/* ------------------------------
+   PAGE SCOPE / TOKENS
+------------------------------ */
+body.properties-page {
+  --prop-bg: #faf7f4;
+  --prop-surface: #ffffff;
+  --prop-surface-soft: #fff5f6;
+  --prop-text: #3f3435;
+  --prop-heading: #1f1718;
+  --prop-muted: #7b6f70;
+
+  --prop-red: #b52f36;
+  --prop-red-dark: #8f242a;
+  --prop-red-deep: #64171b;
+  --prop-rose: #f2dbe1;
+
+  --prop-border: rgba(32, 23, 24, 0.12);
+  --prop-border-strong: rgba(32, 23, 24, 0.2);
+
+  --prop-shadow-sm: 0 12px 34px rgba(32, 23, 24, 0.1);
+  --prop-shadow-md: 0 24px 64px rgba(32, 23, 24, 0.16);
+  --prop-shadow-red: 0 18px 42px rgba(181, 47, 54, 0.28);
+
+  --prop-radius-sm: 12px;
+  --prop-radius-md: 18px;
+  --prop-radius-lg: 28px;
+  --prop-transition: 220ms ease;
+
+  background: var(--prop-bg);
+}
+
+/* ------------------------------
+   PAGE TITLE / HERO
+------------------------------ */
+body.properties-page .page-title {
+  position: relative;
+  overflow: visible;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(135deg, var(--prop-red-deep) 0%, var(--prop-red-dark) 48%, var(--prop-red) 100%);
+}
+
+body.properties-page .page-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.32;
+}
+
+body.properties-page .page-title .heading {
+  position: relative;
+  z-index: 1;
+  padding: 155px 0 62px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.properties-page .page-title h1 {
+  margin: 0 0 14px;
+  color: #ffffff;
+  font-size: clamp(2.25rem, 5vw, 4.15rem);
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+body.properties-page .page-title .heading p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+/* ------------------------------
+   FILTER BAR
+------------------------------ */
+body.properties-page .page-title nav {
+  position: relative;
+  z-index: 20;
+  overflow: visible;
+  background: rgba(40, 17, 19, 0.36);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+body.properties-page .filtro-wrapper {
+  position: relative;
+  z-index: 25;
+  display: grid;
+  grid-template-columns: minmax(150px, 190px) minmax(170px, 1fr) minmax(170px, 1fr) minmax(160px, 190px) minmax(150px, 190px);
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+  padding: 26px 0;
+}
+
+body.properties-page .custom-multiselect {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+body.properties-page .filtro-select,
+body.properties-page .dropdown-button,
+body.properties-page .limpiar-filtros {
+  width: 100%;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.13);
+  color: #ffffff;
+  padding: 0 18px;
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    border-color var(--prop-transition),
+    background-color var(--prop-transition),
+    box-shadow var(--prop-transition),
+    transform var(--prop-transition);
+}
+
+body.properties-page .dropdown-button {
+  text-align: left;
+}
+
+body.properties-page .filtro-select {
+  appearance: none;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 320 512'%3E%3Cpath d='M31 192h258c17.7 0 26.7 21.5 14.1 34L174.1 355c-7.8 7.8-20.5 7.8-28.3 0L16.9 226C4.3 213.5 13.3 192 31 192z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 10px;
+}
+
+body.properties-page .filtro-select option {
+  color: var(--prop-heading);
+  background: #ffffff;
+  font-weight: 700;
+}
+
+body.properties-page .filtro-select:hover,
+body.properties-page .dropdown-button:hover,
+body.properties-page .limpiar-filtros:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.19);
+  transform: translateY(-1px);
+}
+
+body.properties-page .filtro-select:focus,
+body.properties-page .dropdown-button:focus,
+body.properties-page .limpiar-filtros:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.13);
+}
+
+body.properties-page .limpiar-filtros {
+  justify-content: center;
+}
+
+body.properties-page .dropdown-count {
+  margin-left: 4px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+body.properties-page .dropdown-options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 9999;
+  width: min(330px, 90vw);
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid var(--prop-border);
+  border-radius: 18px;
+  background: #ffffff;
+  color: var(--prop-heading);
+  box-shadow: var(--prop-shadow-md);
+}
+
+body.properties-page .dropdown-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.properties-page .dropdown-options::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(181, 47, 54, 0.3);
+}
+
+body.properties-page .dropdown-options label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 11px;
+  border-radius: 12px;
+  color: var(--prop-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: background var(--prop-transition), color var(--prop-transition);
+}
+
+body.properties-page .dropdown-options label:hover {
+  background: var(--prop-surface-soft);
+  color: var(--prop-red-dark);
+}
+
+body.properties-page .dropdown-options input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--prop-red);
+}
+
+/* ------------------------------
+   REAL ESTATE LIST
+------------------------------ */
+body.properties-page .real-estate {
+  position: relative;
+  z-index: 1;
+  padding: 72px 0 86px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(181, 47, 54, 0.08), transparent 32%),
+    var(--prop-bg);
+}
+
+body.properties-page #tokko-properties-grid {
+  align-items: stretch;
+}
+
+body.properties-page #tokko-loading-state,
+body.properties-page .tokko-empty-state {
+  color: var(--prop-muted);
+}
+
+/* ------------------------------
+   PROPERTY CARD
+------------------------------ */
+body.properties-page .tokko-property-card {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--prop-border);
+  border-radius: var(--prop-radius-lg);
+  background: var(--prop-surface);
+  color: var(--prop-text);
+  box-shadow: var(--prop-shadow-sm);
+  transition:
+    transform var(--prop-transition),
+    box-shadow var(--prop-transition),
+    border-color var(--prop-transition);
+}
+
+body.properties-page .tokko-property-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(181, 47, 54, 0.22);
+  box-shadow: var(--prop-shadow-md);
+}
+
+body.properties-page .tokko-property-card > a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #2a1d1f;
+  aspect-ratio: 4 / 3;
+}
+
+body.properties-page .tokko-property-card > a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, 0.26) 100%);
+}
+
+body.properties-page .tokko-property-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform 520ms ease, filter 520ms ease;
+}
+
+body.properties-page .tokko-property-card:hover img {
+  transform: scale(1.055);
+  filter: saturate(1.06) contrast(1.03);
+}
+
+body.properties-page .tokko-property-card .card-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  padding: 23px 22px 22px;
+  background: #ffffff;
+}
+
+body.properties-page .tokko-property-card .sale-rent {
+  width: fit-content;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 13px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--prop-rose);
+  color: var(--prop-red-dark);
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+body.properties-page .tokko-property-card h3 {
+  margin: 0 0 10px;
+  color: var(--prop-heading);
+  font-size: clamp(1.05rem, 1.3vw, 1.22rem);
+  font-weight: 900;
+  line-height: 1.22;
+  letter-spacing: -0.025em;
+}
+
+body.properties-page .tokko-property-card h3 a {
+  color: inherit;
+}
+
+body.properties-page .tokko-property-card h3 a:hover {
+  color: var(--prop-red);
+}
+
+body.properties-page .tokko-property-location,
+body.properties-page .tokko-property-type {
+  color: var(--prop-muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+body.properties-page .tokko-property-location {
+  display: -webkit-box;
+  min-height: 2.75em;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+body.properties-page .tokko-property-type {
+  margin-top: 2px;
+  color: var(--prop-red-dark);
+  font-weight: 800;
+}
+
+/* Bootstrap class inside generated card */
+body.properties-page .tokko-property-card .card-content {
+  margin-top: auto !important;
+  padding: 15px 13px;
+  border: 1px solid var(--prop-border);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(181, 47, 54, 0.04), rgba(181, 47, 54, 0.015));
+}
+
+body.properties-page .tokko-property-card .propery-info {
+  color: var(--prop-muted) !important;
+}
+
+body.properties-page .tokko-property-card .propery-info .col,
+body.properties-page .tokko-property-card .row.mt-2 .col {
+  min-width: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+body.properties-page .tokko-property-card .propery-info i {
+  color: var(--prop-red);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+body.properties-page .tokko-property-card .propery-info small {
+  color: var(--prop-muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+body.properties-page .tokko-property-card .row.mt-2 {
+  color: var(--prop-heading);
+  font-size: 0.86rem;
+  font-weight: 900 !important;
+  line-height: 1.2;
+}
+
+body.properties-page .tokko-card-whatsapp {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 18px;
+  padding: 0 18px;
+  border: 1px solid rgba(181, 47, 54, 0.18);
+  border-radius: 999px;
+  background: var(--prop-red);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(181, 47, 54, 0.23);
+  transition:
+    transform var(--prop-transition),
+    background var(--prop-transition),
+    box-shadow var(--prop-transition);
+}
+
+body.properties-page .tokko-card-whatsapp:hover {
+  transform: translateY(-2px);
+  background: var(--prop-red-dark);
+  color: #ffffff;
+  box-shadow: var(--prop-shadow-red);
+}
+
+/* ------------------------------
+   RESULTS / LOAD MORE
+------------------------------ */
+body.properties-page .tokko-list-footer {
+  margin-top: 52px !important;
+}
+
+body.properties-page .tokko-results-count {
+  margin-bottom: 16px;
+  color: var(--prop-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+body.properties-page #tokko-load-more {
+  width: auto;
+  min-width: 220px;
+  border-color: var(--prop-red);
+  background: var(--prop-red);
+  color: #ffffff;
+  box-shadow: var(--prop-shadow-red);
+}
+
+body.properties-page #tokko-load-more:hover {
+  background: var(--prop-red-dark);
+}
+
+/* Empty/error states generated by JS */
+body.properties-page #tokko-properties-grid .col-12 h3 {
+  margin-bottom: 8px;
+  color: var(--prop-heading);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-weight: 900;
+}
+
+body.properties-page #tokko-properties-grid .col-12 p {
+  margin: 0;
+  color: var(--prop-muted);
+  font-weight: 600;
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 1199px) {
+  body.properties-page .filtro-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  body.properties-page .limpiar-filtros {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  body.properties-page .page-title .heading {
+    padding: 132px 0 46px;
+  }
+
+  body.properties-page .page-title h1,
+  body.properties-page .page-title .heading p {
+    text-align: left;
+  }
+
+  body.properties-page .page-title .heading p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  body.properties-page .filtro-wrapper {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 18px 0;
+  }
+
+  body.properties-page .limpiar-filtros {
+    grid-column: auto;
+  }
+
+  body.properties-page .filtro-select,
+  body.properties-page .dropdown-button,
+  body.properties-page .limpiar-filtros {
+    min-height: 50px;
+    justify-content: space-between;
+    font-size: 0.91rem;
+  }
+
+  body.properties-page .limpiar-filtros {
+    justify-content: center;
+  }
+
+  body.properties-page .dropdown-options {
+    position: static;
+    width: 100%;
+    max-height: 260px;
+    margin-top: 8px;
+  }
+
+  body.properties-page .real-estate {
+    padding: 48px 0 64px;
+  }
+
+  body.properties-page .tokko-property-card .card-body {
+    min-height: auto;
+    padding: 20px 18px 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  body.properties-page .tokko-property-card > a {
+    aspect-ratio: 1 / 0.82;
+  }
+
+  body.properties-page .tokko-property-card .card-content {
+    padding: 13px 8px;
+  }
+
+  body.properties-page .tokko-property-card .propery-info small {
+    font-size: 0.68rem;
+  }
+
+  body.properties-page .tokko-property-card .row.mt-2 {
+    font-size: 0.78rem;
+  }
+}
