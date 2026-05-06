@@ -1,0 +1,271 @@
+/* ==========================================================
+   IBARRA PROPIEDADES — DETALLE PROPIEDAD
+   Archivo sugerido: assets/css/detalle-propiedad.css
+   ========================================================== */
+
+body.property-single-page.properties-page .tokko-detail-section {
+  background:
+    radial-gradient(circle at 16% 0%, rgba(181, 47, 54, 0.08), transparent 34%),
+    #faf7f4;
+}
+
+body.property-single-page .breadcrumbs {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body.property-single-page .breadcrumbs ol,
+body.property-single-page .breadcrumbs a,
+body.property-single-page .breadcrumbs .current {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body.property-single-page .portfolio-details-slider {
+  overflow: hidden;
+  border: 1px solid rgba(32, 23, 24, 0.12);
+  border-radius: 28px;
+  background: #241719;
+  box-shadow: 0 24px 64px rgba(32, 23, 24, 0.16);
+}
+
+body.property-single-page .portfolio-details-slider .swiper-slide {
+  height: clamp(320px, 56vw, 680px);
+  background: #241719;
+}
+
+body.property-single-page .portfolio-details-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body.property-single-page .swiper-button-next,
+body.property-single-page .swiper-button-prev {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #b52f36;
+  backdrop-filter: blur(12px);
+}
+
+body.property-single-page .swiper-button-next::after,
+body.property-single-page .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+body.property-single-page .tokko-detail-description-card,
+body.property-single-page .tokko-detail-summary-card,
+body.property-single-page .tokko-detail-tags,
+body.property-single-page .tokko-detail-tab-content {
+  border: 1px solid rgba(32, 23, 24, 0.12);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 34px rgba(32, 23, 24, 0.08);
+}
+
+body.property-single-page .tokko-detail-description-card {
+  padding: 30px;
+}
+
+body.property-single-page .tokko-detail-price {
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #f2dbe1;
+  color: #8f242a;
+  font-size: 0.88rem;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+body.property-single-page .tokko-detail-description-card h2 {
+  margin-bottom: 16px;
+  color: #1f1718;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+body.property-single-page .tokko-detail-description-card p {
+  color: #665b5c;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.85;
+  white-space: pre-line;
+}
+
+body.property-single-page .tokko-detail-summary-card {
+  position: sticky;
+  top: 96px;
+  padding: 26px;
+}
+
+body.property-single-page .tokko-detail-summary-card h3,
+body.property-single-page .tokko-detail-tags h3 {
+  margin-bottom: 18px;
+  color: #1f1718;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+body.property-single-page .tokko-detail-summary-card ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body.property-single-page .tokko-detail-summary-card li {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(32, 23, 24, 0.09);
+  color: #665b5c;
+  font-size: 0.94rem;
+}
+
+body.property-single-page .tokko-detail-summary-card li strong {
+  flex: 0 0 auto;
+  color: #1f1718;
+  font-weight: 900;
+}
+
+body.property-single-page .tokko-detail-summary-card li span {
+  text-align: right;
+  font-weight: 700;
+}
+
+body.property-single-page .tokko-detail-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+body.property-single-page .tokko-detail-primary-btn,
+body.property-single-page .tokko-detail-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+body.property-single-page .tokko-detail-primary-btn {
+  background: #b52f36;
+  color: #ffffff;
+  box-shadow: 0 18px 42px rgba(181, 47, 54, 0.28);
+}
+
+body.property-single-page .tokko-detail-primary-btn:hover {
+  transform: translateY(-2px);
+  background: #8f242a;
+  color: #ffffff;
+}
+
+body.property-single-page .tokko-detail-secondary-btn {
+  border: 1px solid rgba(181, 47, 54, 0.2);
+  background: #fff5f6;
+  color: #8f242a;
+}
+
+body.property-single-page .tokko-detail-secondary-btn:hover {
+  background: #f2dbe1;
+  color: #8f242a;
+}
+
+body.property-single-page .tokko-detail-back {
+  margin-top: 4px;
+  color: #8f242a;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+body.property-single-page .tokko-detail-tags {
+  padding: 24px;
+}
+
+body.property-single-page .tokko-detail-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+body.property-single-page .tokko-detail-tags-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: #fff5f6;
+  color: #8f242a;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+body.property-single-page .tokko-detail-tabs .nav-link {
+  border-radius: 999px;
+  color: #8f242a;
+  font-weight: 900;
+}
+
+body.property-single-page .tokko-detail-tabs .nav-link.active {
+  background: #b52f36;
+  color: #ffffff;
+}
+
+body.property-single-page .tokko-detail-tab-content {
+  padding: 24px;
+}
+
+body.property-single-page .tokko-detail-muted {
+  margin: 0;
+  color: #7b6f70;
+  font-weight: 700;
+}
+
+body.property-single-page .tokko-detail-external {
+  color: #8f242a;
+  font-weight: 900;
+}
+
+@media (max-width: 991px) {
+  body.property-single-page .tokko-detail-summary-card {
+    position: static;
+  }
+}
+
+@media (max-width: 575px) {
+  body.property-single-page .tokko-detail-description-card,
+  body.property-single-page .tokko-detail-summary-card,
+  body.property-single-page .tokko-detail-tags,
+  body.property-single-page .tokko-detail-tab-content {
+    border-radius: 18px;
+  }
+
+  body.property-single-page .tokko-detail-description-card {
+    padding: 22px;
+  }
+
+  body.property-single-page .portfolio-details-slider .swiper-slide {
+    height: 300px;
+  }
+
+  body.property-single-page .tokko-detail-summary-card li {
+    display: block;
+  }
+
+  body.property-single-page .tokko-detail-summary-card li span {
+    display: block;
+    margin-top: 4px;
+    text-align: left;
+  }
+}

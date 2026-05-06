@@ -614,7 +614,7 @@
     window.toggleDropdown = toggleDropdown;
     window.resetFiltros = resetFiltros;
 
-    if (!TOKKO_CONFIG.apiKey || TOKKO_CONFIG.apiKey === "PEGAR_API_KEY_DE_TOKKO_ACA") {
+    if (!TOKKO_CONFIG.apiKey) {
       showErrorState(new Error("Falta configurar la API Key de Tokko"));
       return;
     }
