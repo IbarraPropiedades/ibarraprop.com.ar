@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Ibarra Propiedades</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>Propiedades en venta y alquiler | Ibarra Propiedades</title>
+    <meta
+      name="description"
+      content="Propiedades en venta y alquiler en Zona Norte. Casas, departamentos, terrenos y oportunidades inmobiliarias de Ibarra Propiedades."
+    />
+    <meta
+      name="keywords"
+      content="Ibarra Propiedades, propiedades en venta, propiedades en alquiler, Zona Norte, San Isidro, Beccar, Olivos"
+    />
 
     <!-- Favicons -->
     <link href="assets/img/favicon/favicon.ico" rel="icon" />
-    <link
-      href="assets/img/favicon/apple-touch-icon.png"
-      rel="apple-touch-icon"
-    />
+    <link href="assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -23,19 +26,10 @@
     />
 
     <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
@@ -43,61 +37,31 @@
   </head>
 
   <body class="properties-page">
-    <!-- wasap -->
+    <!-- WhatsApp -->
     <div class="wasap" style="animation-name: tada">
       <a
         href="https://api.whatsapp.com/send?l=es&text=Hola%20Ibarra%20Propiedades!%20Quiero%20consultarles%20por%20una%20propiedad&phone=+5491121805630"
         target="_blank"
+        rel="noopener"
         aria-label="Link a WhatsApp Ibarra Propiedades"
       >
-        <img
-          src="assets/img/svg/logo-wapp-01.svg"
-          alt="Ibarra Propiedades WhatsApp"
-        />
+        <img src="assets/img/svg/logo-wapp-01.svg" alt="Ibarra Propiedades WhatsApp" />
       </a>
     </div>
 
     <!-- HEADER -->
     <header id="header" class="header d-flex align-items-center fixed-top">
-      <div
-        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
-      >
+      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <!-- <img src="assets/img/logo.png" alt=""> -->
-          <img src="assets/img/logo.png" alt="ibarra propiedades logo" />
+          <img src="assets/img/logo.png" alt="Ibarra Propiedades logo" />
         </a>
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html" >Inicio</a></li>
-            <!-- <li><a href="about.html">About</a></li> -->
-            <!-- <li><a href="services.html">Services</a></li> -->
-            <!-- <li><a href="index.html#about">Conocé a Ibarra</a></li> -->
-           <li><a href="propiedades.html" class="active">Propiedades</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="propiedades.html" class="active">Propiedades</a></li>
             <li class="tasar">
-              <a
-                href="index.html#contact"
-                style="color: black; margin-right: 15px"
-                >Tasár ahora</a
-              >
+              <a href="index.html#contact" style="color: black; margin-right: 15px">Tasár ahora</a>
             </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -121,235 +85,37 @@
             </div>
           </div>
         </div>
-        <nav class="breadcrumbs with-filters">
+
+        <nav class="breadcrumbs with-filters" aria-label="Filtros de propiedades">
           <div class="container">
             <div class="filtro-wrapper">
-              <select class="filtro-select" id="filtro-operacion">
-                <option value="operacion" disabled>Operación</option>
-                <option value="compra">Compra</option>
-                <option value="venta">Venta</option>
-                <option value="alquiler">Alquiler</option>
+              <select class="filtro-select" id="filtro-operacion" aria-label="Filtrar por operación">
+                <option value="">Operación</option>
               </select>
 
-              <div class="custom-multiselect" data-id="zona">
-                <button
-                  type="button"
-                  class="dropdown-button"
-                  onclick="toggleDropdown('zona')"
-                >
-                  Zona
+              <div class="custom-multiselect" data-id="zona" data-label="Zona">
+                <button type="button" class="dropdown-button" aria-label="Filtrar por zona">
+                  <span class="dropdown-button-text">Zona</span>
+                  <span class="dropdown-count" id="zona-count"></span>
+                  <span class="dropdown-caret">▼</span>
                 </button>
                 <div class="dropdown-options" id="dropdown-zona">
-                  <!-- Vicente López -->
-                  <label><input type="checkbox" value="olivos" /> Olivos</label>
-                  <label
-                    ><input type="checkbox" value="la-lucila" /> La
-                    Lucila</label
-                  >
-                  <label
-                    ><input type="checkbox" value="florida" /> Florida</label
-                  >
-                  <label><input type="checkbox" value="munro" /> Munro</label>
-                  <label
-                    ><input type="checkbox" value="villa-martelli" /> Villa
-                    Martelli</label
-                  >
-
-                  <!-- San Isidro -->
-                  <label
-                    ><input type="checkbox" value="martinez" /> Martínez</label
-                  >
-                  <label
-                    ><input type="checkbox" value="acassuso" /> Acassuso</label
-                  >
-                  <label><input type="checkbox" value="beccar" /> Béccar</label>
-                  <label
-                    ><input type="checkbox" value="villa-adelina" /> Villa
-                    Adelina</label
-                  >
-                  <label
-                    ><input type="checkbox" value="san-isidro-centro" /> San
-                    Isidro Centro</label
-                  >
-
-                  <!-- San Fernando -->
-                  <label
-                    ><input type="checkbox" value="victoria" /> Victoria</label
-                  >
-                  <label
-                    ><input type="checkbox" value="virreyes" /> Virreyes</label
-                  >
-                  <label
-                    ><input type="checkbox" value="san-fernando-centro" /> San
-                    Fernando Centro</label
-                  >
-
-                  <!-- Tigre -->
-                  <label
-                    ><input type="checkbox" value="tigre-centro" /> Tigre
-                    Centro</label
-                  >
-                  <label
-                    ><input type="checkbox" value="general-pacheco" /> General
-                    Pacheco</label
-                  >
-                  <label
-                    ><input type="checkbox" value="nordelta" /> Nordelta</label
-                  >
-                  <label
-                    ><input type="checkbox" value="don-torcuato" /> Don
-                    Torcuato</label
-                  >
-                  <label
-                    ><input type="checkbox" value="rincon-de-milberg" /> Rincón
-                    de Milberg</label
-                  >
-                  <label
-                    ><input type="checkbox" value="el-talar" /> El Talar</label
-                  >
-                  <label
-                    ><input type="checkbox" value="troncos-del-talar" /> Troncos
-                    del Talar</label
-                  >
-
-                  <!-- Pilar -->
-                  <label
-                    ><input type="checkbox" value="pilar-centro" /> Pilar
-                    Centro</label
-                  >
-                  <label
-                    ><input type="checkbox" value="del-viso" /> Del Viso</label
-                  >
-                  <label
-                    ><input type="checkbox" value="villa-rosa" /> Villa
-                    Rosa</label
-                  >
-                  <label
-                    ><input type="checkbox" value="manuel-alberti" /> Manuel
-                    Alberti</label
-                  >
-                  <label
-                    ><input type="checkbox" value="champagnat" />
-                    Champagnat</label
-                  >
-                  <label
-                    ><input type="checkbox" value="pilar-del-este" /> Pilar del
-                    Este</label
-                  >
-
-                  <!-- Escobar -->
-                  <label
-                    ><input type="checkbox" value="ingeniero-maschwitz" />
-                    Ingeniero Maschwitz</label
-                  >
-                  <label
-                    ><input type="checkbox" value="belen-de-escobar" /> Belén de
-                    Escobar</label
-                  >
-                  <label
-                    ><input type="checkbox" value="loma-verde" /> Loma
-                    Verde</label
-                  >
-                  <label><input type="checkbox" value="garin" /> Garín</label>
-                  <label><input type="checkbox" value="matheu" /> Matheu</label>
-
-                  <!-- Malvinas Argentinas -->
-                  <label
-                    ><input type="checkbox" value="los-polvorines" /> Los
-                    Polvorines</label
-                  >
-                  <label
-                    ><input type="checkbox" value="tortuguitas" />
-                    Tortuguitas</label
-                  >
-                  <label
-                    ><input type="checkbox" value="grand-bourg" /> Grand
-                    Bourg</label
-                  >
-
-                  <!-- San Miguel -->
-                  <label
-                    ><input type="checkbox" value="san-miguel-centro" /> San
-                    Miguel Centro</label
-                  >
-                  <label
-                    ><input type="checkbox" value="bella-vista" /> Bella
-                    Vista</label
-                  >
-                  <label><input type="checkbox" value="muniz" /> Muñiz</label>
-
-                  <!-- José C. Paz -->
-                  <label
-                    ><input type="checkbox" value="jose-c-paz-centro" /> José C.
-                    Paz Centro</label
-                  >
-                  <label
-                    ><input type="checkbox" value="barrio-frino" /> Barrio
-                    Frino</label
-                  >
-
-                  <!-- San Martín -->
-                  <label
-                    ><input type="checkbox" value="san-martin-centro" /> San
-                    Martín Centro</label
-                  >
-                  <label
-                    ><input type="checkbox" value="villa-ballester" /> Villa
-                    Ballester</label
-                  >
-                  <label
-                    ><input type="checkbox" value="san-andres" /> San
-                    Andrés</label
-                  >
-
-                  <!-- Campana -->
-                  <label
-                    ><input type="checkbox" value="campana" /> Campana</label
-                  >
-
-                  <!-- Zárate -->
-                  <label><input type="checkbox" value="zarate" /> Zárate</label>
+                  <p class="tokko-filter-empty">Cargando zonas...</p>
                 </div>
               </div>
 
-              <div class="custom-multiselect" data-id="tipo">
-                <button
-                  type="button"
-                  class="dropdown-button mr-2"
-                  onclick="toggleDropdown('tipo')"
-                >
-                  Tipo
+              <div class="custom-multiselect" data-id="tipo" data-label="Tipo">
+                <button type="button" class="dropdown-button" aria-label="Filtrar por tipo de propiedad">
+                  <span class="dropdown-button-text">Tipo</span>
+                  <span class="dropdown-count" id="tipo-count"></span>
+                  <span class="dropdown-caret">▼</span>
                 </button>
                 <div class="dropdown-options" id="dropdown-tipo">
-                  <label><input type="checkbox" value="campo" /> Campo</label>
-                  <label><input type="checkbox" value="casa" /> Casa</label>
-                  <label
-                    ><input type="checkbox" value="cochera" /> Cochera</label
-                  >
-                  <label
-                    ><input type="checkbox" value="departamento" />
-                    Departamento</label
-                  >
-                  <label
-                    ><input type="checkbox" value="deposito" /> Depósito</label
-                  >
-                  <label
-                    ><input type="checkbox" value="edificio-comercial" />
-                    Edificio Comercial</label
-                  >
-                  <label><input type="checkbox" value="galpon" /> Galpón</label>
-                  <label><input type="checkbox" value="local" /> Local</label>
-                  <label
-                    ><input type="checkbox" value="oficina" /> Oficina</label
-                  >
-                  <label><input type="checkbox" value="ph" /> PH</label>
-                  <label
-                    ><input type="checkbox" value="terreno" /> Terreno</label
-                  >
+                  <p class="tokko-filter-empty">Cargando tipos...</p>
                 </div>
               </div>
 
-              <select class="filtro-select" id="filtro-orden">
+              <select class="filtro-select" id="filtro-orden" aria-label="Ordenar propiedades">
                 <option value="">Ordenar por</option>
                 <option value="precio-asc">Precio ↑</option>
                 <option value="precio-desc">Precio ↓</option>
@@ -359,11 +125,7 @@
                 <option value="fecha-desc">Fecha ↓</option>
               </select>
 
-              <button
-                type="button"
-                class="limpiar-filtros"
-                onclick="resetFiltros()"
-              >
+              <button type="button" class="limpiar-filtros" onclick="resetFiltros()">
                 Limpiar filtros
               </button>
             </div>
@@ -397,11 +159,7 @@
         <div class="row gy-3">
           <div class="col-lg-3 col-md-6 d-flex">
             <div class="address">
-              <img
-                src="assets/img/logo.png"
-                alt="ibarra propiedades logo"
-                style="height: 80px"
-              />
+              <img src="assets/img/logo.png" alt="Ibarra Propiedades logo" style="height: 80px" />
             </div>
           </div>
 
@@ -411,8 +169,7 @@
               <h4>Contacto</h4>
               <p>
                 <strong>Teléfono:</strong> <span>+54 9 11 2180 5630</span><br />
-                <strong>Email:</strong> <span>info@ibarraprop.com.ar</span
-                ><br />
+                <strong>Email:</strong> <span>info@ibarraprop.com.ar</span><br />
               </p>
             </div>
           </div>
@@ -422,8 +179,8 @@
             <div>
               <h4>Horarios de Atención</h4>
               <p>
-                <strong>Lunes a Viernes:</strong> <span>11:00 - 23:00 hs</span><br /> 
-                <strong>Domingo</strong>: <span>Cerrado</span>
+                <strong>Lunes a Viernes:</strong> <span>11:00 - 23:00 hs</span><br />
+                <strong>Domingo:</strong> <span>Cerrado</span>
               </p>
             </div>
           </div>
@@ -431,10 +188,8 @@
           <div class="col-lg-3 col-md-6">
             <h4>Seguinos en redes</h4>
             <div class="social-links d-flex">
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
-              <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
+              <a href="#" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -443,28 +198,22 @@
       <div class="container copyright text-center mt-4">
         <p id="copyright"></p>
         <div class="credits">
-          <a
-            href="https://www.raven3.com.ar"
-            style="font-size: 10px; text-decoration: none; color: #892025"
-            >by <strong>Raven3</strong></a
-          >
+          <a href="https://www.raven3.com.ar" style="font-size: 10px; text-decoration: none; color: #892025">
+            by <strong>Raven3</strong>
+          </a>
         </div>
       </div>
     </footer>
 
     <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
 
     <!-- Preloader -->
     <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
-
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
@@ -472,7 +221,6 @@
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
     <!-- Main JS File -->
-    <script defer src="assets/js/dropdowns.js"></script>
     <script src="assets/js/main.js"></script>
     <script defer src="assets/js/tokko-propiedades.js"></script>
   </body>
