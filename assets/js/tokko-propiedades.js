@@ -35,7 +35,8 @@
   };
 
   const $ = (selector, parent = document) => parent.querySelector(selector);
-  const $$ = (selector, parent = document) => Array.from(parent.querySelectorAll(selector));
+  const $$ = (selector, parent = document) =>
+    Array.from(parent.querySelectorAll(selector));
 
   function normalizeText(value = "") {
     return String(value)
@@ -62,7 +63,9 @@
   }
 
   function getSelectedCheckboxValues(dropdownId) {
-    return $$(`#dropdown-${dropdownId} input[type="checkbox"]:checked`).map((input) => input.value);
+    return $$(`#dropdown-${dropdownId} input[type="checkbox"]:checked`).map(
+      (input) => input.value,
+    );
   }
 
   function getPropertyTitle(property) {
@@ -97,7 +100,8 @@
 
   function getPropertyImage(property) {
     const photos = Array.isArray(property.photos) ? property.photos : [];
-    const cover = photos.find((photo) => photo.is_front_cover) || photos[0] || {};
+    const cover =
+      photos.find((photo) => photo.is_front_cover) || photos[0] || {};
 
     return (
       cover.image ||
@@ -114,7 +118,12 @@
   }
 
   function getOperationName(operation = {}) {
-    return operation.operation_type || operation.type || operation.name || "Consultar";
+    return (
+      operation.operation_type ||
+      operation.type ||
+      operation.name ||
+      "Consultar"
+    );
   }
 
   function normalizeOperationName(operationName = "") {
@@ -122,7 +131,14 @@
 
     if (["venta", "sale", "compra"].includes(normalized)) return "venta";
     if (["alquiler", "rent"].includes(normalized)) return "alquiler";
-    if (["alquiler-temporal", "alquiler-temporario", "temporary-rent", "temporal"].includes(normalized)) {
+    if (
+      [
+        "alquiler-temporal",
+        "alquiler-temporario",
+        "temporary-rent",
+        "temporal",
+      ].includes(normalized)
+    ) {
       return "alquiler-temporal";
     }
 
@@ -180,18 +196,33 @@
   }
 
   function formatMetric(value, suffix = "") {
-    if (value === null || value === undefined || value === "" || Number(value) === 0) return "-";
+    if (
+      value === null ||
+      value === undefined ||
+      value === "" ||
+      Number(value) === 0
+    )
+      return "-";
     const number = Number(value);
-    const output = Number.isFinite(number) ? new Intl.NumberFormat("es-AR", { maximumFractionDigits: 0 }).format(number) : value;
+    const output = Number.isFinite(number)
+      ? new Intl.NumberFormat("es-AR", { maximumFractionDigits: 0 }).format(
+          number,
+        )
+      : value;
     return suffix ? `${output}${suffix}` : output;
   }
 
   function getSurface(property) {
-    return formatMetric(property.total_surface || property.surface || property.roofed_surface, " m²");
+    return formatMetric(
+      property.total_surface || property.surface || property.roofed_surface,
+      " m²",
+    );
   }
 
   function getRooms(property) {
-    return formatMetric(property.room_amount || property.suite_amount || property.bedroom_amount);
+    return formatMetric(
+      property.room_amount || property.suite_amount || property.bedroom_amount,
+    );
   }
 
   function getBathrooms(property) {
@@ -199,15 +230,26 @@
   }
 
   function getGarages(property) {
-    return formatMetric(property.parking_lot_amount || property.garage_amount || property.parking_amount);
+    return formatMetric(
+      property.parking_lot_amount ||
+        property.garage_amount ||
+        property.parking_amount,
+    );
   }
 
   function getCreatedDate(property) {
-    return new Date(property.created_at || property.updated_at || property.publication_date || 0).getTime();
+    return new Date(
+      property.created_at ||
+        property.updated_at ||
+        property.publication_date ||
+        0,
+    ).getTime();
   }
 
   function getUniqueSortedValues(values) {
-    return [...new Set(values.filter(Boolean).map((value) => String(value).trim()))].sort((a, b) => a.localeCompare(b, "es"));
+    return [
+      ...new Set(values.filter(Boolean).map((value) => String(value).trim())),
+    ].sort((a, b) => a.localeCompare(b, "es"));
   }
 
   function buildCheckboxOption(value, label) {
@@ -224,7 +266,11 @@
     if (!select) return;
 
     const operations = getUniqueSortedValues(
-      properties.flatMap((property) => getPropertyOperations(property).map((operation) => getOperationName(operation)))
+      properties.flatMap((property) =>
+        getPropertyOperations(property).map((operation) =>
+          getOperationName(operation),
+        ),
+      ),
     );
 
     const preferredOrder = ["Venta", "Alquiler", "Alquiler temporal"];
@@ -253,14 +299,24 @@
     const uniqueValues = getUniqueSortedValues(values);
 
     dropdown.innerHTML = uniqueValues.length
-      ? uniqueValues.map((value) => buildCheckboxOption(normalizeText(value), value)).join("")
+      ? uniqueValues
+          .map((value) => buildCheckboxOption(normalizeText(value), value))
+          .join("")
       : `<p class="tokko-filter-empty">${escapeHtml(emptyText)}</p>`;
   }
 
   function populateDynamicFilters(properties) {
     populateOperationFilter(properties);
-    populateCheckboxFilter(SELECTORS.zoneDropdown, properties.map(getPropertyLocationName), "Sin zonas disponibles");
-    populateCheckboxFilter(SELECTORS.typeDropdown, properties.map(getPropertyTypeName), "Sin tipos disponibles");
+    populateCheckboxFilter(
+      SELECTORS.zoneDropdown,
+      properties.map(getPropertyLocationName),
+      "Sin zonas disponibles",
+    );
+    populateCheckboxFilter(
+      SELECTORS.typeDropdown,
+      properties.map(getPropertyTypeName),
+      "Sin tipos disponibles",
+    );
     updateDropdownButtonLabels();
   }
 
@@ -268,7 +324,9 @@
     if (!operationFilter) return true;
 
     return getPropertyOperations(property).some((operation) => {
-      return normalizeOperationName(getOperationName(operation)) === operationFilter;
+      return (
+        normalizeOperationName(getOperationName(operation)) === operationFilter
+      );
     });
   }
 
@@ -285,7 +343,9 @@
       .filter(Boolean)
       .map(normalizeText);
 
-    return selectedZones.some((zone) => locationValues.some((locationValue) => locationValue.includes(zone)));
+    return selectedZones.some((zone) =>
+      locationValues.some((locationValue) => locationValue.includes(zone)),
+    );
   }
 
   function propertyMatchesTypes(property, selectedTypes) {
@@ -300,13 +360,21 @@
 
     switch (sortValue) {
       case "precio-asc":
-        return sorted.sort((a, b) => getComparablePrice(a).amount - getComparablePrice(b).amount);
+        return sorted.sort(
+          (a, b) => getComparablePrice(a).amount - getComparablePrice(b).amount,
+        );
       case "precio-desc":
-        return sorted.sort((a, b) => getComparablePrice(b).amount - getComparablePrice(a).amount);
+        return sorted.sort(
+          (a, b) => getComparablePrice(b).amount - getComparablePrice(a).amount,
+        );
       case "titulo-asc":
-        return sorted.sort((a, b) => getPropertyTitle(a).localeCompare(getPropertyTitle(b), "es"));
+        return sorted.sort((a, b) =>
+          getPropertyTitle(a).localeCompare(getPropertyTitle(b), "es"),
+        );
       case "titulo-desc":
-        return sorted.sort((a, b) => getPropertyTitle(b).localeCompare(getPropertyTitle(a), "es"));
+        return sorted.sort((a, b) =>
+          getPropertyTitle(b).localeCompare(getPropertyTitle(a), "es"),
+        );
       case "fecha-asc":
         return sorted.sort((a, b) => getCreatedDate(a) - getCreatedDate(b));
       case "fecha-desc":
@@ -345,7 +413,9 @@
   function buildWhatsAppUrl(property) {
     const title = getPropertyTitle(property);
     const location = getPropertyLocation(property);
-    const referenceCode = property.reference_code ? ` - Código: ${property.reference_code}` : "";
+    const referenceCode = property.reference_code
+      ? ` - Código: ${property.reference_code}`
+      : "";
     const text = `Hola Ibarra Propiedades. Quiero consultar por esta propiedad: ${title} - ${location}${referenceCode}`;
 
     return `https://api.whatsapp.com/send?phone=${TOKKO_CONFIG.whatsappPhone}&text=${encodeURIComponent(text)}`;
@@ -361,7 +431,9 @@
     const location = getPropertyLocation(property);
     const type = getPropertyTypeName(property);
     const image = getPropertyImage(property);
-    const operationName = translateOperation(getOperationName(getMainOperation(property)));
+    const operationName = translateOperation(
+      getOperationName(getMainOperation(property)),
+    );
     const price = formatPrice(property);
     const surface = getSurface(property);
     const rooms = getRooms(property);
@@ -435,7 +507,10 @@
 
     if (!grid) return;
 
-    const visibleProperties = TOKKO_STATE.filteredProperties.slice(0, TOKKO_STATE.visibleCount);
+    const visibleProperties = TOKKO_STATE.filteredProperties.slice(
+      0,
+      TOKKO_STATE.visibleCount,
+    );
 
     if (!visibleProperties.length) {
       grid.innerHTML = `
@@ -451,11 +526,14 @@
     if (resultsCount) {
       const total = TOKKO_STATE.filteredProperties.length;
       const showing = visibleProperties.length;
-      resultsCount.textContent = total ? `Mostrando ${showing} de ${total} propiedades` : "";
+      resultsCount.textContent = total
+        ? `Mostrando ${showing} de ${total} propiedades`
+        : "";
     }
 
     if (loadMoreButton) {
-      const hasMore = TOKKO_STATE.visibleCount < TOKKO_STATE.filteredProperties.length;
+      const hasMore =
+        TOKKO_STATE.visibleCount < TOKKO_STATE.filteredProperties.length;
       loadMoreButton.classList.toggle("d-none", !hasMore);
     }
 
@@ -475,7 +553,9 @@
 
     if (TOKKO_CONFIG.shared) params.set("shared", "true");
 
-    const response = await fetch(`${TOKKO_CONFIG.baseUrl}?${params.toString()}`);
+    const response = await fetch(
+      `${TOKKO_CONFIG.baseUrl}?${params.toString()}`,
+    );
 
     if (!response.ok) {
       throw new Error(`Tokko respondió con error ${response.status}`);
@@ -529,7 +609,9 @@
     $$(".custom-multiselect").forEach((wrapper) => {
       const id = wrapper.dataset.id;
       const label = wrapper.dataset.label || (id === "zona" ? "Zona" : "Tipo");
-      const selectedCount = $$(`#dropdown-${id} input[type="checkbox"]:checked`).length;
+      const selectedCount = $$(
+        `#dropdown-${id} input[type="checkbox"]:checked`,
+      ).length;
       const count = wrapper.querySelector(".dropdown-count");
 
       if (count) {
@@ -554,7 +636,9 @@
     const dropdown = $(`#dropdown-${id}`);
     if (!dropdown) return;
 
-    const isOpen = dropdown.classList.contains("is-open") || dropdown.style.display === "block";
+    const isOpen =
+      dropdown.classList.contains("is-open") ||
+      dropdown.style.display === "block";
     closeAllDropdowns();
 
     if (!isOpen) {
@@ -636,4 +720,45 @@
   }
 
   document.addEventListener("DOMContentLoaded", initTokkoProperties);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const body = document.body;
+    const openButton = document.getElementById("open-mobile-filters");
+    const closeButton = document.getElementById("close-mobile-filters");
+    const overlay = document.getElementById("mobile-filters-overlay");
+    const sidebar = document.querySelector(".properties-sidebar");
+
+    if (!openButton || !closeButton || !overlay || !sidebar) return;
+
+    function openFilters() {
+      body.classList.add("mobile-filters-open");
+      openButton.setAttribute("aria-expanded", "true");
+    }
+
+    function closeFilters() {
+      body.classList.remove("mobile-filters-open");
+      openButton.setAttribute("aria-expanded", "false");
+    }
+
+    openButton.setAttribute("aria-expanded", "false");
+    openButton.setAttribute("aria-controls", "properties-mobile-sidebar");
+
+    sidebar.setAttribute("id", "properties-mobile-sidebar");
+
+    openButton.addEventListener("click", openFilters);
+    closeButton.addEventListener("click", closeFilters);
+    overlay.addEventListener("click", closeFilters);
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeFilters();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 992) {
+        closeFilters();
+      }
+    });
+  });
 })();

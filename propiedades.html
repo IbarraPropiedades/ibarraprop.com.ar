@@ -137,99 +137,167 @@
             </div>
           </div>
         </div>
-
-        <nav
-          class="breadcrumbs with-filters"
-          aria-label="Filtros de propiedades"
-        >
-          <div class="container">
-            <div class="filtro-wrapper">
-              <select
-                class="filtro-select"
-                id="filtro-operacion"
-                aria-label="Filtrar por operación"
-              >
-                <option value="">Operación</option>
-              </select>
-
-              <div class="custom-multiselect" data-id="zona" data-label="Zona">
-                <button
-                  type="button"
-                  class="dropdown-button"
-                  aria-label="Filtrar por zona"
-                >
-                  <span class="dropdown-button-text">Zona</span>
-                  <span class="dropdown-count" id="zona-count"></span>
-                  <span class="dropdown-caret">▼</span>
-                </button>
-                <div class="dropdown-options" id="dropdown-zona">
-                  <p class="tokko-filter-empty">Cargando zonas...</p>
-                </div>
-              </div>
-
-              <div class="custom-multiselect" data-id="tipo" data-label="Tipo">
-                <button
-                  type="button"
-                  class="dropdown-button"
-                  aria-label="Filtrar por tipo de propiedad"
-                >
-                  <span class="dropdown-button-text">Tipo</span>
-                  <span class="dropdown-count" id="tipo-count"></span>
-                  <span class="dropdown-caret">▼</span>
-                </button>
-                <div class="dropdown-options" id="dropdown-tipo">
-                  <p class="tokko-filter-empty">Cargando tipos...</p>
-                </div>
-              </div>
-
-              <select
-                class="filtro-select"
-                id="filtro-orden"
-                aria-label="Ordenar propiedades"
-              >
-                <option value="">Ordenar por</option>
-                <option value="precio-asc">Precio ↑</option>
-                <option value="precio-desc">Precio ↓</option>
-                <option value="titulo-asc">Título A-Z</option>
-                <option value="titulo-desc">Título Z-A</option>
-                <option value="fecha-asc">Fecha ↑</option>
-                <option value="fecha-desc">Fecha ↓</option>
-              </select>
-
-              <button
-                type="button"
-                class="limpiar-filtros"
-                onclick="resetFiltros()"
-              >
-                Limpiar filtros
-              </button>
-            </div>
-          </div>
-        </nav>
       </div>
       <!-- End Page Title -->
 
       <!-- Real Estate Section -->
-      <section id="real-estate" class="real-estate section">
-        <div class="container">
-          <div class="row gy-4" id="tokko-properties-grid">
-            <div class="col-12 text-center py-5" id="tokko-loading-state">
-              <p class="mb-0">Cargando propiedades...</p>
+  <section id="real-estate" class="real-estate section real-estate--full">
+  <div class="properties-shell">
+    <!-- SIDEBAR FILTROS -->
+    <aside class="properties-sidebar" aria-label="Filtros de propiedades">
+      <!-- Botón cerrar mobile -->
+      <button
+        type="button"
+        class="mobile-filters-close"
+        id="close-mobile-filters"
+        aria-label="Cerrar filtros"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <div class="properties-sidebar-card">
+        <div class="sidebar-heading">
+          <span class="sidebar-kicker">Búsqueda</span>
+          <h2>Filtrar propiedades</h2>
+          <p>Refiná los resultados por operación, zona, tipo y orden.</p>
+        </div>
+
+        <div class="filtro-wrapper">
+          <!-- Operación -->
+          <div class="filter-field">
+            <label for="filtro-operacion">Operación</label>
+            <select
+              class="filtro-select"
+              id="filtro-operacion"
+              aria-label="Filtrar por operación"
+            >
+              <option value="">Todas las operaciones</option>
+            </select>
+          </div>
+
+          <!-- Zona -->
+          <div class="filter-field">
+            <label>Zona</label>
+
+            <div
+              class="custom-multiselect"
+              data-id="zona"
+              data-label="Zona"
+            >
+              <button
+                type="button"
+                class="dropdown-button"
+                aria-label="Filtrar por zona"
+              >
+                <span class="dropdown-button-text">Todas las zonas</span>
+                <span class="dropdown-count" id="zona-count"></span>
+                <span class="dropdown-caret">▼</span>
+              </button>
+
+              <div class="dropdown-options" id="dropdown-zona">
+                <p class="tokko-filter-empty">Cargando zonas...</p>
+              </div>
             </div>
           </div>
 
-          <div class="tokko-list-footer text-center mt-5">
-            <p class="tokko-results-count" id="tokko-results-count"></p>
-            <button
-              type="button"
-              class="limpiar-filtros d-none"
-              id="tokko-load-more"
+          <!-- Tipo -->
+          <div class="filter-field">
+            <label>Tipo de propiedad</label>
+
+            <div
+              class="custom-multiselect"
+              data-id="tipo"
+              data-label="Tipo"
             >
-              Ver más propiedades
-            </button>
+              <button
+                type="button"
+                class="dropdown-button"
+                aria-label="Filtrar por tipo de propiedad"
+              >
+                <span class="dropdown-button-text">Todos los tipos</span>
+                <span class="dropdown-count" id="tipo-count"></span>
+                <span class="dropdown-caret">▼</span>
+              </button>
+
+              <div class="dropdown-options" id="dropdown-tipo">
+                <p class="tokko-filter-empty">Cargando tipos...</p>
+              </div>
+            </div>
           </div>
+
+          <!-- Orden -->
+          <div class="filter-field">
+            <label for="filtro-orden">Ordenar por</label>
+            <select
+              class="filtro-select"
+              id="filtro-orden"
+              aria-label="Ordenar propiedades"
+            >
+              <option value="">Relevancia</option>
+              <option value="precio-asc">Precio menor a mayor</option>
+              <option value="precio-desc">Precio mayor a menor</option>
+              <option value="titulo-asc">Título A-Z</option>
+              <option value="titulo-desc">Título Z-A</option>
+              <option value="fecha-asc">Fecha más antigua</option>
+              <option value="fecha-desc">Fecha más reciente</option>
+            </select>
+          </div>
+
+          <!-- Limpiar -->
+          <button
+            type="button"
+            class="limpiar-filtros"
+            onclick="resetFiltros()"
+          >
+            Limpiar filtros
+          </button>
         </div>
-      </section>
+      </div>
+    </aside>
+
+    <!-- Overlay mobile -->
+    <div class="mobile-filters-overlay" id="mobile-filters-overlay"></div>
+
+    <!-- RESULTADOS -->
+    <main class="properties-results">
+      <!-- Botón filtros mobile -->
+      <button
+        type="button"
+        class="mobile-filters-button"
+        id="open-mobile-filters"
+        aria-label="Abrir filtros"
+      >
+        <i class="bi bi-sliders"></i>
+        <span>Filtros</span>
+      </button>
+
+      <div class="properties-results-header">
+        <div>
+          <span class="results-kicker">Propiedades disponibles</span>
+          <h2>Venta y alquiler</h2>
+        </div>
+
+        <p class="tokko-results-count" id="tokko-results-count"></p>
+      </div>
+
+      <div class="row gy-4" id="tokko-properties-grid">
+        <div class="col-12 text-center py-5" id="tokko-loading-state">
+          <p class="mb-0">Cargando propiedades...</p>
+        </div>
+      </div>
+
+      <div class="tokko-list-footer text-center mt-5">
+        <button
+          type="button"
+          class="limpiar-filtros d-none"
+          id="tokko-load-more"
+        >
+          Ver más propiedades
+        </button>
+      </div>
+    </main>
+  </div>
+</section>
       <!-- /Real Estate Section -->
     </main>
 
