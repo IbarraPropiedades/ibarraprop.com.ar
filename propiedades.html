@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -12,10 +12,43 @@
       name="keywords"
       content="Ibarra Propiedades, propiedades en venta, propiedades en alquiler, Zona Norte, San Isidro, Beccar, Olivos"
     />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ibarra Propiedades" />
+    <meta
+      property="og:title"
+      content="Ibarra Propiedades | Inmobiliaria en Zona Norte"
+    />
+    <meta
+      property="og:description"
+      content="Comprá, vendé o alquilá tu propiedad con asesoramiento profesional en Zona Norte. Tasaciones, propiedades destacadas y atención personalizada."
+    />
+    <meta property="og:url" content="https://ibarraprop.com.ar/" />
+    <meta
+      property="og:image"
+      content="https://ibarraprop.com.ar/assets/img/Logo.jpg"
+    />
+    <meta property="og:image:alt" content="Logo de Ibarra Propiedades" />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Ibarra Propiedades | Inmobiliaria en Zona Norte"
+    />
+    <meta
+      name="twitter:description"
+      content="Propiedades en venta y alquiler, tasaciones y asesoramiento inmobiliario en Zona Norte."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ibarraprop.com.ar/assets/img/Logo.jpg"
+    />
     <!-- Favicons -->
     <link href="assets/img/favicon/favicon.ico" rel="icon" />
-    <link href="assets/img/favicon/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link
+      href="assets/img/favicon/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -26,10 +59,19 @@
     />
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
@@ -46,13 +88,18 @@
         rel="noopener"
         aria-label="Link a WhatsApp Ibarra Propiedades"
       >
-        <img src="assets/img/svg/logo-wapp-01.svg" alt="Ibarra Propiedades WhatsApp" />
+        <img
+          src="assets/img/svg/logo-wapp-01.svg"
+          alt="Ibarra Propiedades WhatsApp"
+        />
       </a>
     </div>
 
     <!-- HEADER -->
     <header id="header" class="header d-flex align-items-center fixed-top">
-      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
         <a href="index.html" class="logo d-flex align-items-center">
           <img src="assets/img/logo.png" alt="Ibarra Propiedades logo" />
         </a>
@@ -62,7 +109,11 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="propiedades.html" class="active">Propiedades</a></li>
             <li class="tasar">
-              <a href="index.html#contact" style="color: black; margin-right: 15px">Tasár ahora</a>
+              <a
+                href="index.html#contact"
+                style="color: black; margin-right: 15px"
+                >Tasár ahora</a
+              >
             </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -87,15 +138,26 @@
           </div>
         </div>
 
-        <nav class="breadcrumbs with-filters" aria-label="Filtros de propiedades">
+        <nav
+          class="breadcrumbs with-filters"
+          aria-label="Filtros de propiedades"
+        >
           <div class="container">
             <div class="filtro-wrapper">
-              <select class="filtro-select" id="filtro-operacion" aria-label="Filtrar por operación">
+              <select
+                class="filtro-select"
+                id="filtro-operacion"
+                aria-label="Filtrar por operación"
+              >
                 <option value="">Operación</option>
               </select>
 
               <div class="custom-multiselect" data-id="zona" data-label="Zona">
-                <button type="button" class="dropdown-button" aria-label="Filtrar por zona">
+                <button
+                  type="button"
+                  class="dropdown-button"
+                  aria-label="Filtrar por zona"
+                >
                   <span class="dropdown-button-text">Zona</span>
                   <span class="dropdown-count" id="zona-count"></span>
                   <span class="dropdown-caret">▼</span>
@@ -106,7 +168,11 @@
               </div>
 
               <div class="custom-multiselect" data-id="tipo" data-label="Tipo">
-                <button type="button" class="dropdown-button" aria-label="Filtrar por tipo de propiedad">
+                <button
+                  type="button"
+                  class="dropdown-button"
+                  aria-label="Filtrar por tipo de propiedad"
+                >
                   <span class="dropdown-button-text">Tipo</span>
                   <span class="dropdown-count" id="tipo-count"></span>
                   <span class="dropdown-caret">▼</span>
@@ -116,7 +182,11 @@
                 </div>
               </div>
 
-              <select class="filtro-select" id="filtro-orden" aria-label="Ordenar propiedades">
+              <select
+                class="filtro-select"
+                id="filtro-orden"
+                aria-label="Ordenar propiedades"
+              >
                 <option value="">Ordenar por</option>
                 <option value="precio-asc">Precio ↑</option>
                 <option value="precio-desc">Precio ↓</option>
@@ -126,7 +196,11 @@
                 <option value="fecha-desc">Fecha ↓</option>
               </select>
 
-              <button type="button" class="limpiar-filtros" onclick="resetFiltros()">
+              <button
+                type="button"
+                class="limpiar-filtros"
+                onclick="resetFiltros()"
+              >
                 Limpiar filtros
               </button>
             </div>
@@ -146,7 +220,11 @@
 
           <div class="tokko-list-footer text-center mt-5">
             <p class="tokko-results-count" id="tokko-results-count"></p>
-            <button type="button" class="limpiar-filtros d-none" id="tokko-load-more">
+            <button
+              type="button"
+              class="limpiar-filtros d-none"
+              id="tokko-load-more"
+            >
               Ver más propiedades
             </button>
           </div>
@@ -160,7 +238,11 @@
         <div class="row gy-3">
           <div class="col-lg-3 col-md-6 d-flex">
             <div class="address">
-              <img src="assets/img/logo.png" alt="Ibarra Propiedades logo" style="height: 80px" />
+              <img
+                src="assets/img/logo.png"
+                alt="Ibarra Propiedades logo"
+                style="height: 80px"
+              />
             </div>
           </div>
 
@@ -170,7 +252,8 @@
               <h4>Contacto</h4>
               <p>
                 <strong>Teléfono:</strong> <span>+54 9 11 2180 5630</span><br />
-                <strong>Email:</strong> <span>info@ibarraprop.com.ar</span><br />
+                <strong>Email:</strong> <span>info@ibarraprop.com.ar</span
+                ><br />
               </p>
             </div>
           </div>
@@ -180,7 +263,8 @@
             <div>
               <h4>Horarios de Atención</h4>
               <p>
-                <strong>Lunes a Viernes:</strong> <span>11:00 - 23:00 hs</span><br />
+                <strong>Lunes a Viernes:</strong> <span>11:00 - 23:00 hs</span
+                ><br />
                 <strong>Domingo:</strong> <span>Cerrado</span>
               </p>
             </div>
@@ -189,8 +273,12 @@
           <div class="col-lg-3 col-md-6">
             <h4>Seguinos en redes</h4>
             <div class="social-links d-flex">
-              <a href="#" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="facebook" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="instagram" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -199,7 +287,10 @@
       <div class="container copyright text-center mt-4">
         <p id="copyright"></p>
         <div class="credits">
-          <a href="https://www.raven3.com.ar" style="font-size: 10px; text-decoration: none; color: #892025">
+          <a
+            href="https://www.raven3.com.ar"
+            style="font-size: 10px; text-decoration: none; color: #892025"
+          >
             by <strong>Raven3</strong>
           </a>
         </div>
@@ -207,7 +298,11 @@
     </footer>
 
     <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+    >
       <i class="bi bi-arrow-up-short"></i>
     </a>
 
