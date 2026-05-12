@@ -1,8 +1,6 @@
 /* =========================================================
    Ibarra Propiedades - Integración Tokko Broker
-   Archivo sugerido: assets/js/tokko-propiedades.js
    ========================================================= */
-
 (() => {
   "use strict";
 
@@ -98,19 +96,71 @@
     return property.type?.name || property.property_type?.name || "Propiedad";
   }
 
-  function getPropertyImage(property) {
-    const photos = Array.isArray(property.photos) ? property.photos : [];
-    const cover =
-      photos.find((photo) => photo.is_front_cover) || photos[0] || {};
+  function getPhotoUrl(photo) {
+    if (!photo) return "";
+
+    if (typeof photo === "string") return photo;
 
     return (
-      cover.image ||
-      cover.original ||
-      cover.url ||
-      cover.thumb ||
-      cover.thumbnail ||
-      TOKKO_CONFIG.fallbackImage
+      photo.image ||
+      photo.original ||
+      photo.url ||
+      photo.file ||
+      photo.picture ||
+      photo.medium ||
+      photo.thumb ||
+      photo.thumbnail ||
+      ""
     );
+  }
+
+  function getPropertyImages(property) {
+    const photos = Array.isArray(property.photos) ? property.photos : [];
+
+    if (!photos.length) {
+      return [TOKKO_CONFIG.fallbackImage];
+    }
+
+    const frontCover = photos.find((photo) => photo.is_front_cover);
+    const orderedPhotos = frontCover
+      ? [frontCover, ...photos.filter((photo) => photo !== frontCover)]
+      : photos;
+
+    const images = orderedPhotos.map(getPhotoUrl).filter(Boolean);
+
+    return images.length ? images : [TOKKO_CONFIG.fallbackImage];
+  }
+
+  function initPropertyCardSwipers() {
+    if (!window.Swiper) return;
+
+    document.querySelectorAll(".tokko-card-swiper").forEach((swiperElement) => {
+      if (swiperElement.classList.contains("swiper-initialized")) return;
+
+      const slides = swiperElement.querySelectorAll(".swiper-slide");
+
+      new Swiper(swiperElement, {
+        loop: slides.length > 1,
+        speed: 450,
+        grabCursor: slides.length > 1,
+        watchOverflow: true,
+        nested: true,
+        observer: true,
+        observeParents: true,
+        autoplay:
+          slides.length > 1
+            ? {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }
+            : false,
+        navigation: {
+          nextEl: swiperElement.querySelector(".tokko-swiper-next"),
+          prevEl: swiperElement.querySelector(".tokko-swiper-prev"),
+        },
+      });
+    });
   }
 
   function getPropertyOperations(property) {
@@ -430,74 +480,138 @@
     const title = getPropertyTitle(property);
     const location = getPropertyLocation(property);
     const type = getPropertyTypeName(property);
-    const image = getPropertyImage(property);
+    const images = getPropertyImages(property);
+    const detailUrl = buildDetailUrl(property);
+
     const operationName = translateOperation(
       getOperationName(getMainOperation(property)),
     );
+
     const price = formatPrice(property);
     const surface = getSurface(property);
     const rooms = getRooms(property);
     const bathrooms = getBathrooms(property);
     const garages = getGarages(property);
     const delay = 100 + (index % 6) * 100;
+    const hasMultipleImages = images.length > 1;
 
     return `
-      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="${delay}">
-        <article class="card tokko-property-card h-100">
-          <a class="tokko-card-media" href="${escapeHtml(buildDetailUrl(property))}" aria-label="Ver ${escapeHtml(title)}">
-            <img
-              src="${escapeHtml(image)}"
-              alt="${escapeHtml(title)}"
-              class="img-fluid"
-              loading="lazy"
-              onerror="this.src='${escapeHtml(TOKKO_CONFIG.fallbackImage)}'"
-            />
-            <span class="sale-rent">${escapeHtml(operationName)} | ${escapeHtml(price)}</span>
+    <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="${delay}">
+      <article class="card tokko-property-card h-100">
+        
+        <div class="tokko-card-media">
+          <div class="swiper tokko-card-swiper">
+            <div class="swiper-wrapper">
+              ${images
+                .map(
+                  (image, imageIndex) => `
+                    <div class="swiper-slide">
+                      <img
+                        src="${escapeHtml(image)}"
+                        alt="${escapeHtml(title)} - foto ${imageIndex + 1}"
+                        class="img-fluid"
+                        loading="${imageIndex === 0 ? "eager" : "lazy"}"
+                        decoding="async"
+                        onerror="this.src='${escapeHtml(TOKKO_CONFIG.fallbackImage)}'"
+                      />
+                    </div>
+                  `,
+                )
+                .join("")}
+            </div>
+
+            ${
+              hasMultipleImages
+                ? `
+                  <button
+                    type="button"
+                    class="tokko-swiper-arrow tokko-swiper-prev"
+                    aria-label="Foto anterior"
+                  ></button>
+
+                  <button
+                    type="button"
+                    class="tokko-swiper-arrow tokko-swiper-next"
+                    aria-label="Foto siguiente"
+                  ></button>
+                `
+                : ""
+            }
+          </div>
+
+          <span class="sale-rent">${escapeHtml(operationName)} | ${escapeHtml(price)}</span>
+
+          ${
+            hasMultipleImages
+              ? `
+                <span class="tokko-photo-count" aria-label="${images.length} fotos">
+                  <i class="bi bi-images" aria-hidden="true"></i>
+                  ${images.length}
+                </span>
+              `
+              : ""
+          }
+
+          <a
+            class="tokko-media-detail-link"
+            href="${escapeHtml(detailUrl)}"
+            aria-label="Ver detalle de ${escapeHtml(title)}"
+          >
+            Ver detalle
           </a>
+        </div>
 
-          <div class="card-body d-flex flex-column">
-            <p class="tokko-property-type mb-2">${escapeHtml(type)}</p>
-            <h3>
-              <a href="${escapeHtml(buildDetailUrl(property))}">
-                ${escapeHtml(title)}
-              </a>
-            </h3>
-            <p class="tokko-property-location mb-3">${escapeHtml(location)}</p>
+        <div class="card-body d-flex flex-column">
+          <p class="tokko-property-type mb-2">${escapeHtml(type)}</p>
 
-            <div class="card-content d-flex flex-column justify-content-center text-center mt-auto">
-              <div class="row propery-info text-muted">
-                <div class="col">
-                  <i class="fas fa-vector-square"></i><br />
-                  <small>Área</small>
-                </div>
-                <div class="col">
-                  <i class="fas fa-bed"></i><br />
-                  <small>Amb.</small>
-                </div>
-                <div class="col">
-                  <i class="fas fa-bath"></i><br />
-                  <small>Baños</small>
-                </div>
-                <div class="col">
-                  <i class="fas fa-car"></i><br />
-                  <small>Coch.</small>
-                </div>
+          <h3>
+            <a href="${escapeHtml(detailUrl)}">
+              ${escapeHtml(title)}
+            </a>
+          </h3>
+
+          <p class="tokko-property-location mb-3">${escapeHtml(location)}</p>
+
+          <div class="card-content d-flex flex-column justify-content-center text-center mt-auto">
+            <div class="row propery-info text-muted">
+              <div class="col">
+                <i class="fas fa-vector-square"></i><br />
+                <small>Área</small>
               </div>
-              <div class="row mt-2 fw-bold">
-                <div class="col">${escapeHtml(surface)}</div>
-                <div class="col">${escapeHtml(rooms)}</div>
-                <div class="col">${escapeHtml(bathrooms)}</div>
-                <div class="col">${escapeHtml(garages)}</div>
+              <div class="col">
+                <i class="fas fa-bed"></i><br />
+                <small>Amb.</small>
+              </div>
+              <div class="col">
+                <i class="fas fa-bath"></i><br />
+                <small>Baños</small>
+              </div>
+              <div class="col">
+                <i class="fas fa-car"></i><br />
+                <small>Coch.</small>
               </div>
             </div>
 
-            <a class="tokko-card-whatsapp mt-3" href="${escapeHtml(buildWhatsAppUrl(property))}" target="_blank" rel="noopener">
-              Consultar por WhatsApp
-            </a>
+            <div class="row mt-2 fw-bold">
+              <div class="col">${escapeHtml(surface)}</div>
+              <div class="col">${escapeHtml(rooms)}</div>
+              <div class="col">${escapeHtml(bathrooms)}</div>
+              <div class="col">${escapeHtml(garages)}</div>
+            </div>
           </div>
-        </article>
-      </div>
-    `;
+
+          <a
+            class="tokko-card-whatsapp mt-3"
+            href="${escapeHtml(buildWhatsAppUrl(property))}"
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+    </div>
+  `;
   }
 
   function renderProperties() {
@@ -536,7 +650,7 @@
         TOKKO_STATE.visibleCount < TOKKO_STATE.filteredProperties.length;
       loadMoreButton.classList.toggle("d-none", !hasMore);
     }
-
+    initPropertyCardSwipers();
     if (window.AOS) {
       AOS.refreshHard();
     }

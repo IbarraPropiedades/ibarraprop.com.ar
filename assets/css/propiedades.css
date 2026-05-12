@@ -1072,3 +1072,228 @@ body.properties-page .mobile-filters-overlay {
     right: 16px;
   }
 }
+
+/* ------------------------------
+   TOKKO PROPERTY CARD SWIPER
+------------------------------ */
+
+.tokko-property-card {
+  overflow: hidden;
+}
+
+.tokko-card-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f3eeee;
+}
+
+.tokko-card-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.tokko-card-swiper .swiper-wrapper,
+.tokko-card-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.tokko-card-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.tokko-property-card:hover .tokko-card-swiper .swiper-slide img {
+  transform: scale(1.035);
+}
+
+/* Oculta cualquier bullet/paginación que venga por estilos globales */
+.tokko-card-swiper .swiper-pagination,
+.tokko-card-swiper .swiper-pagination-bullet {
+  display: none !important;
+}
+
+/* Flechas */
+.tokko-swiper-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 8;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(137, 32, 37, 0.88);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  transition: opacity 0.25s ease, visibility 0.25s ease, background 0.25s ease,
+    transform 0.25s ease;
+  cursor: pointer;
+}
+
+.tokko-swiper-arrow::before {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: "bootstrap-icons";
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+}
+
+.tokko-swiper-prev {
+  left: 12px;
+}
+
+.tokko-swiper-next {
+  right: 12px;
+}
+
+.tokko-swiper-prev::before {
+  content: "\F284";
+}
+
+.tokko-swiper-next::before {
+  content: "\F285";
+}
+
+.tokko-card-media:hover .tokko-swiper-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tokko-swiper-arrow:hover {
+  background: #892025;
+  transform: translateY(-50%) scale(1.06);
+}
+
+/* Badge operación/precio */
+.tokko-card-media .sale-rent {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 7;
+  display: inline-flex;
+  align-items: center;
+  max-width: calc(100% - 28px);
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(137, 32, 37, 0.92);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+  backdrop-filter: blur(10px);
+}
+
+/* Contador de fotos */
+.tokko-photo-count {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 7;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(28, 18, 20, 0.72);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+}
+
+.tokko-photo-count i {
+  color: #fff;
+  font-size: 13px;
+}
+
+/* Link de detalle sobre imagen */
+.tokko-media-detail-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #892025 !important;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.tokko-card-media:hover .tokko-media-detail-link {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tokko-media-detail-link:hover {
+  background: #fff;
+  color: #892025 !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .tokko-card-media {
+    aspect-ratio: 16 / 11;
+  }
+
+  .tokko-swiper-arrow {
+    opacity: 1;
+    visibility: visible;
+    width: 32px;
+    height: 32px;
+  }
+
+  .tokko-swiper-prev {
+    left: 10px;
+  }
+
+  .tokko-swiper-next {
+    right: 10px;
+  }
+
+  .tokko-card-media .sale-rent {
+    left: 12px;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+    font-size: 12px;
+  }
+
+  .tokko-photo-count {
+    top: 10px;
+    right: 10px;
+  }
+
+  .tokko-media-detail-link {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    top: 10px;
+    left: 10px;
+  }
+}
