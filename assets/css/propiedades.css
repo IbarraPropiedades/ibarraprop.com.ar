@@ -20,7 +20,7 @@ body.properties-page {
   --prop-heading: #1f1718;
   --prop-muted: #7b6f70;
 
-  --prop-red: #b52f36;
+  --prop-red: #de223a;
   --prop-red-dark: #8f242a;
   --prop-red-deep: #64171b;
   --prop-rose: #f2dbe1;
@@ -30,7 +30,7 @@ body.properties-page {
 
   --prop-shadow-sm: 0 12px 34px rgba(32, 23, 24, 0.1);
   --prop-shadow-md: 0 24px 64px rgba(32, 23, 24, 0.16);
-  --prop-shadow-red: 0 18px 42px rgba(181, 47, 54, 0.28);
+  --prop-shadow-red: 0 18px 42px rgba(222, 34, 58, 0.28);
 
   --prop-radius-sm: 12px;
   --prop-radius-md: 18px;
@@ -53,12 +53,7 @@ body.properties-page .page-title {
       rgba(255, 255, 255, 0.16),
       transparent 34%
     ),
-    linear-gradient(
-      135deg,
-      var(--prop-red-deep) 0%,
-      var(--prop-red-dark) 48%,
-      var(--prop-red) 100%
-    );
+    linear-gradient(135deg, var(--prop-red) 0%, var(--prop-red) 100%);
 }
 
 body.properties-page .page-title::before {
@@ -113,7 +108,7 @@ body.properties-page .real-estate--full {
   z-index: 1;
   padding: 0;
   background:
-    radial-gradient(circle at 18% 0%, rgba(181, 47, 54, 0.06), transparent 32%),
+    radial-gradient(circle at 18% 0%, rgba(222, 34, 58, 0.06), transparent 32%),
     var(--prop-bg);
 }
 
@@ -170,7 +165,7 @@ body.properties-page .sidebar-kicker,
 body.properties-page .results-kicker {
   display: inline-flex;
   margin-bottom: 8px;
-  color: var(--prop-red-dark);
+  color: var(--prop-red);
   font-size: 0.74rem;
   font-weight: 900;
   letter-spacing: 0.14em;
@@ -308,7 +303,7 @@ body.properties-page .dropdown-caret {
 body.properties-page .filtro-select {
   appearance: none;
   padding-right: 42px;
-  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23b52f36' viewBox='0 0 320 512'%3E%3Cpath d='M31 192h258c17.7 0 26.7 21.5 14.1 34L174.1 355c-7.8 7.8-20.5 7.8-28.3 0L16.9 226C4.3 213.5 13.3 192 31 192z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23de223a' viewBox='0 0 320 512'%3E%3Cpath d='M31 192h258c17.7 0 26.7 21.5 14.1 34L174.1 355c-7.8 7.8-20.5 7.8-28.3 0L16.9 226C4.3 213.5 13.3 192 31 192z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 17px center;
   background-size: 10px;
@@ -322,7 +317,7 @@ body.properties-page .filtro-select option {
 
 body.properties-page .filtro-select:hover,
 body.properties-page .dropdown-button:hover {
-  border-color: rgba(181, 47, 54, 0.32);
+  border-color: rgba(222, 34, 58, 0.32);
   background-color: #ffffff;
   transform: translateY(-1px);
   box-shadow: 0 12px 26px rgba(32, 23, 24, 0.08);
@@ -331,17 +326,17 @@ body.properties-page .dropdown-button:hover {
 body.properties-page .filtro-select:focus,
 body.properties-page .dropdown-button:focus {
   outline: none;
-  border-color: rgba(181, 47, 54, 0.52);
-  box-shadow: 0 0 0 4px rgba(181, 47, 54, 0.12);
+  border-color: rgba(222, 34, 58, 0.52);
+  box-shadow: 0 0 0 4px rgba(222, 34, 58, 0.12);
 }
 
 body.properties-page .limpiar-filtros {
   justify-content: center;
   margin-top: 4px;
-  border-color: rgba(181, 47, 54, 0.18);
+  border-color: rgba(222, 34, 58, 0.18);
   background: var(--prop-red);
   color: #ffffff;
-  box-shadow: 0 14px 30px rgba(181, 47, 54, 0.22);
+  box-shadow: 0 14px 30px rgba(222, 34, 58, 0.22);
 }
 
 body.properties-page .limpiar-filtros:hover {
@@ -361,7 +356,7 @@ body.properties-page .dropdown-count {
   margin-left: auto;
   border-radius: 999px;
   background: var(--prop-rose);
-  color: var(--prop-red-dark);
+  color: var(--prop-red);
   font-size: 0.74rem;
   font-weight: 900;
 }
@@ -393,7 +388,7 @@ body.properties-page .dropdown-options::-webkit-scrollbar {
 
 body.properties-page .dropdown-options::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: rgba(181, 47, 54, 0.3);
+  background: rgba(222, 34, 58, 0.3);
 }
 
 body.properties-page .dropdown-options label {
@@ -489,7 +484,7 @@ body.properties-page .tokko-property-card {
 
 body.properties-page .tokko-property-card:hover {
   transform: translateY(-7px);
-  border-color: rgba(181, 47, 54, 0.22);
+  border-color: rgba(222, 34, 58, 0.22);
   box-shadow: var(--prop-shadow-md);
 }
 
@@ -545,7 +540,7 @@ body.properties-page .tokko-property-card .sale-rent {
   padding: 8px 12px;
   border-radius: 999px;
   background: var(--prop-rose);
-  color: var(--prop-red-dark);
+  color: var(--prop-red);
   font-size: 0.78rem;
   font-weight: 900;
   line-height: 1;
@@ -588,7 +583,7 @@ body.properties-page .tokko-property-location {
 
 body.properties-page .tokko-property-type {
   margin-top: 2px;
-  color: var(--prop-red-dark);
+  color: var(--prop-red);
   font-weight: 800;
 }
 
@@ -601,8 +596,8 @@ body.properties-page .tokko-property-card .card-content {
   background:
     linear-gradient(
       180deg,
-      rgba(181, 47, 54, 0.04),
-      rgba(181, 47, 54, 0.015)
+      rgba(222, 34, 58, 0.04),
+      rgba(222, 34, 58, 0.015)
     );
 }
 
@@ -646,7 +641,7 @@ body.properties-page .tokko-card-whatsapp {
   min-height: 46px;
   margin-top: 18px;
   padding: 0 18px;
-  border: 1px solid rgba(181, 47, 54, 0.18);
+  border: 1px solid rgba(222, 34, 58, 0.18);
   border-radius: 999px;
   background: var(--prop-red);
   color: #ffffff;
@@ -654,7 +649,7 @@ body.properties-page .tokko-card-whatsapp {
   font-weight: 900;
   line-height: 1;
   text-decoration: none;
-  box-shadow: 0 14px 30px rgba(181, 47, 54, 0.23);
+  box-shadow: 0 14px 30px rgba(222, 34, 58, 0.23);
   transition:
     transform var(--prop-transition),
     background var(--prop-transition),
@@ -893,7 +888,7 @@ body.properties-page .mobile-filters-overlay {
     border: 1px solid rgba(32, 23, 24, 0.12);
     border-radius: 999px;
     background: #ffffff;
-    color: var(--prop-red-dark);
+    color: var(--prop-red);
     box-shadow: 0 14px 34px rgba(32, 23, 24, 0.08);
     font-size: 0.96rem;
     font-weight: 900;
@@ -910,7 +905,7 @@ body.properties-page .mobile-filters-overlay {
   }
 
   body.properties-page .mobile-filters-button:hover {
-    border-color: rgba(181, 47, 54, 0.28);
+    border-color: rgba(222, 34, 58, 0.28);
     box-shadow: 0 18px 42px rgba(32, 23, 24, 0.12);
   }
 
@@ -1129,7 +1124,7 @@ body.properties-page .mobile-filters-overlay {
   padding: 0;
   border: 0;
   border-radius: 999px;
-  background: rgba(137, 32, 37, 0.88);
+  background: rgba(222, 34, 58, 0.88);
   color: #fff;
   opacity: 0;
   visibility: hidden;
@@ -1187,7 +1182,7 @@ body.properties-page .mobile-filters-overlay {
   max-width: calc(100% - 28px);
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(137, 32, 37, 0.92);
+  background: rgba(222, 34, 58, 0.92);
   color: #fff;
   font-size: 13px;
   font-weight: 800;
