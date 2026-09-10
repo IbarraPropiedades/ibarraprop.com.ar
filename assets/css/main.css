@@ -263,15 +263,6 @@ p {
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.16));
 }
 
-.header.logo-on-scroll .logo img {
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.header.logo-on-scroll.logo-visible .logo img {
-  opacity: 1;
-}
-
 .header .logo h1 {
   font-size: 28px;
   margin: 0;
@@ -705,7 +696,34 @@ section,
   text-align: center;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(135deg, var(--ibarra-red-dark) 0%, var(--ibarra-red) 100%);
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  transform: scale(1.02);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(
+      circle at 50% 26%,
+      rgba(222, 34, 58, 0.42),
+      transparent 31%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(20, 12, 13, 0.56) 0%,
+      rgba(20, 12, 13, 0.74) 52%,
+      rgba(20, 12, 13, 0.9) 100%
+    );
 }
 
 .hero::after {
@@ -761,14 +779,6 @@ section,
   font-size: clamp(1.04rem, 1.65vw, 1.25rem);
   line-height: 1.75;
   text-wrap: pretty;
-}
-
-.hero-logo {
-  display: block;
-  width: clamp(280px, 34vw, 640px);
-  height: auto;
-  margin: 0 auto 46px;
-  filter: drop-shadow(0 20px 46px rgba(0, 0, 0, 0.3));
 }
 
 .search-bar {

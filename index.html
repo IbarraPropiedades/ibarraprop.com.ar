@@ -16,7 +16,7 @@
     />
     <meta name="author" content="Ibarra Propiedades" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta name="theme-color" content="#892025" />
+    <meta name="theme-color" content="#de223a" />
     <meta name="format-detection" content="telephone=yes" />
 
     <link rel="canonical" href="https://ibarraprop.com.ar/" />
@@ -239,26 +239,30 @@
         class="hero section dark-background"
         aria-labelledby="hero-title"
       >
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="hero-video"
+          aria-hidden="true"
+          preload="metadata"
+        >
+          <source src="assets/video/1.mp4" type="video/mp4" />
+          Tu navegador no soporta el video HTML5.
+        </video>
+        <div class="overlay" aria-hidden="true"></div>
+
         <div class="hero-content" data-aos="fade-up">
-          <p class="hero-kicker visually-hidden">Inmobiliaria en Zona Norte</p>
-          <h1 id="hero-title" class="visually-hidden">
+          <p class="hero-kicker">Inmobiliaria en Zona Norte</p>
+          <h1 id="hero-title">
             Tu próximo hogar empieza con una decisión bien asesorada
           </h1>
-          <p class="hero-subtitle visually-hidden">
+          <p class="hero-subtitle">
             Comprá, vendé o alquilá propiedades con el acompañamiento de una
             inmobiliaria local, cercana y especializada en San Isidro, Vicente
             López, Tigre y alrededores.
           </p>
-
-          <img
-            src="assets/img/ibarra-logo-white.png"
-            alt="Ibarra Propiedades"
-            class="hero-logo"
-            width="463"
-            height="264"
-            loading="eager"
-            decoding="async"
-          />
 
           <form
             class="search-bar"
