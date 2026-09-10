@@ -231,13 +231,10 @@ p {
 ------------------------------ */
 .header {
   color: var(--nav-color);
-  background: rgba(222, 34, 58, 0.92);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: var(--ibarra-red);
   min-height: var(--header-height);
   padding: 10px 0;
   transition:
-    background var(--transition),
     box-shadow var(--transition),
     min-height var(--transition),
     padding var(--transition);
@@ -264,6 +261,15 @@ p {
   margin-right: 8px;
   object-fit: contain;
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.16));
+}
+
+.header.logo-on-scroll .logo img {
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.header.logo-on-scroll.logo-visible .logo img {
+  opacity: 1;
 }
 
 .header .logo h1 {

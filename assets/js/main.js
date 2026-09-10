@@ -22,6 +22,28 @@
   window.addEventListener("load", toggleScrolled);
 
   /**
+   * Reveal the header logo only after scrolling past the hero
+   * (the hero already shows the same logo, huge, on load)
+   */
+  function initHeaderLogoReveal() {
+    const selectHeader = document.querySelector("#header");
+    const selectHero = document.querySelector("#hero");
+    if (!selectHeader || !selectHero) return;
+
+    selectHeader.classList.add("logo-on-scroll");
+
+    function toggleHeaderLogo() {
+      selectHeader.classList.toggle("logo-visible", window.scrollY > 300);
+    }
+
+    document.addEventListener("scroll", toggleHeaderLogo);
+    window.addEventListener("load", toggleHeaderLogo);
+    toggleHeaderLogo();
+  }
+
+  initHeaderLogoReveal();
+
+  /**
    * Mobile nav toggle
    */
   const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
