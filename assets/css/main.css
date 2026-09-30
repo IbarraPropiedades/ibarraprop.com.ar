@@ -1287,7 +1287,7 @@ section,
 
 .location-card {
   position: absolute;
-  left: 32px;
+  right: 32px;
   bottom: 32px;
   z-index: 2;
   width: min(360px, calc(100% - 64px));
@@ -1298,41 +1298,32 @@ section,
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.7);
   box-shadow: var(--shadow-md);
+  overflow: hidden;
 }
 
-.location-pin {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 16px;
+.location-photo {
+  position: relative;
+  margin: -30px -32px 20px;
+}
+
+.location-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.location-photo figcaption {
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+  padding: 5px 12px;
   border-radius: 999px;
   background: var(--ibarra-red);
   color: var(--contrast-color);
-  font-size: 22px;
+  font-size: 0.78rem;
+  font-weight: 700;
   box-shadow: var(--shadow-red);
-  position: relative;
-}
-
-.location-pin::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  border-radius: inherit;
-  border: 2px solid rgba(222, 34, 58, 0.35);
-  animation: location-pulse 2.4s ease-out infinite;
-}
-
-@keyframes location-pulse {
-  0% {
-    transform: scale(0.85);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(1.35);
-    opacity: 0;
-  }
 }
 
 .location-card h3 {
@@ -1398,10 +1389,18 @@ section,
 
 @media (max-width: 991px) {
   .location-card {
-    left: 20px;
+    right: 20px;
     bottom: 20px;
     width: min(320px, calc(100% - 40px));
     padding: 24px 26px;
+  }
+
+  .location-photo {
+    margin: -24px -26px 16px;
+  }
+
+  .location-map {
+    min-height: 560px;
   }
 }
 
