@@ -38,6 +38,11 @@
             gtag("event", "conversion", {
               send_to: "AW-18440838855/vf60COWgtv8cEMe9o9lE",
             });
+            // Google Analytics: lead de tasación
+            gtag("event", "generate_lead", {
+              send_to: "G-JXQJ55SG0R",
+              form_name: "solicitar_tasacion",
+            });
           }
         } else {
           return response.json().then(function (data) {
