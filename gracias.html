@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <!-- Solo page_view: las conversiones se disparan en el formulario antes de redirigir. -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-18440838855"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-18440838855");
+      gtag("config", "G-JXQJ55SG0R");
+    </script>
+
+    <title>¡Gracias! | Ibarra Propiedades</title>
+    <meta
+      name="description"
+      content="Recibimos tu solicitud de tasación. Te vamos a contactar a la brevedad."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#de223a" />
+
+    <link href="assets/img/favicon/favicon.ico" rel="icon" />
+    <link
+      href="assets/img/favicon/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --red: #de223a;
+        --red-deep: #64171b;
+        --white: #ffffff;
+        --white-soft: rgba(255, 255, 255, 0.82);
+        --white-line: rgba(255, 255, 255, 0.22);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 40px 16px;
+        font-family: "Poppins", "Helvetica Neue", Arial, sans-serif;
+        color: var(--white);
+        text-align: center;
+        background-color: var(--red);
+        background-image:
+          radial-gradient(
+            circle at 20% 15%,
+            rgba(255, 255, 255, 0.14),
+            transparent 45%
+          ),
+          radial-gradient(
+            circle at 85% 90%,
+            rgba(100, 23, 27, 0.55),
+            transparent 55%
+          );
+      }
+
+      .logo {
+        width: 170px;
+        height: auto;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 560px;
+        padding: 44px 32px 36px;
+        border: 1px solid var(--white-line);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 24px 60px rgba(60, 10, 14, 0.35);
+        backdrop-filter: blur(6px);
+        animation: rise 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+
+      .check {
+        width: 84px;
+        height: 84px;
+        margin: 0 auto 22px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--white);
+        color: var(--red);
+        font-size: 44px;
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.14);
+        animation: pop 520ms 180ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-family: "Raleway", "Poppins", sans-serif;
+        font-weight: 800;
+        font-size: clamp(2rem, 6vw, 2.6rem);
+        line-height: 1.1;
+      }
+
+      .lead {
+        margin: 0 auto;
+        max-width: 420px;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: var(--white-soft);
+      }
+
+      .countdown {
+        margin: 32px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        font-size: 0.95rem;
+        color: var(--white-soft);
+      }
+
+      .ring {
+        position: relative;
+        width: 52px;
+        height: 52px;
+        flex-shrink: 0;
+      }
+
+      .ring svg {
+        width: 100%;
+        height: 100%;
+        transform: rotate(-90deg);
+      }
+
+      .ring circle {
+        fill: none;
+        stroke-width: 4;
+      }
+
+      .ring .track {
+        stroke: var(--white-line);
+      }
+
+      .ring .progress {
+        stroke: var(--white);
+        stroke-linecap: round;
+        stroke-dasharray: 138.23;
+        stroke-dashoffset: 0;
+        animation: drain 5s linear forwards;
+      }
+
+      .ring span {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--white);
+      }
+
+      .countdown.is-stopped .ring {
+        display: none;
+      }
+
+      .actions {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 26px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition:
+          transform 200ms ease,
+          background-color 200ms ease,
+          box-shadow 200ms ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn:focus-visible {
+        outline: 3px solid var(--white);
+        outline-offset: 3px;
+      }
+
+      .btn-primary {
+        background: var(--white);
+        color: var(--red);
+        box-shadow: 0 12px 28px rgba(60, 10, 14, 0.3);
+      }
+
+      .btn-ghost {
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        color: var(--white);
+      }
+
+      .btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      @keyframes pop {
+        from {
+          opacity: 0;
+          transform: scale(0.4);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      @keyframes drain {
+        to {
+          stroke-dashoffset: 138.23;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .card,
+        .check,
+        .ring .progress {
+          animation: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          padding: 36px 20px 28px;
+        }
+        .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" aria-label="Ibarra Propiedades - Inicio">
+      <img
+        class="logo"
+        src="assets/img/ibarra-logo-white.png"
+        alt="Ibarra Propiedades"
+      />
+    </a>
+
+    <main class="card">
+      <div class="check" aria-hidden="true">
+        <i class="bi bi-check-lg"></i>
+      </div>
+      <h1>¡Gracias!</h1>
+      <p class="lead">
+        Recibimos tu solicitud de tasación. Un asesor de Ibarra Propiedades te
+        va a contactar a la brevedad.
+      </p>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="ring" aria-hidden="true">
+          <svg viewBox="0 0 52 52">
+            <circle class="track" cx="26" cy="26" r="22" />
+            <circle class="progress" cx="26" cy="26" r="22" />
+          </svg>
+          <span id="countdown-number">5</span>
+        </div>
+        <p id="countdown-text">Te llevamos al inicio en 5 segundos…</p>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="index.html">
+          <i class="bi bi-house-door" aria-hidden="true"></i> Volver al inicio
+        </a>
+        <a class="btn btn-ghost" href="propiedades.html">
+          <i class="bi bi-buildings" aria-hidden="true"></i> Ver propiedades
+        </a>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var HOME_URL = "index.html";
+        var seconds = 5;
+        var box = document.getElementById("countdown");
+        var numberEl = document.getElementById("countdown-number");
+        var textEl = document.getElementById("countdown-text");
+
+        var timer = setInterval(function () {
+          seconds -= 1;
+          if (seconds <= 0) {
+            clearInterval(timer);
+            textEl.textContent = "Redirigiendo…";
+            // replace: así "atrás" no vuelve a esta página.
+            window.location.replace(HOME_URL);
+            return;
+          }
+          numberEl.textContent = seconds;
+          textEl.textContent =
+            "Te llevamos al inicio en " +
+            seconds +
+            (seconds === 1 ? " segundo…" : " segundos…");
+        }, 1000);
+
+        // Si el usuario interactúa, cancelamos la redirección automática.
+        function stop() {
+          if (!timer) return;
+          clearInterval(timer);
+          timer = null;
+          box.classList.add("is-stopped");
+          textEl.textContent = "Podés seguir navegando cuando quieras.";
+          ["pointerdown", "keydown", "wheel", "touchstart"].forEach(
+            function (evt) {
+              document.removeEventListener(evt, stop);
+            },
+          );
+        }
+
+        ["pointerdown", "keydown", "wheel", "touchstart"].forEach(
+          function (evt) {
+            document.addEventListener(evt, stop, { passive: true });
+          },
+        );
+      })();
+    </script>
+  </body>
+</html>
