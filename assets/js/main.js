@@ -157,3 +157,13 @@
 
     
 })();
+
+// Conversión Google Ads: clic en WhatsApp
+document.addEventListener("click", function (e) {
+  var link = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp://"]');
+  if (!link || typeof gtag !== "function") return;
+  gtag("event", "conversion", {
+    send_to: "AW-18440838855/PbaICJuiio0dEMe9o9lE"
+  });
+  gtag("event", "whatsapp_click", { link_url: link.href }); // para verlo también en GA4
+});
