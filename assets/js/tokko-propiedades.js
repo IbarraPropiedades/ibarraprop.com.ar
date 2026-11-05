@@ -808,6 +808,62 @@
     applyFilters();
   }
 
+  function prettifySlug(slug = "") {
+    return slug
+      .split("-")
+      .filter(Boolean)
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  }
+
+  // Marca (o agrega, si no existe entre las opciones) un checkbox del dropdown
+  function checkDropdownValue(dropdownId, value) {
+    const dropdown = $(`#dropdown-${dropdownId}`);
+    if (!dropdown || !value) return;
+
+    let input = $$(`input[type="checkbox"]`, dropdown).find(
+      (checkbox) => checkbox.value === value,
+    );
+
+    if (!input) {
+      dropdown.querySelector(".tokko-filter-empty")?.remove();
+      dropdown.insertAdjacentHTML(
+        "afterbegin",
+        buildCheckboxOption(value, prettifySlug(value)),
+      );
+      input = $(`input[type="checkbox"]`, dropdown);
+    }
+
+    input.checked = true;
+  }
+
+  // Aplica los filtros que llegan por URL (buscador del index, links de zonas/tipos)
+  function applyUrlFilters() {
+    const params = new URLSearchParams(window.location.search);
+
+    const operation = params.get("operacion");
+    const operationSelect = $(SELECTORS.operation);
+    if (operation && operationSelect) {
+      const value = normalizeOperationName(operation);
+      if (!$$("option", operationSelect).some((opt) => opt.value === value)) {
+        operationSelect.insertAdjacentHTML(
+          "beforeend",
+          `<option value="${escapeHtml(value)}">${escapeHtml(translateOperation(value))}</option>`,
+        );
+      }
+      operationSelect.value = value;
+    }
+
+    params.getAll("tipo").forEach((tipo) => {
+      checkDropdownValue("tipo", normalizeText(tipo));
+    });
+
+    params.getAll("zona").forEach((zona) => {
+      // "san-isidro-centro" → "san-isidro" para que coincida con la ubicación de Tokko
+      checkDropdownValue("zona", normalizeText(zona).replace(/-centro$/, ""));
+    });
+  }
+
   async function initTokkoProperties() {
     window.toggleDropdown = toggleDropdown;
     window.resetFiltros = resetFiltros;
@@ -825,6 +881,7 @@
       TOKKO_STATE.allProperties = await fetchAllTokkoProperties();
       TOKKO_STATE.filteredProperties = [...TOKKO_STATE.allProperties];
       populateDynamicFilters(TOKKO_STATE.allProperties);
+      applyUrlFilters();
       applyFilters();
     } catch (error) {
       showErrorState(error);
