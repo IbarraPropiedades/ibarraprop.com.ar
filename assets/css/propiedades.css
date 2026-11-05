@@ -38,6 +38,8 @@ body.properties-page {
   --prop-transition: 220ms ease;
 
   background: var(--prop-bg);
+  /* overflow-x: hidden en body rompe position: sticky del sidebar */
+  overflow-x: clip;
 }
 
 /* ------------------------------
@@ -48,12 +50,20 @@ body.properties-page .page-title {
   overflow: visible;
   color: #ffffff;
   background:
-    radial-gradient(
-      circle at 50% 0%,
-      rgba(255, 255, 255, 0.16),
-      transparent 34%
+    linear-gradient(
+      180deg,
+      rgba(100, 23, 27, 0.55) 0%,
+      rgba(31, 23, 24, 0.62) 55%,
+      rgba(31, 23, 24, 0.78) 100%
     ),
-    linear-gradient(135deg, var(--prop-red) 0%, var(--prop-red) 100%);
+    url("../img/oficina/vidriera-ibarra-propiedades.jpg") center 58% / cover
+      no-repeat,
+    var(--prop-red-deep);
+}
+
+body.properties-page .page-title h1,
+body.properties-page .page-title .heading p {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
 }
 
 body.properties-page .page-title::before {
@@ -201,7 +211,8 @@ body.properties-page .properties-results-header {
   display: flex;
   align-items: end;
   justify-content: space-between;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 16px 20px;
   margin-bottom: 28px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(32, 23, 24, 0.1);
@@ -222,6 +233,56 @@ body.properties-page .tokko-results-count {
   font-size: 0.95rem;
   font-weight: 800;
   white-space: nowrap;
+}
+
+/* Barra de resultados fija al hacer scroll (desktop) */
+@media (min-width: 992px) {
+  body.properties-page .properties-results-header {
+    position: sticky;
+    top: var(--header-height, 92px);
+    z-index: 15;
+    padding-top: 18px;
+    margin-top: -18px;
+  }
+
+  /* Fondo que cubre también el padding lateral de la columna */
+  body.properties-page .properties-results-header::before {
+    content: "";
+    position: absolute;
+    inset: 0 -52px 0 -36px;
+    z-index: -1;
+    background: rgba(250, 247, 244, 0.94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 14px 24px -18px rgba(32, 23, 24, 0.25);
+  }
+}
+
+body.properties-page .results-tools {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+body.properties-page .results-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+body.properties-page .results-sort label {
+  margin: 0;
+  color: var(--prop-heading);
+  font-size: 0.82rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+body.properties-page .results-sort .filtro-select {
+  width: 236px;
 }
 
 /* ------------------------------
@@ -784,6 +845,24 @@ body.properties-page #tokko-properties-grid .col-12 p {
     display: block;
     margin-top: 8px;
     white-space: normal;
+  }
+
+  body.properties-page .results-tools {
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 0;
+    gap: 12px;
+    margin-top: 6px;
+  }
+
+  body.properties-page .results-sort {
+    justify-content: space-between;
+  }
+
+  body.properties-page .results-sort .filtro-select {
+    width: auto;
+    flex: 1;
+    max-width: 260px;
   }
 
   body.properties-page .filtro-wrapper {

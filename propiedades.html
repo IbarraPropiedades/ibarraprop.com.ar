@@ -179,8 +179,8 @@
                 <span class="sidebar-kicker">Búsqueda personalizada</span>
                 <h2>Filtrá tu propiedad</h2>
                 <p>
-                  Elegí operación, zona, tipo de propiedad y ordená los
-                  resultados según tu preferencia.
+                  Elegí operación, zona y tipo de propiedad para encontrar lo
+                  que estás buscando.
                 </p>
               </div>
 
@@ -251,24 +251,6 @@
                   </div>
                 </div>
 
-                <!-- Orden -->
-                <div class="filter-field">
-                  <label for="filtro-orden">Ordenar por</label>
-                  <select
-                    class="filtro-select"
-                    id="filtro-orden"
-                    aria-label="Ordenar propiedades"
-                  >
-                    <option value="">Orden recomendado</option>
-                    <option value="precio-asc">Menor precio</option>
-                    <option value="precio-desc">Mayor precio</option>
-                    <option value="titulo-asc">Nombre A-Z</option>
-                    <option value="titulo-desc">Nombre Z-A</option>
-                    <option value="fecha-desc">Más recientes</option>
-                    <option value="fecha-asc">Más antiguas</option>
-                  </select>
-                </div>
-
                 <!-- Limpiar -->
                 <button
                   type="button"
@@ -303,7 +285,25 @@
                 <h2>Propiedades disponibles en Zona Norte</h2>
               </div>
 
-              <p class="tokko-results-count" id="tokko-results-count"></p>
+              <div class="results-tools">
+                <p class="tokko-results-count" id="tokko-results-count"></p>
+                <div class="results-sort">
+                  <label for="filtro-orden">Ordenar por</label>
+                  <select
+                    class="filtro-select"
+                    id="filtro-orden"
+                    aria-label="Ordenar propiedades"
+                  >
+                    <option value="">Orden recomendado</option>
+                    <option value="precio-asc">Menor precio</option>
+                    <option value="precio-desc">Mayor precio</option>
+                    <option value="titulo-asc">Nombre A-Z</option>
+                    <option value="titulo-desc">Nombre Z-A</option>
+                    <option value="fecha-desc">Más recientes</option>
+                    <option value="fecha-asc">Más antiguas</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
             <div class="row gy-4" id="tokko-properties-grid">
