@@ -1,0 +1,263 @@
+/* Tarjeta de propiedad, formularios cortos y bloques de fichas y zonas */
+/* Vitrina de la home: se recorre sola y también se puede deslizar */
+.featured-properties {
+  overflow-x: clip;
+}
+
+.vitrina {
+  overflow-x: auto;
+  margin: 0 calc(50% - 50vw);
+  padding: 8px 16px 16px;
+  scrollbar-width: none;
+}
+
+.vitrina::-webkit-scrollbar {
+  display: none;
+}
+
+.vitrina__track {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+}
+
+.vitrina__item {
+  flex: none;
+  width: clamp(270px, 82vw, 340px);
+}
+
+.prop-card {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  background: var(--surface-color);
+  box-shadow: var(--shadow-xs);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.prop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.prop-card__media {
+  position: relative;
+  display: block;
+  flex: none;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--surface-warm);
+}
+
+/* Absoluta: una foto vertical no puede agrandar el recuadro */
+.prop-card__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prop-card__badge,
+.prop-card__count {
+  position: absolute;
+  top: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.prop-card__badge {
+  left: 12px;
+  background: var(--ibarra-red);
+  color: #ffffff;
+}
+
+.prop-card__count {
+  right: 12px;
+  background: rgba(32, 23, 24, 0.72);
+  color: #ffffff;
+}
+
+.prop-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px;
+}
+
+.prop-card__price {
+  margin: 0;
+  color: var(--ibarra-red);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.prop-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.prop-card__title a {
+  color: var(--heading-color);
+}
+
+.prop-card__title a:hover {
+  color: var(--ibarra-red);
+}
+
+.prop-card__location {
+  margin: 0;
+  color: var(--muted-color);
+  font-size: 0.9rem;
+}
+
+.prop-card__specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin: 6px 0 10px;
+  padding: 0;
+  color: var(--default-color);
+  font-size: 0.88rem;
+  font-weight: 600;
+  list-style: none;
+}
+
+.prop-card__specs i {
+  margin-right: 5px;
+  color: var(--ibarra-red);
+}
+
+.prop-card__whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  min-height: 46px;
+  border: 1px solid var(--ibarra-red);
+  border-radius: 12px;
+  color: var(--ibarra-red);
+  font-weight: 700;
+}
+
+.prop-card__whatsapp:hover {
+  background: var(--ibarra-red);
+  color: #ffffff;
+}
+
+.lead-honeypot {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.lead-legal {
+  margin: 8px 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.ficha-form {
+  display: grid;
+  gap: 6px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.ficha-form h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.ficha-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ficha-form input:not(.lead-honeypot) {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 14px;
+  border: 1px solid var(--border-color-strong);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.ficha-form button {
+  min-height: 48px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--ibarra-red);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.ficha-form button:disabled {
+  opacity: 0.65;
+}
+
+.ficha-form + .tokko-detail-back {
+  display: block;
+  margin-top: 16px;
+}
+
+.ficha-breadcrumb {
+  margin-bottom: 18px;
+  color: var(--muted-color);
+  font-size: 0.88rem;
+}
+
+.ficha-breadcrumb a {
+  color: var(--ibarra-red);
+  font-weight: 600;
+}
+
+.ficha-similares {
+  margin-top: 56px;
+}
+
+.ficha-similares h2 {
+  margin-bottom: 24px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+}
+
+.zona-cta {
+  margin-top: 56px;
+  padding: 36px 24px;
+  border-radius: 18px;
+  background: var(--ibarra-red-soft);
+  text-align: center;
+}
+
+.zona-cta h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 900;
+}
+
+.lead-legal a {
+  text-decoration: underline;
+}
+
+.tokko-detail-pagination {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}

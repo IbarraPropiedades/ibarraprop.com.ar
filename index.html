@@ -25,10 +25,6 @@
       name="description"
       content="Ibarra Propiedades, inmobiliaria en Zona Norte con más de 20 años de experiencia. Propiedades en venta y alquiler, tasaciones y asesoramiento inmobiliario personalizado."
     />
-    <meta
-      name="keywords"
-      content="Ibarra Propiedades, inmobiliaria Zona Norte, propiedades en venta, propiedades en alquiler, tasaciones inmobiliarias, casas en venta, departamentos en venta, San Isidro, Vicente López, Tigre"
-    />
     <meta name="author" content="Ibarra Propiedades" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="theme-color" content="#de223a" />
@@ -78,39 +74,22 @@
     <!-- Performance: external connections -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://static.tokkobroker.com" />
 
     <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
 
     <!-- Vendor CSS Files -->
     <link
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-AvbHedHu8FDxE3ddefa5tQ2Oa4KQbZwkqc7TqvQl4E8c5q1h9fY1xGj9b6X2YvL3B4h7sZ9B4Yq0Qp1x0Q6J7g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/propiedad-card.css" rel="stylesheet" />
 
     <script type="application/ld+json">
       {
@@ -130,6 +109,7 @@
             ],
             "description": "Inmobiliaria en Zona Norte especializada en propiedades en venta, alquiler y tasaciones inmobiliarias.",
             "telephone": "+54 9 11 2180 5630",
+            "sameAs": ["https://www.instagram.com/ibarrapropiedades/"],
             "email": "info@ibarraprop.com.ar",
             "areaServed": [
               "Zona Norte",
@@ -176,24 +156,7 @@
             "publisher": {
               "@id": "https://ibarraprop.com.ar/#realestateagent"
             },
-            "inLanguage": "es-AR",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://ibarraprop.com.ar/propiedades.html?search={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": "https://ibarraprop.com.ar/#breadcrumb",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Inicio",
-                "item": "https://ibarraprop.com.ar/"
-              }
-            ]
+            "inLanguage": "es-AR"
           }
         ]
       }
@@ -225,47 +188,26 @@
     </div>
 
     <!-- HEADER -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div
-        class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
-      >
-        <a
-          href="index.html"
-          class="logo d-flex align-items-center"
-          aria-label="Ibarra Propiedades - Inicio"
-        >
-          <img
-            src="assets/img/ibarra-logo-white.png"
-            alt="Ibarra Propiedades"
-            width="140"
-            height="80"
-            fetchpriority="high"
-            decoding="async"
-          />
+    <!-- GEN:header -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center" aria-label="Ibarra Propiedades - Inicio">
+          <img src="/assets/img/ibarra-logo-white.png" alt="Ibarra Propiedades" width="140" height="80" decoding="async" />
         </a>
-
         <nav id="navmenu" class="navmenu" aria-label="Navegación principal">
           <ul>
-            <li><a href="#hero" class="active">Inicio</a></li>
-            <li><a href="propiedades.html">Propiedades</a></li>
-            <li><a href="#services">Vender</a></li>
-            <li><a href="#about">Quiénes somos</a></li>
-            <li><a href="#zonas">Zonas</a></li>
-            <li class="tasar">
-              <a href="#contact" style="color: black; margin-right: 15px"
-                >Tasá ahora</a
-              >
-            </li>
+            <li><a href="/" class="active">Inicio</a></li>
+            <li><a href="/propiedades.html">Propiedades</a></li>
+            <li><a href="/#services">Vender</a></li>
+            <li><a href="/#about">Quiénes somos</a></li>
+            <li><a href="/#zonas">Zonas</a></li>
+            <li class="tasar"><a href="/tasacion.html" style="color: black; margin-right: 15px">Tasá ahora</a></li>
           </ul>
-          <i
-            class="mobile-nav-toggle d-xl-none bi bi-list"
-            role="button"
-            tabindex="0"
-            aria-label="Abrir menú de navegación"
-          ></i>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Abrir menú de navegación"></i>
         </nav>
       </div>
     </header>
+<!-- /GEN:header -->
 
     <main id="main" class="main">
       <!-- Hero Section -->
@@ -275,20 +217,28 @@
         aria-labelledby="hero-title"
       >
         <video
-          autoplay
+          id="hero-video"
           muted
           loop
           playsinline
           class="hero-video"
           aria-hidden="true"
-          preload="metadata"
-        >
-          <source src="assets/video/1.mp4" type="video/mp4" />
-          Tu navegador no soporta el video HTML5.
-        </video>
+          preload="none"
+          poster="assets/video/hero-poster.jpg"
+        ></video>
+        <script>
+          (function () {
+            var video = document.getElementById("hero-video");
+            var connection = navigator.connection;
+            var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            if (window.innerWidth < 768 || reduced || (connection && connection.saveData)) return;
+            video.src = "assets/video/hero-720.mp4";
+            video.play().catch(function () {});
+          })();
+        </script>
         <div class="overlay" aria-hidden="true"></div>
 
-        <div class="hero-content" data-aos="fade-up">
+        <div class="hero-content">
           <p class="hero-kicker">Inmobiliaria en Zona Norte</p>
           <h1 id="hero-title">
             Tu próximo hogar empieza con una decisión bien asesorada
@@ -308,12 +258,13 @@
             <div class="custom-select-wrapper">
               <label class="visually-hidden" for="operacion">Operación</label>
               <select id="operacion" name="operacion" class="custom-select">
+<!-- GEN:opciones-operacion -->
                 <option value="" selected>Operación</option>
                 <option value="venta">Venta</option>
                 <option value="alquiler">Alquiler</option>
-                <option value="alquiler-temporario">Alquiler temporario</option>
+<!-- /GEN:opciones-operacion -->
               </select>
-              <i class="fas fa-chevron-down select-icon" aria-hidden="true"></i>
+              <i class="bi bi-chevron-down select-icon" aria-hidden="true"></i>
             </div>
 
             <div class="custom-select-wrapper">
@@ -321,88 +272,46 @@
                 >Tipo de propiedad</label
               >
               <select id="tipo" name="tipo" class="custom-select">
+<!-- GEN:opciones-tipo -->
                 <option value="" selected>Tipo</option>
-                <option value="casa">Casa</option>
-                <option value="campo">Campo</option>
-                <option value="cochera">Cochera</option>
                 <option value="departamento">Departamento</option>
-                <option value="deposito">Depósito</option>
-                <option value="edificio-comercial">Edificio comercial</option>
-                <option value="galpon">Galpón</option>
-                <option value="local">Local</option>
-                <option value="oficina">Oficina</option>
-                <option value="ph">PH</option>
+                <option value="casa">Casa</option>
                 <option value="terreno">Terreno</option>
+                <option value="oficina">Oficina</option>
+<!-- /GEN:opciones-tipo -->
               </select>
-              <i class="fas fa-chevron-down select-icon" aria-hidden="true"></i>
+              <i class="bi bi-chevron-down select-icon" aria-hidden="true"></i>
             </div>
 
             <div class="custom-select-wrapper">
               <label class="visually-hidden" for="zona">Zona</label>
               <select id="zona" name="zona" class="custom-select">
+<!-- GEN:opciones-zona -->
                 <option value="" selected>Zona</option>
-                <optgroup label="Vicente López">
-                  <option value="olivos">Olivos</option>
-                  <option value="la-lucila">La Lucila</option>
-                  <option value="florida">Florida</option>
-                  <option value="munro">Munro</option>
-                  <option value="villa-martelli">Villa Martelli</option>
+                <optgroup label="San Fernando">
+                  <option value="san-fernando">Todo San Fernando</option>
+                  <option value="virreyes">Virreyes</option>
                 </optgroup>
                 <optgroup label="San Isidro">
+                  <option value="san-isidro">Todo San Isidro</option>
+                  <option value="boulogne-sur-mer">Boulogne Sur Mer</option>
+                  <option value="las-lomas-de-san-isidro">Las Lomas de San Isidro</option>
+                  <option value="las-lomas-golf">Las Lomas Golf</option>
                   <option value="martinez">Martínez</option>
-                  <option value="acassuso">Acassuso</option>
-                  <option value="beccar">Béccar</option>
-                  <option value="villa-adelina">Villa Adelina</option>
                   <option value="san-isidro-centro">San Isidro Centro</option>
-                </optgroup>
-                <optgroup label="San Fernando">
-                  <option value="victoria">Victoria</option>
-                  <option value="virreyes">Virreyes</option>
-                  <option value="san-fernando-centro">
-                    San Fernando Centro
-                  </option>
+                  <option value="villa-adelina">Villa Adelina</option>
                 </optgroup>
                 <optgroup label="Tigre">
-                  <option value="tigre-centro">Tigre Centro</option>
-                  <option value="general-pacheco">General Pacheco</option>
+                  <option value="tigre">Todo Tigre</option>
                   <option value="nordelta">Nordelta</option>
-                  <option value="don-torcuato">Don Torcuato</option>
-                  <option value="rincon-de-milberg">Rincón de Milberg</option>
-                  <option value="el-talar">El Talar</option>
-                  <option value="troncos-del-talar">Troncos del Talar</option>
                 </optgroup>
-                <optgroup label="Pilar">
-                  <option value="pilar-centro">Pilar Centro</option>
-                  <option value="del-viso">Del Viso</option>
-                  <option value="villa-rosa">Villa Rosa</option>
-                  <option value="manuel-alberti">Manuel Alberti</option>
-                  <option value="champagnat">Champagnat</option>
-                  <option value="pilar-del-este">Pilar del Este</option>
+                <optgroup label="Vicente López">
+                  <option value="vicente-lopez">Todo Vicente López</option>
+                  <option value="olivos">Olivos</option>
                 </optgroup>
-                <optgroup label="Escobar">
-                  <option value="ingeniero-maschwitz">
-                    Ingeniero Maschwitz
-                  </option>
-                  <option value="belen-de-escobar">Belén de Escobar</option>
-                  <option value="loma-verde">Loma Verde</option>
-                  <option value="garin">Garín</option>
-                  <option value="matheu">Matheu</option>
-                </optgroup>
-                <optgroup label="Otras zonas">
-                  <option value="los-polvorines">Los Polvorines</option>
-                  <option value="tortuguitas">Tortuguitas</option>
-                  <option value="grand-bourg">Grand Bourg</option>
-                  <option value="san-miguel-centro">San Miguel Centro</option>
-                  <option value="bella-vista">Bella Vista</option>
-                  <option value="muniz">Muñiz</option>
-                  <option value="jose-c-paz-centro">José C. Paz Centro</option>
-                  <option value="san-martin-centro">San Martín Centro</option>
-                  <option value="villa-ballester">Villa Ballester</option>
-                  <option value="campana">Campana</option>
-                  <option value="zarate">Zárate</option>
-                </optgroup>
+<!-- /GEN:opciones-zona -->
               </select>
-              <i class="fas fa-chevron-down select-icon" aria-hidden="true"></i>
+              <i class="bi bi-chevron-down select-icon" aria-hidden="true"></i>
             </div>
 
             <button class="search-button" type="submit">
@@ -412,6 +321,44 @@
         </div>
       </section>
       <!-- /Hero Section -->
+
+      <!-- Propiedades -->
+      <section
+        id="propiedades-destacadas"
+        class="section featured-properties"
+        aria-labelledby="featured-title"
+      >
+        <div class="container">
+          <div class="section-title">
+            <h2 id="featured-title">Últimas propiedades</h2>
+            <p>Las publicaciones más recientes de Ibarra Propiedades en Zona Norte.</p>
+          </div>
+<!-- GEN:destacadas -->
+          <div class="vitrina" data-vitrina role="region" aria-label="Últimas propiedades publicadas">
+            <div class="vitrina__track">
+            <div class="vitrina__item"><article class="prop-card"><a class="prop-card__media" href="/propiedades/casa-martinez-13221727/"><img src="https://static.tokkobroker.com/pictures/13221727_62062303826003636178805831323498023480224897134380177876280649289395661679030.jpg" alt="Casa Martínez" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 28</span></a><div class="prop-card__body"><p class="prop-card__price">USD 205.000</p><h3 class="prop-card__title"><a href="/propiedades/casa-martinez-13221727/">Casa Martínez</a></h3><p class="prop-card__location">Casa · Martínez, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>102 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>6 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>2 baños</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Casa%20Mart%C3%ADnez%20(Mart%C3%ADnez%2C%20San%20Isidro).%20C%C3%B3digo%20IHO13221727.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fcasa-martinez-13221727%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            <div class="vitrina__item"><article class="prop-card"><a class="prop-card__media" href="/propiedades/casa-villa-adelina-12439704/"><img src="https://static.tokkobroker.com/pictures/12439704_33014959148742471597375171132414660565788414080723926845589359795196535809626.jpg" alt="Terreno/Casa en Villa Adelina" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 25</span></a><div class="prop-card__body"><p class="prop-card__price">USD 160.000</p><h3 class="prop-card__title"><a href="/propiedades/casa-villa-adelina-12439704/">Terreno/Casa en Villa Adelina</a></h3><p class="prop-card__location">Casa · Villa Adelina, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>139 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>4 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>2 baños</li><li><i class="bi bi-car-front" aria-hidden="true"></i>2 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Terreno%2FCasa%20en%20Villa%20Adelina%20(Villa%20Adelina%2C%20San%20Isidro).%20C%C3%B3digo%20IHO12439704.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fcasa-villa-adelina-12439704%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            <div class="vitrina__item"><article class="prop-card"><a class="prop-card__media" href="/propiedades/casa-san-isidro-12034893/"><img src="https://static.tokkobroker.com/pictures/12034893_46944979650097938612955744901453889513407974537903312170739811775498845520679.jpg" alt="Casa en casco historico de San isidro" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 16</span></a><div class="prop-card__body"><p class="prop-card__price">USD 180.000</p><h3 class="prop-card__title"><a href="/propiedades/casa-san-isidro-12034893/">Casa en casco historico de San isidro</a></h3><p class="prop-card__location">Casa · San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>83 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>4 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>2 baños</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Casa%20en%20casco%20historico%20de%20San%20isidro%20(San%20Isidro).%20C%C3%B3digo%20IHO12034893.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fcasa-san-isidro-12034893%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            <div class="vitrina__item"><article class="prop-card"><a class="prop-card__media" href="/propiedades/oficina-las-lomas-golf-11099099/"><img src="https://static.tokkobroker.com/pictures/11099099_84355346539975406780028545006412418613790295931651367464792671147022722093093.jpg" alt="Local/Consultoria" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Alquiler</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 8</span></a><div class="prop-card__body"><p class="prop-card__price">ARS 700.000</p><h3 class="prop-card__title"><a href="/propiedades/oficina-las-lomas-golf-11099099/">Local/Consultoria</a></h3><p class="prop-card__location">Oficina · Las Lomas Golf, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>40 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>2 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Local%2FConsultoria%20(Las%20Lomas%20Golf%2C%20San%20Isidro).%20C%C3%B3digo%20IOF11099099.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Foficina-las-lomas-golf-11099099%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            <div class="vitrina__item"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-virreyes-11098962/"><img src="https://static.tokkobroker.com/pictures/11098962_104848192219076949454536500308218106794109415808301446240580335734571746328228.jpg" alt="Departamento en Virreyes" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 6</span></a><div class="prop-card__body"><p class="prop-card__price">USD 47.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-virreyes-11098962/">Departamento en Virreyes</a></h3><p class="prop-card__location">Departamento · Virreyes, San Fernando</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>52 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>3 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li><li><i class="bi bi-car-front" aria-hidden="true"></i>2 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Virreyes%20(Virreyes%2C%20San%20Fernando).%20C%C3%B3digo%20IAP11098962.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-virreyes-11098962%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            <div class="vitrina__item"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-nordelta-8565849/"><img src="https://static.tokkobroker.com/pictures/8565849_77704475358303482366871061241592785004770232567439194513560304645728337346547.jpg" alt="Departamento en Nordelta" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 22</span></a><div class="prop-card__body"><p class="prop-card__price">USD 300.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-nordelta-8565849/">Departamento en Nordelta</a></h3><p class="prop-card__location">Departamento · Nordelta, Tigre</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>117 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>3 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Nordelta%20(Nordelta%2C%20Tigre).%20C%C3%B3digo%20IAP8565849.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-nordelta-8565849%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            <div class="vitrina__item"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-nordelta-8565499/"><img src="https://static.tokkobroker.com/pictures/8565499_43702679894866658481855013525691690745590964222894430126402097625616236274807.jpg" alt="Departamento en Nordelta" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 20</span></a><div class="prop-card__body"><p class="prop-card__price">USD 285.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-nordelta-8565499/">Departamento en Nordelta</a></h3><p class="prop-card__location">Departamento · Nordelta, Tigre</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>113 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>2 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Nordelta%20(Nordelta%2C%20Tigre).%20C%C3%B3digo%20IAP8565499.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-nordelta-8565499%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            <div class="vitrina__item"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-nordelta-8565337/"><img src="https://static.tokkobroker.com/pictures/8565337_46664681806871163060210686371049400094658140272677936680573394885088150590152.jpg" alt="Departamento en Nordelta" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 24</span></a><div class="prop-card__body"><p class="prop-card__price">USD 282.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-nordelta-8565337/">Departamento en Nordelta</a></h3><p class="prop-card__location">Departamento · Nordelta, Tigre</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>131 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>2 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Nordelta%20(Nordelta%2C%20Tigre).%20C%C3%B3digo%20IAP8565337.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-nordelta-8565337%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            </div>
+          </div>
+          <div class="text-center mt-4 mb-5">
+            <a class="btn btn-primary" href="/propiedades.html">Ver las 15 propiedades</a>
+          </div>
+          <div class="row gy-3">
+            <div class="col-md-3 col-6"><a class="zone-link" href="/propiedades.html?tipo=departamento">Departamentos (6)</a></div>
+            <div class="col-md-3 col-6"><a class="zone-link" href="/propiedades.html?tipo=casa">Casas (5)</a></div>
+            <div class="col-md-3 col-6"><a class="zone-link" href="/propiedades.html?tipo=terreno">Terrenos (3)</a></div>
+            <div class="col-md-3 col-6"><a class="zone-link" href="/propiedades.html?tipo=oficina">Oficina (1)</a></div>
+          </div>
+<!-- /GEN:destacadas -->
+        </div>
+      </section>
+      <!-- /Propiedades -->
 
       <!-- Services Section -->
       <section
@@ -584,7 +531,7 @@
                   >
                 </li>
               </ul>
-              <a href="#contact" class="btn btn-primary mt-3"
+              <a href="/tasacion.html" class="btn btn-primary mt-3"
                 >Solicitar asesoramiento</a
               >
             </div>
@@ -643,158 +590,52 @@
       <section
         id="stats"
         class="stats section"
-        aria-label="Indicadores de confianza de Ibarra Propiedades"
+        aria-label="Datos de Ibarra Propiedades"
       >
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
+<!-- GEN:datos -->
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i
-                  class="bi bi-emoji-smile color-blue flex-shrink-0"
-                  aria-hidden="true"
-                ></i>
+                <i class="bi bi-award flex-shrink-0" aria-hidden="true"></i>
                 <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="312"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Clientes asesorados</p>
+                  <span>+20</span>
+                  <p>Años en Zona Norte</p>
                 </div>
               </div>
             </div>
-
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i
-                  class="bi bi-journal-richtext color-orange flex-shrink-0"
-                  aria-hidden="true"
-                ></i>
+                <i class="bi bi-house-door flex-shrink-0" aria-hidden="true"></i>
                 <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="183"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Operaciones acompañadas</p>
+                  <span>15</span>
+                  <p>Propiedades disponibles hoy</p>
                 </div>
               </div>
             </div>
-
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i
-                  class="bi bi-headset color-green flex-shrink-0"
-                  aria-hidden="true"
-                ></i>
+                <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
                 <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="2563"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Horas de asesoramiento</p>
+                  <span>10</span>
+                  <p>Barrios con propiedades</p>
                 </div>
               </div>
             </div>
-
             <div class="col-lg-3 col-md-6">
               <div class="stats-item d-flex align-items-center w-100 h-100">
-                <i
-                  class="bi bi-people color-pink flex-shrink-0"
-                  aria-hidden="true"
-                ></i>
+                <i class="bi bi-shop flex-shrink-0" aria-hidden="true"></i>
                 <div>
-                  <span
-                    data-purecounter-start="0"
-                    data-purecounter-end="20"
-                    data-purecounter-duration="1"
-                    class="purecounter"
-                  ></span>
-                  <p>Barrios de Zona Norte</p>
+                  <span>1</span>
+                  <p>Oficina propia en Lomas de San Isidro</p>
                 </div>
               </div>
             </div>
+<!-- /GEN:datos -->
           </div>
         </div>
       </section>
       <!-- /Stats Section -->
-
-      <!-- Featured CTA Section -->
-      <section
-        id="propiedades-destacadas"
-        class="section featured-properties"
-        aria-labelledby="featured-title"
-      >
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2 id="featured-title">Propiedades en venta y alquiler</h2>
-            <p>
-              Explorá oportunidades seleccionadas en Zona Norte o consultanos
-              para encontrar una propiedad alineada a tu búsqueda, presupuesto y
-              momento de vida.
-            </p>
-          </div>
-
-          <div class="row gy-4">
-            <div class="col-lg-4 col-md-6">
-              <article class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-building" aria-hidden="true"></i>
-                </div>
-                <h3>Departamentos</h3>
-                <p>
-                  Opciones en venta y alquiler para vivir, invertir o mudarte
-                  dentro de Zona Norte.
-                </p>
-                <a
-                  href="propiedades.html?tipo=departamento"
-                  class="stretched-link"
-                  aria-label="Ver departamentos en Ibarra Propiedades"
-                ></a>
-              </article>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <article class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-house-door" aria-hidden="true"></i>
-                </div>
-                <h3>Casas y PH</h3>
-                <p>
-                  Propiedades familiares, casas con jardín, PH y alternativas
-                  residenciales bien ubicadas.
-                </p>
-                <a
-                  href="propiedades.html?tipo=casa"
-                  class="stretched-link"
-                  aria-label="Ver casas y PH en Ibarra Propiedades"
-                ></a>
-              </article>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <article class="service-item position-relative h-100">
-                <div class="icon">
-                  <i class="bi bi-shop" aria-hidden="true"></i>
-                </div>
-                <h3>Locales, oficinas y terrenos</h3>
-                <p>
-                  Inmuebles comerciales, terrenos y oportunidades para proyectos
-                  o inversión.
-                </p>
-                <a
-                  href="propiedades.html"
-                  class="stretched-link"
-                  aria-label="Ver inmuebles comerciales y terrenos"
-                ></a>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Featured CTA Section -->
 
       <!-- Zones Section -->
       <section
@@ -812,44 +653,12 @@
             </p>
           </div>
           <div class="row gy-3">
-            <div class="col-md-3 col-6">
-              <a class="zone-link" href="propiedades.html?zona=san-isidro"
-                >San Isidro</a
-              >
-            </div>
-            <div class="col-md-3 col-6">
-              <a class="zone-link" href="propiedades.html?zona=vicente-lopez"
-                >Vicente López</a
-              >
-            </div>
-            <div class="col-md-3 col-6">
-              <a class="zone-link" href="propiedades.html?zona=tigre">Tigre</a>
-            </div>
-            <div class="col-md-3 col-6">
-              <a class="zone-link" href="propiedades.html?zona=san-fernando"
-                >San Fernando</a
-              >
-            </div>
-            <div class="col-md-3 col-6">
-              <a class="zone-link" href="propiedades.html?zona=olivos"
-                >Olivos</a
-              >
-            </div>
-            <div class="col-md-3 col-6">
-              <a class="zone-link" href="propiedades.html?zona=martinez"
-                >Martínez</a
-              >
-            </div>
-            <div class="col-md-3 col-6">
-              <a class="zone-link" href="propiedades.html?zona=beccar"
-                >Béccar</a
-              >
-            </div>
-            <div class="col-md-3 col-6">
-              <a class="zone-link" href="propiedades.html?zona=nordelta"
-                >Nordelta</a
-              >
-            </div>
+<!-- GEN:zonas -->
+            <div class="col-md-3 col-6"><a class="zone-link" href="/zonas/san-isidro/">San Isidro (9)</a></div>
+            <div class="col-md-3 col-6"><a class="zone-link" href="/zonas/nordelta/">Nordelta (4)</a></div>
+            <div class="col-md-3 col-6"><a class="zone-link" href="/propiedades.html?zona=san-fernando">San Fernando (1)</a></div>
+            <div class="col-md-3 col-6"><a class="zone-link" href="/propiedades.html?zona=vicente-lopez">Vicente López (1)</a></div>
+<!-- /GEN:zonas -->
           </div>
         </div>
       </section>
@@ -864,106 +673,30 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="text-center mb-4">
             <h2 id="contact-title">¿Querés vender o alquilar tu propiedad?</h2>
-            <p style="color: black; font-weight: 600">
-              Completá el formulario y coordinamos una tasación sin compromiso.
+            <p style="color: white; font-weight: 600">
+              Dejanos tus datos y coordinamos una tasación sin compromiso.
             </p>
           </div>
 
-          <div class="row gy-4">
-            <div class="col-lg-12">
-              <form
-                id="contactForm"
-                action="https://formspree.io/f/mgaverye"
-                method="POST"
-                class="tasa-form"
-                aria-label="Formulario para solicitar tasación inmobiliaria"
-              >
+          <!-- GEN:form-tasacion -->
+<form action="https://formspree.io/f/mgaverye" method="POST" class="tasa-form lead-form" data-lead-type="tasacion" aria-label="Formulario para solicitar tasación inmobiliaria">
                 <div class="form-row">
                   <div class="form-field">
-                    <label class="visually-hidden" for="name"
-                      >Nombre y apellido</label
-                    >
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Nombre y apellido"
-                      autocomplete="name"
-                      required
-                    />
+                    <label class="visually-hidden" for="name">Nombre y apellido</label>
+                    <input type="text" name="name" id="name" placeholder="Nombre y apellido" autocomplete="name" required />
                   </div>
                   <div class="form-field">
-                    <label class="visually-hidden" for="email">Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Email"
-                      autocomplete="email"
-                      required
-                    />
+                    <label class="visually-hidden" for="telefono">Teléfono</label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" autocomplete="tel" required />
                   </div>
                 </div>
-
                 <div class="form-row">
                   <div class="form-field">
-                    <label class="visually-hidden" for="telefono"
-                      >Teléfono</label
-                    >
-                    <input
-                      type="tel"
-                      name="telefono"
-                      id="telefono"
-                      placeholder="Teléfono"
-                      autocomplete="tel"
-                      required
-                    />
+                    <label class="visually-hidden" for="direccion">Dirección o zona de la propiedad</label>
+                    <input type="text" name="direccion" id="direccion" placeholder="Dirección o zona de la propiedad" autocomplete="street-address" required />
                   </div>
                   <div class="form-field">
-                    <label class="visually-hidden" for="localidad"
-                      >Localidad</label
-                    >
-                    <select name="localidad" id="localidad" required>
-                      <option value="">Localidad</option>
-                      <option>Acassuso</option>
-                      <option>Béccar</option>
-                      <option>Boulogne</option>
-                      <option>Del Viso</option>
-                      <option>Don Torcuato</option>
-                      <option>Florida</option>
-                      <option>General Pacheco</option>
-                      <option>Ingeniero Maschwitz</option>
-                      <option>La Lucila</option>
-                      <option>Martínez</option>
-                      <option>Nordelta</option>
-                      <option>Olivos</option>
-                      <option>Pilar</option>
-                      <option>San Fernando</option>
-                      <option>San Isidro</option>
-                      <option>Tigre</option>
-                      <option>Tortuguitas</option>
-                      <option>Vicente López</option>
-                      <option>Villa Adelina</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-field">
-                    <label class="visually-hidden" for="tipo_operacion"
-                      >Tipo de operación</label
-                    >
-                    <select name="tipo_operacion" id="tipo_operacion" required>
-                      <option value="">Operación</option>
-                      <option>Venta</option>
-                      <option>Alquiler</option>
-                      <option>Alquiler temporario</option>
-                    </select>
-                  </div>
-                  <div class="form-field">
-                    <label class="visually-hidden" for="tipo_inmueble"
-                      >Tipo de inmueble</label
-                    >
+                    <label class="visually-hidden" for="tipo_inmueble">Tipo de inmueble</label>
                     <select name="tipo_inmueble" id="tipo_inmueble" required>
                       <option value="">Tipo de inmueble</option>
                       <option>Departamento</option>
@@ -976,47 +709,15 @@
                     </select>
                   </div>
                 </div>
-
-                <label class="visually-hidden" for="mensaje">Mensaje</label>
-                <textarea
-                  name="mensaje"
-                  id="mensaje"
-                  rows="4"
-                  placeholder="Contanos un poco más sobre tu propiedad: ubicación, estado, superficie, ambientes y cualquier dato relevante."
-                ></textarea>
-
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value="Nueva solicitud de tasación - Ibarra Prop"
-                />
-
-                <!-- TODO: agregar sitekey real de reCAPTCHA antes de publicar. -->
-                <div
-                  style="
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 1rem;
-                  "
-                >
-                  <div class="g-recaptcha" data-sitekey=""></div>
-                </div>
-
-                <div
-                  id="form-status"
-                  class="form-status"
-                  role="status"
-                  aria-live="polite"
-                ></div>
-
+                <input type="hidden" name="_subject" value="Nueva solicitud de tasación - Ibarra Prop" />
+                <input type="text" name="_gotcha" class="lead-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <div class="form-status" role="status" aria-live="polite"></div>
                 <div style="text-align: center">
-                  <button type="submit" class="tasa-btn" id="submit-button">
-                    Enviar solicitud de tasación
-                  </button>
+                  <button type="submit" class="tasa-btn">Pedir tasación sin compromiso</button>
                 </div>
+                <p class="lead-legal">Al enviar aceptás nuestra <a href="/politica-de-privacidad.html">política de privacidad</a>.</p>
               </form>
-            </div>
-          </div>
+<!-- /GEN:form-tasacion -->
         </div>
       </section>
       <!-- /Contact Section -->
@@ -1095,110 +796,61 @@
       <!-- /Location / Map Section -->
     </main>
 
-    <footer id="footer" class="footer light-background">
+    <!-- GEN:footer -->
+<footer id="footer" class="footer light-background">
       <div class="container">
         <div class="row gy-3">
           <div class="col-lg-3 col-md-6 d-flex">
             <div class="address">
-              <img
-                src="assets/img/ibarra-logo-white.png"
-                alt="Ibarra Propiedades"
-                style="height: 80px"
-                width="140"
-                height="80"
-                loading="lazy"
-                decoding="async"
-              />
-              <p class="mt-3 mb-0">
-                Inmobiliaria especializada en venta, alquiler y tasación de
-                propiedades en Zona Norte.
-              </p>
+              <img src="/assets/img/ibarra-logo-white.png" alt="Ibarra Propiedades" width="140" height="80" style="height: 80px" loading="lazy" decoding="async" />
+              <p class="mt-3 mb-0">Inmobiliaria especializada en venta, alquiler y tasación de propiedades en Zona Norte.</p>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-flex">
             <i class="bi bi-telephone-fill icon" aria-hidden="true"></i>
             <div>
               <h3 class="h4">Contacto</h3>
               <p>
-                <strong>Teléfono:</strong>
-                <a href="tel:+5491121805630">+54 9 11 2180 5630</a><br />
-                <strong>Email:</strong>
-                <a href="mailto:info@ibarraprop.com.ar"
-                  >info@ibarraprop.com.ar</a
-                ><br />
+                <strong>Teléfono:</strong> <a href="tel:+5491121805630">+54 9 11 2180 5630</a><br />
+                <strong>Email:</strong> <a href="mailto:info@ibarraprop.com.ar">info@ibarraprop.com.ar</a><br />
               </p>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-flex">
             <i class="bi bi-clock-fill icon" aria-hidden="true"></i>
             <div>
               <h3 class="h4">Horarios de atención</h3>
               <p>
-                <strong>Lunes a viernes:</strong> <span>10:00 - 18:00 hs</span
-                ><br />
-                <strong>Sábados:</strong> <span>Consultar disponibilidad</span
-                ><br />
+                <strong>Lunes a viernes:</strong> <span>10:00 - 18:00 hs</span><br />
+                <strong>Sábados:</strong> <span>Consultar disponibilidad</span><br />
                 <strong>Domingo:</strong> <span>Cerrado</span>
               </p>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6">
             <h3 class="h4">Seguinos en redes</h3>
             <div class="social-links d-flex">
-              <!-- TODO: reemplazar por la URL real de Facebook. -->
-              <a
-                href="https://www.facebook.com/"
-                class="facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook de Ibarra Propiedades"
-              >
-                <i class="bi bi-facebook" aria-hidden="true"></i>
-              </a>
-              <!-- TODO: reemplazar por la URL real de Instagram. -->
-              <a
-                href="https://www.instagram.com/"
-                class="instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram de Ibarra Propiedades"
-              >
+              <a href="https://www.instagram.com/ibarrapropiedades/" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Ibarra Propiedades">
                 <i class="bi bi-instagram" aria-hidden="true"></i>
               </a>
             </div>
-            <nav
-              class="footer-links mt-3"
-              aria-label="Enlaces del pie de página"
-            >
-              <a href="propiedades.html">Propiedades</a><br />
-              <a href="#contact">Tasaciones</a><br />
-              <a href="#about">Quiénes somos</a><br />
-              <a href="politica-de-privacidad.html">Política de privacidad</a>
+            <nav class="footer-links mt-3" aria-label="Enlaces del pie de página">
+              <a href="/propiedades.html">Propiedades</a><br />
+              <a href="/tasacion.html">Tasaciones</a><br />
+              <a href="/#about">Quiénes somos</a><br />
+              <a href="/politica-de-privacidad.html">Política de privacidad</a>
             </nav>
           </div>
         </div>
       </div>
-
       <div class="container copyright text-center mt-4">
-        <p id="copyright">
-          © <span id="current-year">2026</span> IBARRA Propiedades. Todos los
-          derechos reservados. Argentina, Buenos Aires.
-        </p>
+        <p id="copyright">© IBARRA Propiedades. Todos los derechos reservados. Argentina, Buenos Aires.</p>
         <div class="credits">
-          <a
-            href="https://raven3.com.ar/webs-para-inmobiliarias"
-            target="_blank"
-            rel="noopener"
-            title="Diseño y desarrollo de sitios web para inmobiliarias - Raven3"
-            style="font-size: 10px; text-decoration: none;"
-            >by <strong>Raven3</strong></a
-          >
+          <a href="https://raven3.com.ar/webs-para-inmobiliarias" target="_blank" rel="noopener" title="Diseño y desarrollo de sitios web para inmobiliarias - Raven3" style="font-size: 10px; text-decoration: none;">by <strong>Raven3</strong></a>
         </div>
       </div>
     </footer>
+<!-- /GEN:footer -->
 
     <!-- Scroll Top -->
     <a
@@ -1210,42 +862,12 @@
       <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
     </a>
 
-    <!-- Preloader -->
-    <div id="preloader" aria-hidden="true"></div>
-
     <!-- Vendor JS Files -->
-    <script
-      src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
-      defer
-    ></script>
-    <script src="assets/vendor/php-email-form/validate.js" defer></script>
     <script src="assets/vendor/aos/aos.js" defer></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-    <script
-      src="assets/vendor/purecounter/purecounter_vanilla.js"
-      defer
-    ></script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/contact-form.js" defer></script>
-    <script>
-      document.getElementById("current-year").textContent =
-        new Date().getFullYear();
-    </script>
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle, .nav-toggle");
-      const navMenu = document.querySelector(".nav-menu, .header__nav, .nav");
-
-      if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", () => {
-          document.body.classList.toggle("nav-open");
-          navMenu.classList.toggle("is-open");
-
-          const isOpen = navMenu.classList.contains("is-open");
-          menuToggle.setAttribute("aria-expanded", String(isOpen));
-        });
-      }
-    </script>
+    <script src="assets/js/vitrina.js" defer></script>
   </body>
 </html>

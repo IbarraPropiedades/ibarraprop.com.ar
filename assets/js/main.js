@@ -95,6 +95,7 @@
    * Animation on scroll function and init
    */
   function aosInit() {
+    if (!window.AOS) return;
     AOS.init({
       duration: 600,
       easing: "ease-in-out",
@@ -144,11 +145,6 @@
   }
 
   window.addEventListener("load", initSwiper);
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
 
   var currentYear = new Date().getFullYear();
   document.getElementById("copyright").innerHTML =

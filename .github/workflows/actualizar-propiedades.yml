@@ -1,0 +1,37 @@
+name: Actualizar propiedades
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-propiedades
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generar páginas desde Tokko
+        run: node scripts/build-propiedades.mjs
+        env:
+          TOKKO_API_KEY: ${{ secrets.TOKKO_API_KEY }}
+      - name: Publicar si hubo cambios
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Sin cambios en Tokko"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Actualizar propiedades desde Tokko"
+          git push
