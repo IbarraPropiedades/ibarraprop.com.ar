@@ -79,14 +79,172 @@
           </div>
         </div>
       </div>
-      <section class="section">
-        <div class="container">
-          <div class="row gy-4">
-          <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-nordelta-8565849/"><img src="https://static.tokkobroker.com/pictures/8565849_77704475358303482366871061241592785004770232567439194513560304645728337346547.jpg" alt="Departamento en Nordelta" width="675" height="506" decoding="async" loading="eager" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 22</span></a><div class="prop-card__body"><p class="prop-card__price">USD 300.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-nordelta-8565849/">Departamento en Nordelta</a></h3><p class="prop-card__location">Departamento · Nordelta, Tigre</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>117 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>3 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Nordelta%20(Nordelta%2C%20Tigre).%20C%C3%B3digo%20IAP8565849.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-nordelta-8565849%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+      <section id="real-estate" class="real-estate section real-estate--full" data-zona="Nordelta">
+        <div class="properties-shell">
+          <!-- SIDEBAR FILTROS -->
+          <aside class="properties-sidebar" aria-label="Filtros de propiedades">
+            <!-- Botón cerrar mobile -->
+            <button
+              type="button"
+              class="mobile-filters-close"
+              id="close-mobile-filters"
+              aria-label="Cerrar filtros"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="properties-sidebar-card">
+              <div class="sidebar-heading">
+                <span class="sidebar-kicker">Búsqueda personalizada</span>
+                <h2>Filtrá tu propiedad</h2>
+                <p>
+                  Elegí operación, zona y tipo de propiedad para encontrar lo
+                  que estás buscando.
+                </p>
+              </div>
+
+              <div class="filtro-wrapper">
+                <!-- Operación -->
+                <div class="filter-field">
+                  <label for="filtro-operacion">Operación</label>
+                  <select
+                    class="filtro-select"
+                    id="filtro-operacion"
+                    aria-label="Filtrar por operación"
+                  >
+                    <option value="">Comprar o alquilar</option>
+                  </select>
+                </div>
+
+                <!-- Zona -->
+                <div class="filter-field">
+                  <span class="filter-label">Zona</span>
+
+                  <div
+                    class="custom-multiselect"
+                    data-id="zona"
+                    data-label="Zona"
+                  >
+                    <button
+                      type="button"
+                      class="dropdown-button"
+                      aria-label="Filtrar por zona"
+                    >
+                      <span class="dropdown-button-text">Seleccionar zona</span>
+                      <span class="dropdown-count" id="zona-count"></span>
+                      <span class="dropdown-caret">▼</span>
+                    </button>
+
+                    <div class="dropdown-options" id="dropdown-zona">
+                      <p class="tokko-filter-empty">
+                        Cargando zonas disponibles...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tipo -->
+                <div class="filter-field">
+                  <span class="filter-label">Tipo de propiedad</span>
+
+                  <div
+                    class="custom-multiselect"
+                    data-id="tipo"
+                    data-label="Tipo"
+                  >
+                    <button
+                      type="button"
+                      class="dropdown-button"
+                      aria-label="Filtrar por tipo de propiedad"
+                    >
+                      <span class="dropdown-button-text">Seleccionar tipo</span>
+                      <span class="dropdown-count" id="tipo-count"></span>
+                      <span class="dropdown-caret">▼</span>
+                    </button>
+
+                    <div class="dropdown-options" id="dropdown-tipo">
+                      <p class="tokko-filter-empty">
+                        Cargando tipos de propiedad...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Limpiar -->
+                <button
+                  type="button"
+                  class="limpiar-filtros"
+                  id="limpiar-filtros"
+                >
+                  Limpiar filtros
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Overlay mobile -->
+          <div class="mobile-filters-overlay" id="mobile-filters-overlay"></div>
+
+          <!-- RESULTADOS -->
+          <div class="properties-results">
+            <!-- Botón filtros mobile -->
+            <button
+              type="button"
+              class="mobile-filters-button"
+              id="open-mobile-filters"
+              aria-label="Abrir filtros"
+            >
+              <i class="bi bi-sliders"></i>
+              <span>Filtros</span>
+            </button>
+
+            <div class="properties-results-header">
+              <div>
+                <span class="results-kicker">Venta</span>
+                <h2>Propiedades disponibles en Nordelta</h2>
+              </div>
+
+              <div class="results-tools">
+                <p class="tokko-results-count" id="tokko-results-count"></p>
+                <div class="results-sort">
+                  <label for="filtro-orden">Ordenar por</label>
+                  <select
+                    class="filtro-select"
+                    id="filtro-orden"
+                    aria-label="Ordenar propiedades"
+                  >
+                    <option value="">Orden recomendado</option>
+                    <option value="precio-asc">Menor precio</option>
+                    <option value="precio-desc">Mayor precio</option>
+                    <option value="fecha-desc">Más recientes</option>
+                    <option value="fecha-asc">Más antiguas</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row gy-4" id="tokko-properties-grid">
+              <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-nordelta-8565849/"><img src="https://static.tokkobroker.com/pictures/8565849_77704475358303482366871061241592785004770232567439194513560304645728337346547.jpg" alt="Departamento en Nordelta" width="675" height="506" decoding="async" loading="eager" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 22</span></a><div class="prop-card__body"><p class="prop-card__price">USD 300.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-nordelta-8565849/">Departamento en Nordelta</a></h3><p class="prop-card__location">Departamento · Nordelta, Tigre</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>117 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>3 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Nordelta%20(Nordelta%2C%20Tigre).%20C%C3%B3digo%20IAP8565849.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-nordelta-8565849%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-nordelta-8565499/"><img src="https://static.tokkobroker.com/pictures/8565499_43702679894866658481855013525691690745590964222894430126402097625616236274807.jpg" alt="Departamento en Nordelta" width="675" height="506" decoding="async" loading="eager" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 20</span></a><div class="prop-card__body"><p class="prop-card__price">USD 285.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-nordelta-8565499/">Departamento en Nordelta</a></h3><p class="prop-card__location">Departamento · Nordelta, Tigre</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>113 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>2 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Nordelta%20(Nordelta%2C%20Tigre).%20C%C3%B3digo%20IAP8565499.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-nordelta-8565499%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-nordelta-8565337/"><img src="https://static.tokkobroker.com/pictures/8565337_46664681806871163060210686371049400094658140272677936680573394885088150590152.jpg" alt="Departamento en Nordelta" width="675" height="506" decoding="async" loading="eager" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 24</span></a><div class="prop-card__body"><p class="prop-card__price">USD 282.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-nordelta-8565337/">Departamento en Nordelta</a></h3><p class="prop-card__location">Departamento · Nordelta, Tigre</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>131 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>2 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Nordelta%20(Nordelta%2C%20Tigre).%20C%C3%B3digo%20IAP8565337.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-nordelta-8565337%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/departamento-nordelta-8565246/"><img src="https://static.tokkobroker.com/pictures/8565246_78764848320771342557399088044537422212455742366003189655673841077082200687241.jpg" alt="Departamento en Nordelta" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 26</span></a><div class="prop-card__body"><p class="prop-card__price">USD 420.000</p><h3 class="prop-card__title"><a href="/propiedades/departamento-nordelta-8565246/">Departamento en Nordelta</a></h3><p class="prop-card__location">Departamento · Nordelta, Tigre</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>259 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>4 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>2 baños</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Departamento%20en%20Nordelta%20(Nordelta%2C%20Tigre).%20C%C3%B3digo%20IAP8565246.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fdepartamento-nordelta-8565246%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            </div>
+
+            <div class="tokko-list-footer text-center mt-5">
+              <button
+                type="button"
+                class="limpiar-filtros d-none"
+                id="tokko-load-more"
+              >
+                Cargar más propiedades
+              </button>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
           <div class="zona-cta">
             <h2>¿Tenés una propiedad en Nordelta?</h2>
             <p>Coordinamos una tasación sin compromiso y te asesoramos en persona.</p>
@@ -151,6 +309,8 @@
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Volver arriba">
       <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
     </a>
+    <script src="/assets/js/property-card.js" defer></script>
+    <script src="/assets/js/propiedades.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/contact-form.js" defer></script>
   </body>

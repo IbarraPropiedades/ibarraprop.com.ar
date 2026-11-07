@@ -610,6 +610,12 @@ function buildZones(properties) {
   return zones;
 }
 
+/* Filtros y resultados: el mismo bloque para el listado y las páginas de zona */
+function listing({ heading, kicker, cards, zone = "" }) {
+  const values = { heading: e(heading), kicker: e(kicker), cards, zone: e(zone) };
+  return readFileSync(join(ROOT, "scripts/listado.html"), "utf8").replace(/{{(\w+)}}/g, (_, name) => values[name]);
+}
+
 function zonePage(zone) {
   const onlySale = zone.items.every((p) => p.operationSlug === "venta");
   const noun = onlySale ? "en venta" : "en venta y alquiler";
@@ -630,11 +636,9 @@ function zonePage(zone) {
           </div>
         </div>
       </div>
-      <section class="section">
+${listing({ heading: `Propiedades disponibles en ${zone.name}`, kicker: onlySale ? "Venta" : "Venta y alquiler", cards: grid(zone.items, 3), zone: zone.name })}
+      <section class="section pt-0">
         <div class="container">
-          <div class="row gy-4">
-          ${grid(zone.items, 3)}
-          </div>
           <div class="zona-cta">
             <h2>¿Tenés una propiedad en ${e(zone.name)}?</h2>
             <p>Coordinamos una tasación sin compromiso y te asesoramos en persona.</p>
@@ -647,6 +651,7 @@ function zonePage(zone) {
     description: `${n} propiedades ${noun} en ${zone.name}: ${counts}. Consultá con Ibarra Propiedades, inmobiliaria en Zona Norte.`,
     path: zone.url,
     image: zone.items[0].cover,
+    scripts: ["/assets/js/property-card.js", "/assets/js/propiedades.js"],
     jsonLd: breadcrumbLd([["Inicio", "/"], ["Propiedades", "/propiedades.html"], [zone.name, zone.url]]),
     bodyClass: "properties-page",
     active: "propiedades",
@@ -773,7 +778,14 @@ write("data/propiedades.json", `${JSON.stringify({ count: publicData.length, pro
 
 const shared = (active) => ({ header: header(active), footer: footer() });
 inject("index.html", { ...shared("inicio"), "form-tasacion": tasacionForm(), ...homeBlocks(properties, zones) });
-inject("propiedades.html", shared("propiedades"));
+inject("propiedades.html", {
+  ...shared("propiedades"),
+  listado: listing({
+    heading: "Propiedades disponibles en Zona Norte",
+    kicker: "Venta y alquiler",
+    cards: '<div class="col-12 text-center py-5"><p class="mb-0">Cargando propiedades disponibles...</p></div>',
+  }),
+});
 inject("politica-de-privacidad.html", shared(""));
 inject("tasacion.html", { ...shared(""), "form-tasacion": tasacionForm() });
 

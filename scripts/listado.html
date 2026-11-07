@@ -1,0 +1,160 @@
+      <section id="real-estate" class="real-estate section real-estate--full" data-zona="{{zone}}">
+        <div class="properties-shell">
+          <!-- SIDEBAR FILTROS -->
+          <aside class="properties-sidebar" aria-label="Filtros de propiedades">
+            <!-- Botón cerrar mobile -->
+            <button
+              type="button"
+              class="mobile-filters-close"
+              id="close-mobile-filters"
+              aria-label="Cerrar filtros"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="properties-sidebar-card">
+              <div class="sidebar-heading">
+                <span class="sidebar-kicker">Búsqueda personalizada</span>
+                <h2>Filtrá tu propiedad</h2>
+                <p>
+                  Elegí operación, zona y tipo de propiedad para encontrar lo
+                  que estás buscando.
+                </p>
+              </div>
+
+              <div class="filtro-wrapper">
+                <!-- Operación -->
+                <div class="filter-field">
+                  <label for="filtro-operacion">Operación</label>
+                  <select
+                    class="filtro-select"
+                    id="filtro-operacion"
+                    aria-label="Filtrar por operación"
+                  >
+                    <option value="">Comprar o alquilar</option>
+                  </select>
+                </div>
+
+                <!-- Zona -->
+                <div class="filter-field">
+                  <span class="filter-label">Zona</span>
+
+                  <div
+                    class="custom-multiselect"
+                    data-id="zona"
+                    data-label="Zona"
+                  >
+                    <button
+                      type="button"
+                      class="dropdown-button"
+                      aria-label="Filtrar por zona"
+                    >
+                      <span class="dropdown-button-text">Seleccionar zona</span>
+                      <span class="dropdown-count" id="zona-count"></span>
+                      <span class="dropdown-caret">▼</span>
+                    </button>
+
+                    <div class="dropdown-options" id="dropdown-zona">
+                      <p class="tokko-filter-empty">
+                        Cargando zonas disponibles...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tipo -->
+                <div class="filter-field">
+                  <span class="filter-label">Tipo de propiedad</span>
+
+                  <div
+                    class="custom-multiselect"
+                    data-id="tipo"
+                    data-label="Tipo"
+                  >
+                    <button
+                      type="button"
+                      class="dropdown-button"
+                      aria-label="Filtrar por tipo de propiedad"
+                    >
+                      <span class="dropdown-button-text">Seleccionar tipo</span>
+                      <span class="dropdown-count" id="tipo-count"></span>
+                      <span class="dropdown-caret">▼</span>
+                    </button>
+
+                    <div class="dropdown-options" id="dropdown-tipo">
+                      <p class="tokko-filter-empty">
+                        Cargando tipos de propiedad...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Limpiar -->
+                <button
+                  type="button"
+                  class="limpiar-filtros"
+                  id="limpiar-filtros"
+                >
+                  Limpiar filtros
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Overlay mobile -->
+          <div class="mobile-filters-overlay" id="mobile-filters-overlay"></div>
+
+          <!-- RESULTADOS -->
+          <div class="properties-results">
+            <!-- Botón filtros mobile -->
+            <button
+              type="button"
+              class="mobile-filters-button"
+              id="open-mobile-filters"
+              aria-label="Abrir filtros"
+            >
+              <i class="bi bi-sliders"></i>
+              <span>Filtros</span>
+            </button>
+
+            <div class="properties-results-header">
+              <div>
+                <span class="results-kicker">{{kicker}}</span>
+                <h2>{{heading}}</h2>
+              </div>
+
+              <div class="results-tools">
+                <p class="tokko-results-count" id="tokko-results-count"></p>
+                <div class="results-sort">
+                  <label for="filtro-orden">Ordenar por</label>
+                  <select
+                    class="filtro-select"
+                    id="filtro-orden"
+                    aria-label="Ordenar propiedades"
+                  >
+                    <option value="">Orden recomendado</option>
+                    <option value="precio-asc">Menor precio</option>
+                    <option value="precio-desc">Mayor precio</option>
+                    <option value="fecha-desc">Más recientes</option>
+                    <option value="fecha-asc">Más antiguas</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row gy-4" id="tokko-properties-grid">
+              {{cards}}
+            </div>
+
+            <div class="tokko-list-footer text-center mt-5">
+              <button
+                type="button"
+                class="limpiar-filtros d-none"
+                id="tokko-load-more"
+              >
+                Cargar más propiedades
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>

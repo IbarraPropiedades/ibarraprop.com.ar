@@ -10,6 +10,7 @@
   const $ = (selector, parent = document) => parent.querySelector(selector);
   const $$ = (selector, parent = document) => Array.from(parent.querySelectorAll(selector));
   const { render, escapeHtml } = window.PropertyCard;
+  const PAGE_ZONE = $("#real-estate").dataset.zona || "";
 
   const elements = {
     grid: $("#tokko-properties-grid"),
@@ -229,10 +230,14 @@
       if (!response.ok) throw new Error(`Respuesta ${response.status}`);
       state.all = (await response.json()).properties;
       fillFilters();
+      // Una página de zona es el listado con esa zona ya seleccionada.
+      if (PAGE_ZONE) checkValue("zona", normalize(PAGE_ZONE));
       applyUrlFilters();
       applyFilters();
     } catch (error) {
       console.error("Error cargando propiedades:", error);
+      // Las páginas de zona ya traen sus tarjetas: sin datos solo se pierden los filtros.
+      if ($(".prop-card", elements.grid)) return;
       elements.grid.innerHTML = `
         <div class="col-12 text-center py-5">
           <h3>No pudimos cargar las propiedades.</h3>

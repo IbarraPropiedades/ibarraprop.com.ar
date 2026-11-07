@@ -79,10 +79,152 @@
           </div>
         </div>
       </div>
-      <section class="section">
-        <div class="container">
-          <div class="row gy-4">
-          <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/casa-martinez-13221727/"><img src="https://static.tokkobroker.com/pictures/13221727_62062303826003636178805831323498023480224897134380177876280649289395661679030.jpg" alt="Casa Martínez" width="675" height="506" decoding="async" loading="eager" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 28</span></a><div class="prop-card__body"><p class="prop-card__price">USD 205.000</p><h3 class="prop-card__title"><a href="/propiedades/casa-martinez-13221727/">Casa Martínez</a></h3><p class="prop-card__location">Casa · Martínez, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>102 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>6 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>2 baños</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Casa%20Mart%C3%ADnez%20(Mart%C3%ADnez%2C%20San%20Isidro).%20C%C3%B3digo%20IHO13221727.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fcasa-martinez-13221727%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+      <section id="real-estate" class="real-estate section real-estate--full" data-zona="San Isidro">
+        <div class="properties-shell">
+          <!-- SIDEBAR FILTROS -->
+          <aside class="properties-sidebar" aria-label="Filtros de propiedades">
+            <!-- Botón cerrar mobile -->
+            <button
+              type="button"
+              class="mobile-filters-close"
+              id="close-mobile-filters"
+              aria-label="Cerrar filtros"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="properties-sidebar-card">
+              <div class="sidebar-heading">
+                <span class="sidebar-kicker">Búsqueda personalizada</span>
+                <h2>Filtrá tu propiedad</h2>
+                <p>
+                  Elegí operación, zona y tipo de propiedad para encontrar lo
+                  que estás buscando.
+                </p>
+              </div>
+
+              <div class="filtro-wrapper">
+                <!-- Operación -->
+                <div class="filter-field">
+                  <label for="filtro-operacion">Operación</label>
+                  <select
+                    class="filtro-select"
+                    id="filtro-operacion"
+                    aria-label="Filtrar por operación"
+                  >
+                    <option value="">Comprar o alquilar</option>
+                  </select>
+                </div>
+
+                <!-- Zona -->
+                <div class="filter-field">
+                  <span class="filter-label">Zona</span>
+
+                  <div
+                    class="custom-multiselect"
+                    data-id="zona"
+                    data-label="Zona"
+                  >
+                    <button
+                      type="button"
+                      class="dropdown-button"
+                      aria-label="Filtrar por zona"
+                    >
+                      <span class="dropdown-button-text">Seleccionar zona</span>
+                      <span class="dropdown-count" id="zona-count"></span>
+                      <span class="dropdown-caret">▼</span>
+                    </button>
+
+                    <div class="dropdown-options" id="dropdown-zona">
+                      <p class="tokko-filter-empty">
+                        Cargando zonas disponibles...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tipo -->
+                <div class="filter-field">
+                  <span class="filter-label">Tipo de propiedad</span>
+
+                  <div
+                    class="custom-multiselect"
+                    data-id="tipo"
+                    data-label="Tipo"
+                  >
+                    <button
+                      type="button"
+                      class="dropdown-button"
+                      aria-label="Filtrar por tipo de propiedad"
+                    >
+                      <span class="dropdown-button-text">Seleccionar tipo</span>
+                      <span class="dropdown-count" id="tipo-count"></span>
+                      <span class="dropdown-caret">▼</span>
+                    </button>
+
+                    <div class="dropdown-options" id="dropdown-tipo">
+                      <p class="tokko-filter-empty">
+                        Cargando tipos de propiedad...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Limpiar -->
+                <button
+                  type="button"
+                  class="limpiar-filtros"
+                  id="limpiar-filtros"
+                >
+                  Limpiar filtros
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Overlay mobile -->
+          <div class="mobile-filters-overlay" id="mobile-filters-overlay"></div>
+
+          <!-- RESULTADOS -->
+          <div class="properties-results">
+            <!-- Botón filtros mobile -->
+            <button
+              type="button"
+              class="mobile-filters-button"
+              id="open-mobile-filters"
+              aria-label="Abrir filtros"
+            >
+              <i class="bi bi-sliders"></i>
+              <span>Filtros</span>
+            </button>
+
+            <div class="properties-results-header">
+              <div>
+                <span class="results-kicker">Venta y alquiler</span>
+                <h2>Propiedades disponibles en San Isidro</h2>
+              </div>
+
+              <div class="results-tools">
+                <p class="tokko-results-count" id="tokko-results-count"></p>
+                <div class="results-sort">
+                  <label for="filtro-orden">Ordenar por</label>
+                  <select
+                    class="filtro-select"
+                    id="filtro-orden"
+                    aria-label="Ordenar propiedades"
+                  >
+                    <option value="">Orden recomendado</option>
+                    <option value="precio-asc">Menor precio</option>
+                    <option value="precio-desc">Mayor precio</option>
+                    <option value="fecha-desc">Más recientes</option>
+                    <option value="fecha-asc">Más antiguas</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row gy-4" id="tokko-properties-grid">
+              <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/casa-martinez-13221727/"><img src="https://static.tokkobroker.com/pictures/13221727_62062303826003636178805831323498023480224897134380177876280649289395661679030.jpg" alt="Casa Martínez" width="675" height="506" decoding="async" loading="eager" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 28</span></a><div class="prop-card__body"><p class="prop-card__price">USD 205.000</p><h3 class="prop-card__title"><a href="/propiedades/casa-martinez-13221727/">Casa Martínez</a></h3><p class="prop-card__location">Casa · Martínez, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>102 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>6 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>2 baños</li><li><i class="bi bi-car-front" aria-hidden="true"></i>1 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Casa%20Mart%C3%ADnez%20(Mart%C3%ADnez%2C%20San%20Isidro).%20C%C3%B3digo%20IHO13221727.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fcasa-martinez-13221727%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/casa-villa-adelina-12439704/"><img src="https://static.tokkobroker.com/pictures/12439704_33014959148742471597375171132414660565788414080723926845589359795196535809626.jpg" alt="Terreno/Casa en Villa Adelina" width="675" height="506" decoding="async" loading="eager" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 25</span></a><div class="prop-card__body"><p class="prop-card__price">USD 160.000</p><h3 class="prop-card__title"><a href="/propiedades/casa-villa-adelina-12439704/">Terreno/Casa en Villa Adelina</a></h3><p class="prop-card__location">Casa · Villa Adelina, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>139 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>4 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>2 baños</li><li><i class="bi bi-car-front" aria-hidden="true"></i>2 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Terreno%2FCasa%20en%20Villa%20Adelina%20(Villa%20Adelina%2C%20San%20Isidro).%20C%C3%B3digo%20IHO12439704.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fcasa-villa-adelina-12439704%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/casa-san-isidro-12034893/"><img src="https://static.tokkobroker.com/pictures/12034893_46944979650097938612955744901453889513407974537903312170739811775498845520679.jpg" alt="Casa en casco historico de San isidro" width="675" height="506" decoding="async" loading="eager" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 16</span></a><div class="prop-card__body"><p class="prop-card__price">USD 180.000</p><h3 class="prop-card__title"><a href="/propiedades/casa-san-isidro-12034893/">Casa en casco historico de San isidro</a></h3><p class="prop-card__location">Casa · San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>83 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>4 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>2 baños</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Casa%20en%20casco%20historico%20de%20San%20isidro%20(San%20Isidro).%20C%C3%B3digo%20IHO12034893.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fcasa-san-isidro-12034893%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/oficina-las-lomas-golf-11099099/"><img src="https://static.tokkobroker.com/pictures/11099099_84355346539975406780028545006412418613790295931651367464792671147022722093093.jpg" alt="Local/Consultoria" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Alquiler</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 8</span></a><div class="prop-card__body"><p class="prop-card__price">ARS 700.000</p><h3 class="prop-card__title"><a href="/propiedades/oficina-las-lomas-golf-11099099/">Local/Consultoria</a></h3><p class="prop-card__location">Oficina · Las Lomas Golf, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>40 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>2 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>1 baño</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Local%2FConsultoria%20(Las%20Lomas%20Golf%2C%20San%20Isidro).%20C%C3%B3digo%20IOF11099099.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Foficina-las-lomas-golf-11099099%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
@@ -91,7 +233,23 @@
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/casa-las-lomas-de-san-isidro-8017349/"><img src="https://static.tokkobroker.com/pictures/8017349_55407289373022078018268065273848186191088892168237431758045103589736427878325.jpg" alt="Imponente casa en venta en calle Florencio Sanchez" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 7</span></a><div class="prop-card__body"><p class="prop-card__price">USD 1.000.000</p><h3 class="prop-card__title"><a href="/propiedades/casa-las-lomas-de-san-isidro-8017349/">Imponente casa en venta en calle Florencio Sanchez</a></h3><p class="prop-card__location">Casa · Las Lomas de San Isidro, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>330 m²</li><li><i class="bi bi-door-open" aria-hidden="true"></i>6 amb.</li><li><i class="bi bi-droplet" aria-hidden="true"></i>3 baños</li><li><i class="bi bi-car-front" aria-hidden="true"></i>4 coch.</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Imponente%20casa%20en%20venta%20en%20calle%20Florencio%20Sanchez%20(Las%20Lomas%20de%20San%20Isidro%2C%20San%20Isidro).%20C%C3%B3digo%20ZP-M-59010582.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fcasa-las-lomas-de-san-isidro-8017349%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/terreno-las-lomas-de-san-isidro-8017347/"><img src="https://static.tokkobroker.com/pictures/8017347_51425820628580939611883095380265216486783469673016517737196444203531976819541.jpg" alt="Terreno de 500 m² en venta, Lomas de San Isidro" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 15</span></a><div class="prop-card__body"><p class="prop-card__price">USD 1.000.000</p><h3 class="prop-card__title"><a href="/propiedades/terreno-las-lomas-de-san-isidro-8017347/">Terreno de 500 m² en venta, Lomas de San Isidro</a></h3><p class="prop-card__location">Terreno · Las Lomas de San Isidro, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>500 m²</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Terreno%20de%20500%20m%C2%B2%20en%20venta%2C%20Lomas%20de%20San%20Isidro%20(Las%20Lomas%20de%20San%20Isidro%2C%20San%20Isidro).%20C%C3%B3digo%20ZP-M-59017945.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fterreno-las-lomas-de-san-isidro-8017347%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
           <div class="col-xl-4 col-md-6"><article class="prop-card"><a class="prop-card__media" href="/propiedades/terreno-boulogne-sur-mer-8017345/"><img src="https://static.tokkobroker.com/pictures/8017345_39925967070423597685366073332514819549115281726544599815675583613043832829419.jpg" alt="Terreno de 380 m² en venta, Boulogne Sur Mer" width="675" height="506" decoding="async" loading="lazy" /><span class="prop-card__badge">Venta</span><span class="prop-card__count"><i class="bi bi-images" aria-hidden="true"></i> 29</span></a><div class="prop-card__body"><p class="prop-card__price">USD 600.000</p><h3 class="prop-card__title"><a href="/propiedades/terreno-boulogne-sur-mer-8017345/">Terreno de 380 m² en venta, Boulogne Sur Mer</a></h3><p class="prop-card__location">Terreno · Boulogne Sur Mer, San Isidro</p><ul class="prop-card__specs"><li><i class="bi bi-aspect-ratio" aria-hidden="true"></i>380 m²</li></ul><a class="prop-card__whatsapp" href="https://api.whatsapp.com/send?phone=5491121805630&amp;text=Hola%20Ibarra%20Propiedades.%20Quiero%20consultar%20por%3A%20Terreno%20de%20380%20m%C2%B2%20en%20venta%2C%20Boulogne%20Sur%20Mer%20(Boulogne%20Sur%20Mer%2C%20San%20Isidro).%20C%C3%B3digo%20ZP-M-59010635.%20https%3A%2F%2Fibarraprop.com.ar%2Fpropiedades%2Fterreno-boulogne-sur-mer-8017345%2F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp</a></div></article></div>
+            </div>
+
+            <div class="tokko-list-footer text-center mt-5">
+              <button
+                type="button"
+                class="limpiar-filtros d-none"
+                id="tokko-load-more"
+              >
+                Cargar más propiedades
+              </button>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section class="section pt-0">
+        <div class="container">
           <div class="zona-cta">
             <h2>¿Tenés una propiedad en San Isidro?</h2>
             <p>Coordinamos una tasación sin compromiso y te asesoramos en persona.</p>
@@ -156,6 +314,8 @@
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Volver arriba">
       <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
     </a>
+    <script src="/assets/js/property-card.js" defer></script>
+    <script src="/assets/js/propiedades.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="/assets/js/contact-form.js" defer></script>
   </body>
